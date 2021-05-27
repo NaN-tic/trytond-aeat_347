@@ -151,6 +151,8 @@ class Invoice(metaclass=PoolMeta):
 
         amount = 0
         for tax in self.taxes:
+            if not tax.tax:
+                continue
             if tax.tax.operation_347 in ('ignore', 'exclude_invoice'):
                 continue
             if tax.tax.operation_347 == 'amount_only':
