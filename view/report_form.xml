@@ -17,14 +17,12 @@ contains the full copyright notices and license terms. -->
     <field name="previous_number"/>
     <notebook colspan="4">
         <page string="General" id="general">
-            <group id="representative" colspan="4" col="6">
-                <label name="contact_name"/>
-                <field name="contact_name"/>
-                <label name="contact_phone"/>
-                <field name="contact_phone"/>
-                <label name="representative_vat"/>
-                <field name="representative_vat"/>
-            </group>
+            <label name="contact_name"/>
+            <field name="contact_name"/>
+            <label name="contact_phone"/>
+            <field name="contact_phone"/>
+            <label name="representative_vat"/>
+            <field name="representative_vat"/>
             <label name="support_type"/>
             <field name="support_type"/>
             <label name="type"/>
