@@ -2,343 +2,313 @@
 <!-- This file is part of Tryton.  The COPYRIGHT file at the top level of
 this repository contains the full copyright notices and license terms. -->
 <tryton>
-
     <data depends="account_es" grouped="1">
         <record model="account.tax.template" id="account_es.iva_X0_compras_bc">
-          <field name="operation_347">base_amount</field>
+            <field name="operation_347">base_amount</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_X0_compras_bi">
-          <field name="operation_347">base_amount</field>
+            <field name="operation_347">base_amount</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_X4_compras_bc">
-          <field name="operation_347">base_amount</field>
+            <field name="operation_347">base_amount</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_X4_compras_bi">
-          <field name="operation_347">base_amount</field>
+            <field name="operation_347">base_amount</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_X10_compras_bc">
-          <field name="operation_347">base_amount</field>
+            <field name="operation_347">base_amount</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_X10_compras_bi">
-          <field name="operation_347">base_amount</field>
+            <field name="operation_347">base_amount</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_X21_compras_bc">
-          <field name="operation_347">base_amount</field>
+            <field name="operation_347">base_amount</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_X21_compras_bi">
-          <field name="operation_347">base_amount</field>
+            <field name="operation_347">base_amount</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_X0">
-          <field name="operation_347">base_amount</field>
+            <field name="operation_347">base_amount</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_ISP_compras_16">
-          <field name="operation_347">base_amount</field>
+            <field name="operation_347">base_amount</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_ISP_reciclaje_0">
-          <field name="operation_347">base_amount</field>
+            <field name="operation_347">base_amount</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_ISP_obra_0">
-          <field name="operation_347">base_amount</field>
+            <field name="operation_347">base_amount</field>
         </record>
+        <!-- #TODO: Remove Intracomunitaries from 347 -->
         <record model="account.tax.template" id="account_es.iva_IO">
-          <field name="operation_347">base_amount</field>
+            <field name="operation_347">base_amount</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_IO_serv">
-          <field name="operation_347">base_amount</field>
+            <field name="operation_347">base_amount</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_dev_AI">
-          <field name="operation_347">base_amount</field>
+            <field name="operation_347">base_amount</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_dev_AI_serv">
-          <field name="operation_347">base_amount</field>
+            <field name="operation_347">base_amount</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_ded_AI">
-          <field name="operation_347">base_amount</field>
+            <field name="operation_347">base_amount</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_ded_AI_serv">
-          <field name="operation_347">base_amount</field>
-        </record>
-        <record model="account.tax.template" id="account_es.iva_IC_compras_4_bc">
-          <field name="operation_347">base_amount</field>
+            <field name="operation_347">base_amount</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_IC_compras_4_bc_1">
-          <field name="operation_347">base_amount</field>
+            <field name="operation_347">base_amount</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_IC_compras_4_bc_2">
-          <field name="operation_347">base_amount</field>
-        </record>
-        <record model="account.tax.template" id="account_es.iva_IC_compras_4_bi">
-          <field name="operation_347">base_amount</field>
+            <field name="operation_347">amount_only</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_IC_compras_4_bi_1">
-          <field name="operation_347">base_amount</field>
+            <field name="operation_347">base_amount</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_IC_compras_4_bi_2">
-          <field name="operation_347">base_amount</field>
-        </record>
-        <record model="account.tax.template" id="account_es.iva_IC_compras_4_servicios">
-          <field name="operation_347">base_amount</field>
+            <field name="operation_347">amount_only</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_IC_compras_4_servicios_1">
-          <field name="operation_347">base_amount</field>
+            <field name="operation_347">base_amount</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_IC_compras_4_servicios_2">
-          <field name="operation_347">base_amount</field>
-        </record>
-        <record model="account.tax.template" id="account_es.iva_IC_compras_10_bc">
-          <field name="operation_347">base_amount</field>
+            <field name="operation_347">amount_only</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_IC_compras_10_bc_1">
-          <field name="operation_347">base_amount</field>
+            <field name="operation_347">base_amount</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_IC_compras_10_bc_2">
-          <field name="operation_347">base_amount</field>
-        </record>
-        <record model="account.tax.template" id="account_es.iva_IC_compras_10_bi">
-          <field name="operation_347">base_amount</field>
+            <field name="operation_347">amount_only</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_IC_compras_10_bi_1">
-          <field name="operation_347">base_amount</field>
+            <field name="operation_347">base_amount</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_IC_compras_10_bi_2">
-          <field name="operation_347">base_amount</field>
-        </record>
-        <record model="account.tax.template" id="account_es.iva_IC_compras_10_servicios">
-          <field name="operation_347">base_amount</field>
+            <field name="operation_347">amount_only</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_IC_compras_10_servicios_1">
-          <field name="operation_347">base_amount</field>
+            <field name="operation_347">base_amount</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_IC_compras_10_servicios_2">
-          <field name="operation_347">base_amount</field>
-        </record>
-        <record model="account.tax.template" id="account_es.iva_IC_compras_21_bc">
-          <field name="operation_347">base_amount</field>
+            <field name="operation_347">amount_only</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_IC_compras_21_bc_1">
-          <field name="operation_347">base_amount</field>
+            <field name="operation_347">base_amount</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_IC_compras_21_bc_2">
-          <field name="operation_347">base_amount</field>
-        </record>
-        <record model="account.tax.template" id="account_es.iva_IC_compras_21_bi">
-          <field name="operation_347">base_amount</field>
+            <field name="operation_347">amount_only</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_IC_compras_21_bi_1">
-          <field name="operation_347">base_amount</field>
+            <field name="operation_347">base_amount</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_IC_compras_21_bi_2">
-          <field name="operation_347">base_amount</field>
-        </record>
-        <record model="account.tax.template" id="account_es.iva_IC_compras_21_ser">
-          <field name="operation_347">base_amount</field>
+            <field name="operation_347">amount_only</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_IC_compras_21_ser_1">
-          <field name="operation_347">base_amount</field>
+            <field name="operation_347">base_amount</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_IC_compras_21_ser_2">
-          <field name="operation_347">base_amount</field>
+            <field name="operation_347">amount_only</field>
         </record>
-        <record model="account.tax.template" id="account_es.iva_reagp_compras_12_1">
-          <field name="operation_347">base_amount</field>
+        <record model="account.tax.template" id="account_es.iva_rea_compras_12">
+            <field name="operation_347">base_amount</field>
         </record>
-        <record model="account.tax.template" id="account_es.iva_ISP_compras">
-          <field name="operation_347">base_amount</field>
+        <record model="account.tax.template" id="account_es.iva_regp_compras_105">
+            <field name="operation_347">base_amount</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_ISP_compras_1">
-          <field name="operation_347">base_amount</field>
+            <field name="operation_347">base_amount</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_ISP_compras_2">
-          <field name="operation_347">base_amount</field>
-        </record>
-        <record model="account.tax.template" id="account_es.iva_ISP_compras_bi">
-          <field name="operation_347">base_amount</field>
+            <field name="operation_347">amount_only</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_ISP_compras_bi_1">
-          <field name="operation_347">base_amount</field>
+            <field name="operation_347">base_amount</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_ISP_compras_bi_2">
-          <field name="operation_347">base_amount</field>
+            <field name="operation_347">amount_only</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_rep_no_sujeto">
-          <field name="operation_347">base_amount</field>
+            <field name="operation_347">base_amount</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_rep_no_sujeto_2">
-          <field name="operation_347">base_amount</field>
+            <field name="operation_347">base_amount</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_sop_no_sujeto">
-          <field name="operation_347">base_amount</field>
+            <field name="operation_347">base_amount</field>
         </record>
     </data>
     <data depends="account_es" grouped="1">
         <record model="account.tax.template" id="account_es.iva_sop_ex">
-          <field name="operation_347">base_amount</field>
+            <field name="operation_347">base_amount</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_sop_4">
-          <field name="operation_347">base_amount</field>
+            <field name="operation_347">base_amount</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_sop_10">
-          <field name="operation_347">base_amount</field>
+            <field name="operation_347">base_amount</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_sop_21">
-          <field name="operation_347">base_amount</field>
+            <field name="operation_347">base_amount</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_sop_ex_inv">
-          <field name="operation_347">base_amount</field>
+            <field name="operation_347">base_amount</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_sop_4_inv">
-          <field name="operation_347">base_amount</field>
+            <field name="operation_347">base_amount</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_sop_10_inv">
-          <field name="operation_347">base_amount</field>
+            <field name="operation_347">base_amount</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_sop_21_inv">
-          <field name="operation_347">base_amount</field>
+            <field name="operation_347">base_amount</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_rep_ex">
-          <field name="operation_347">base_amount</field>
+            <field name="operation_347">base_amount</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_rep_0_asis">
-          <field name="operation_347">base_amount</field>
+            <field name="operation_347">base_amount</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_rep_0_ter_rus">
-          <field name="operation_347">base_amount</field>
+            <field name="operation_347">base_amount</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_rep_4">
-          <field name="operation_347">base_amount</field>
+            <field name="operation_347">base_amount</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_rep_10">
-          <field name="operation_347">base_amount</field>
+            <field name="operation_347">base_amount</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_rep_21">
-          <field name="operation_347">base_amount</field>
+            <field name="operation_347">base_amount</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_sop_alq_ex">
-          <field name="operation_347">base_amount</field>
+            <field name="operation_347">base_amount</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_rep_alq_ex">
-          <field name="operation_347">base_amount</field>
+            <field name="operation_347">base_amount</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_no_ded_4">
-          <field name="operation_347">base_amount</field>
+            <field name="operation_347">base_amount</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_no_ded_10">
-          <field name="operation_347">base_amount</field>
+            <field name="operation_347">base_amount</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_no_ded_21">
-          <field name="operation_347">base_amount</field>
+            <field name="operation_347">base_amount</field>
         </record>
     </data>
     <data depends="account_es" grouped="1">
         <record model="account.tax.template" id="account_es.re_buy_05">
-          <field name="operation_347">amount_only</field>
+            <field name="operation_347">amount_only</field>
         </record>
         <record model="account.tax.template" id="account_es.re_buy_14">
-          <field name="operation_347">amount_only</field>
+            <field name="operation_347">amount_only</field>
         </record>
         <record model="account.tax.template" id="account_es.re_buy_52">
-          <field name="operation_347">amount_only</field>
+            <field name="operation_347">amount_only</field>
         </record>
         <record model="account.tax.template" id="account_es.re_05">
-          <field name="operation_347">amount_only</field>
+            <field name="operation_347">amount_only</field>
         </record>
         <record model="account.tax.template" id="account_es.re_14">
-          <field name="operation_347">amount_only</field>
+            <field name="operation_347">amount_only</field>
         </record>
         <record model="account.tax.template" id="account_es.re_52">
-          <field name="operation_347">amount_only</field>
+            <field name="operation_347">amount_only</field>
         </record>
     </data>
     <data depends="account_es" grouped="1">
-       <record model="account.tax.template" id="account_es.irpf_1">
-         <field name="operation_347">exclude_invoice</field>
-       </record>
-       <record model="account.tax.template" id="account_es.irpf_2">
-         <field name="operation_347">exclude_invoice</field>
-       </record>
-       <record model="account.tax.template" id="account_es.irpf_7">
-         <field name="operation_347">exclude_invoice</field>
-       </record>
-       <record model="account.tax.template" id="account_es.irpf_9">
-         <field name="operation_347">exclude_invoice</field>
-       </record>
-       <record model="account.tax.template" id="account_es.irpf_15">
-         <field name="operation_347">exclude_invoice</field>
-       </record>
-       <record model="account.tax.template" id="account_es.irpf_18">
-         <field name="operation_347">exclude_invoice</field>
-       </record>
-       <record model="account.tax.template" id="account_es.irpf_19">
-         <field name="operation_347">exclude_invoice</field>
-       </record>
-       <record model="account.tax.template" id="account_es.irpf_195">
-         <field name="operation_347">exclude_invoice</field>
-       </record>
-       <record model="account.tax.template" id="account_es.irpf_20">
-         <field name="operation_347">exclude_invoice</field>
-       </record>
-       <record model="account.tax.template" id="account_es.irpf_21">
-         <field name="operation_347">exclude_invoice</field>
-       </record>
-       <record model="account.tax.template" id="account_es.irpf_35">
-         <field name="operation_347">exclude_invoice</field>
-       </record>
-       <record model="account.tax.template" id="account_es.irpf_37">
-         <field name="operation_347">exclude_invoice</field>
-       </record>
-       <record model="account.tax.template" id="account_es.irpf_19a">
-         <field name="operation_347">exclude_invoice</field>
-       </record>
-       <record model="account.tax.template" id="account_es.irpf_195a">
-         <field name="operation_347">exclude_invoice</field>
-       </record>
-       <record model="account.tax.template" id="account_es.irpf_20a">
-         <field name="operation_347">exclude_invoice</field>
-       </record>
-       <record model="account.tax.template" id="account_es.irpf_sale_1">
-         <field name="operation_347">exclude_invoice</field>
-       </record>
-       <record model="account.tax.template" id="account_es.irpf_sale_2">
-         <field name="operation_347">exclude_invoice</field>
-       </record>
-       <record model="account.tax.template" id="account_es.irpf_sale_7">
-         <field name="operation_347">exclude_invoice</field>
-       </record>
-       <record model="account.tax.template" id="account_es.irpf_sale_9">
-         <field name="operation_347">exclude_invoice</field>
-       </record>
-       <record model="account.tax.template" id="account_es.irpf_sale_15">
-         <field name="operation_347">exclude_invoice</field>
-       </record>
-       <record model="account.tax.template" id="account_es.irpf_sale_18">
-         <field name="operation_347">exclude_invoice</field>
-       </record>
-       <record model="account.tax.template" id="account_es.irpf_sale_19">
-         <field name="operation_347">exclude_invoice</field>
-       </record>
-       <record model="account.tax.template" id="account_es.irpf_sale_195">
-         <field name="operation_347">exclude_invoice</field>
-       </record>
-       <record model="account.tax.template" id="account_es.irpf_sale_20">
-         <field name="operation_347">exclude_invoice</field>
-       </record>
-       <record model="account.tax.template" id="account_es.irpf_sale_21">
-         <field name="operation_347">exclude_invoice</field>
-       </record>
-       <record model="account.tax.template" id="account_es.irpf_sale_35">
-         <field name="operation_347">exclude_invoice</field>
-       </record>
-       <record model="account.tax.template" id="account_es.irpf_sale_37">
-         <field name="operation_347">exclude_invoice</field>
-       </record>
-       <record model="account.tax.template" id="account_es.irpf_sale_19a">
-         <field name="operation_347">exclude_invoice</field>
-       </record>
-       <record model="account.tax.template" id="account_es.irpf_sale_195a">
-         <field name="operation_347">exclude_invoice</field>
-       </record>
-       <record model="account.tax.template" id="account_es.irpf_sale_20a">
-         <field name="operation_347">exclude_invoice</field>
-       </record>
+        <record model="account.tax.template" id="account_es.irpf_1">
+            <field name="operation_347">exclude_invoice</field>
+        </record>
+        <record model="account.tax.template" id="account_es.irpf_2">
+            <field name="operation_347">exclude_invoice</field>
+        </record>
+        <record model="account.tax.template" id="account_es.irpf_7">
+            <field name="operation_347">exclude_invoice</field>
+        </record>
+        <record model="account.tax.template" id="account_es.irpf_9">
+            <field name="operation_347">exclude_invoice</field>
+        </record>
+        <record model="account.tax.template" id="account_es.irpf_15">
+            <field name="operation_347">exclude_invoice</field>
+        </record>
+        <record model="account.tax.template" id="account_es.irpf_18">
+            <field name="operation_347">exclude_invoice</field>
+        </record>
+        <record model="account.tax.template" id="account_es.irpf_19">
+            <field name="operation_347">exclude_invoice</field>
+        </record>
+        <record model="account.tax.template" id="account_es.irpf_195">
+            <field name="operation_347">exclude_invoice</field>
+        </record>
+        <record model="account.tax.template" id="account_es.irpf_20">
+            <field name="operation_347">exclude_invoice</field>
+        </record>
+        <record model="account.tax.template" id="account_es.irpf_21">
+            <field name="operation_347">exclude_invoice</field>
+        </record>
+        <record model="account.tax.template" id="account_es.irpf_35">
+            <field name="operation_347">exclude_invoice</field>
+        </record>
+        <record model="account.tax.template" id="account_es.irpf_37">
+            <field name="operation_347">exclude_invoice</field>
+        </record>
+        <record model="account.tax.template" id="account_es.irpf_19a">
+            <field name="operation_347">exclude_invoice</field>
+        </record>
+        <record model="account.tax.template" id="account_es.irpf_195a">
+            <field name="operation_347">exclude_invoice</field>
+        </record>
+        <record model="account.tax.template" id="account_es.irpf_20a">
+            <field name="operation_347">exclude_invoice</field>
+        </record>
+        <record model="account.tax.template" id="account_es.irpf_sale_1">
+            <field name="operation_347">exclude_invoice</field>
+        </record>
+        <record model="account.tax.template" id="account_es.irpf_sale_2">
+            <field name="operation_347">exclude_invoice</field>
+        </record>
+        <record model="account.tax.template" id="account_es.irpf_sale_7">
+            <field name="operation_347">exclude_invoice</field>
+        </record>
+        <record model="account.tax.template" id="account_es.irpf_sale_9">
+            <field name="operation_347">exclude_invoice</field>
+        </record>
+        <record model="account.tax.template" id="account_es.irpf_sale_15">
+            <field name="operation_347">exclude_invoice</field>
+        </record>
+        <record model="account.tax.template" id="account_es.irpf_sale_18">
+            <field name="operation_347">exclude_invoice</field>
+        </record>
+        <record model="account.tax.template" id="account_es.irpf_sale_19">
+            <field name="operation_347">exclude_invoice</field>
+        </record>
+        <record model="account.tax.template" id="account_es.irpf_sale_195">
+            <field name="operation_347">exclude_invoice</field>
+        </record>
+        <record model="account.tax.template" id="account_es.irpf_sale_20">
+            <field name="operation_347">exclude_invoice</field>
+        </record>
+        <record model="account.tax.template" id="account_es.irpf_sale_21">
+            <field name="operation_347">exclude_invoice</field>
+        </record>
+        <record model="account.tax.template" id="account_es.irpf_sale_35">
+            <field name="operation_347">exclude_invoice</field>
+        </record>
+        <record model="account.tax.template" id="account_es.irpf_sale_37">
+            <field name="operation_347">exclude_invoice</field>
+        </record>
+        <record model="account.tax.template" id="account_es.irpf_sale_19a">
+            <field name="operation_347">exclude_invoice</field>
+        </record>
+        <record model="account.tax.template" id="account_es.irpf_sale_195a">
+            <field name="operation_347">exclude_invoice</field>
+        </record>
+        <record model="account.tax.template" id="account_es.irpf_sale_20a">
+            <field name="operation_347">exclude_invoice</field>
+        </record>
     </data>
 </tryton>
