@@ -112,7 +112,7 @@ this repository contains the full copyright notices and license terms. -->
         <record model="account.tax.template" id="account_es.iva_IC_compras_21_ser_2">
             <field name="operation_347">amount_only</field>
         </record>
-        <record model="account.tax.template" id="account_es.iva_rea_compras_12">
+        <record model="account.tax.template" id="account_es.iva_reaf_compras_12">
             <field name="operation_347">base_amount</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_regp_compras_105">
