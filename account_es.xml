@@ -229,40 +229,22 @@ this repository contains the full copyright notices and license terms. -->
         <record model="account.tax.template" id="account_es.irpf_7">
             <field name="operation_347">exclude_invoice</field>
         </record>
-        <record model="account.tax.template" id="account_es.irpf_9">
-            <field name="operation_347">exclude_invoice</field>
-        </record>
         <record model="account.tax.template" id="account_es.irpf_15">
-            <field name="operation_347">exclude_invoice</field>
-        </record>
-        <record model="account.tax.template" id="account_es.irpf_18">
             <field name="operation_347">exclude_invoice</field>
         </record>
         <record model="account.tax.template" id="account_es.irpf_19">
             <field name="operation_347">exclude_invoice</field>
         </record>
-        <record model="account.tax.template" id="account_es.irpf_195">
+        <record model="account.tax.template" id="account_es.irpf_19a">
             <field name="operation_347">exclude_invoice</field>
         </record>
-        <record model="account.tax.template" id="account_es.irpf_20">
-            <field name="operation_347">exclude_invoice</field>
-        </record>
-        <record model="account.tax.template" id="account_es.irpf_21">
+        <record model="account.tax.template" id="account_es.irpf_24">
             <field name="operation_347">exclude_invoice</field>
         </record>
         <record model="account.tax.template" id="account_es.irpf_35">
             <field name="operation_347">exclude_invoice</field>
         </record>
-        <record model="account.tax.template" id="account_es.irpf_37">
-            <field name="operation_347">exclude_invoice</field>
-        </record>
-        <record model="account.tax.template" id="account_es.irpf_19a">
-            <field name="operation_347">exclude_invoice</field>
-        </record>
-        <record model="account.tax.template" id="account_es.irpf_195a">
-            <field name="operation_347">exclude_invoice</field>
-        </record>
-        <record model="account.tax.template" id="account_es.irpf_20a">
+        <record model="account.tax.template" id="account_es.irpf_45">
             <field name="operation_347">exclude_invoice</field>
         </record>
         <record model="account.tax.template" id="account_es.irpf_sale_1">
@@ -274,40 +256,22 @@ this repository contains the full copyright notices and license terms. -->
         <record model="account.tax.template" id="account_es.irpf_sale_7">
             <field name="operation_347">exclude_invoice</field>
         </record>
-        <record model="account.tax.template" id="account_es.irpf_sale_9">
-            <field name="operation_347">exclude_invoice</field>
-        </record>
         <record model="account.tax.template" id="account_es.irpf_sale_15">
-            <field name="operation_347">exclude_invoice</field>
-        </record>
-        <record model="account.tax.template" id="account_es.irpf_sale_18">
             <field name="operation_347">exclude_invoice</field>
         </record>
         <record model="account.tax.template" id="account_es.irpf_sale_19">
             <field name="operation_347">exclude_invoice</field>
         </record>
-        <record model="account.tax.template" id="account_es.irpf_sale_195">
+        <record model="account.tax.template" id="account_es.irpf_sale_19a">
             <field name="operation_347">exclude_invoice</field>
         </record>
-        <record model="account.tax.template" id="account_es.irpf_sale_20">
-            <field name="operation_347">exclude_invoice</field>
-        </record>
-        <record model="account.tax.template" id="account_es.irpf_sale_21">
+        <record model="account.tax.template" id="account_es.irpf_sale_24">
             <field name="operation_347">exclude_invoice</field>
         </record>
         <record model="account.tax.template" id="account_es.irpf_sale_35">
             <field name="operation_347">exclude_invoice</field>
         </record>
-        <record model="account.tax.template" id="account_es.irpf_sale_37">
-            <field name="operation_347">exclude_invoice</field>
-        </record>
-        <record model="account.tax.template" id="account_es.irpf_sale_19a">
-            <field name="operation_347">exclude_invoice</field>
-        </record>
-        <record model="account.tax.template" id="account_es.irpf_sale_195a">
-            <field name="operation_347">exclude_invoice</field>
-        </record>
-        <record model="account.tax.template" id="account_es.irpf_sale_20a">
+        <record model="account.tax.template" id="account_es.irpf_sale_45">
             <field name="operation_347">exclude_invoice</field>
         </record>
     </data>
