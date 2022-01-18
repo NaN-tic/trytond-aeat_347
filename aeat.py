@@ -448,7 +448,10 @@ class Report(Workflow, ModelSQL, ModelView):
             record.fiscalyear = str(self.fiscalyear_code)
             record.nif = self.company_vat
             records.append(record)
-        data = retrofix_write(records)
+        try:
+            data = retrofix_write(records)
+        except AssertionError as e:
+            raise UserError(str(e))
         data = remove_accents(data).upper()
         if isinstance(data, str):
             data = data.encode('iso-8859-1')
