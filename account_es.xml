@@ -41,70 +41,70 @@ this repository contains the full copyright notices and license terms. -->
         </record>
         <!-- #TODO: Remove Intracomunitaries from 347 -->
         <record model="account.tax.template" id="account_es.iva_IO">
-            <field name="operation_347">base_amount</field>
+            <field name="operation_347">exclude_invoice</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_IO_serv">
-            <field name="operation_347">base_amount</field>
+            <field name="operation_347">exclude_invoice</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_ded_AI">
-            <field name="operation_347">base_amount</field>
+            <field name="operation_347">exclude_invoice</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_ded_AI_serv">
-            <field name="operation_347">base_amount</field>
+            <field name="operation_347">exclude_invoice</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_IC_compras_4_bc_1">
-            <field name="operation_347">base_amount</field>
+            <field name="operation_347">exclude_invoice</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_IC_compras_4_bc_2">
-            <field name="operation_347">amount_only</field>
+            <field name="operation_347">exclude_invoice</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_IC_compras_4_bi_1">
-            <field name="operation_347">base_amount</field>
+            <field name="operation_347">exclude_invoice</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_IC_compras_4_bi_2">
-            <field name="operation_347">amount_only</field>
+            <field name="operation_347">exclude_invoice</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_IC_compras_4_servicios_1">
-            <field name="operation_347">base_amount</field>
+            <field name="operation_347">exclude_invoice</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_IC_compras_4_servicios_2">
-            <field name="operation_347">amount_only</field>
+            <field name="operation_347">exclude_invoice</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_IC_compras_10_bc_1">
-            <field name="operation_347">base_amount</field>
+            <field name="operation_347">exclude_invoice</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_IC_compras_10_bc_2">
-            <field name="operation_347">amount_only</field>
+            <field name="operation_347">exclude_invoice</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_IC_compras_10_bi_1">
-            <field name="operation_347">base_amount</field>
+            <field name="operation_347">exclude_invoice</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_IC_compras_10_bi_2">
-            <field name="operation_347">amount_only</field>
+            <field name="operation_347">exclude_invoice</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_IC_compras_10_servicios_1">
-            <field name="operation_347">base_amount</field>
+            <field name="operation_347">exclude_invoice</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_IC_compras_10_servicios_2">
-            <field name="operation_347">amount_only</field>
+            <field name="operation_347">exclude_invoice</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_IC_compras_21_bc_1">
-            <field name="operation_347">base_amount</field>
+            <field name="operation_347">exclude_invoice</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_IC_compras_21_bc_2">
-            <field name="operation_347">amount_only</field>
+            <field name="operation_347">exclude_invoice</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_IC_compras_21_bi_1">
-            <field name="operation_347">base_amount</field>
+            <field name="operation_347">exclude_invoice</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_IC_compras_21_bi_2">
-            <field name="operation_347">amount_only</field>
+            <field name="operation_347">exclude_invoice</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_IC_compras_21_ser_1">
-            <field name="operation_347">base_amount</field>
+            <field name="operation_347">exclude_invoice</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_IC_compras_21_ser_2">
-            <field name="operation_347">amount_only</field>
+            <field name="operation_347">exclude_invoice</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_reaf_compras_12">
             <field name="operation_347">base_amount</field>
