@@ -121,8 +121,6 @@ class Report(Workflow, ModelSQL, ModelView):
         'Party Limit (3)', digits=(16, 2), required=True,
         help='The declaration will include parties from which we received '
         'payments, on behalf of third parties, over this limit')
-    amount = fields.Function(fields.Numeric('Amount', digits=(16, 2)),
-        'get_totals')
     cash_amount = fields.Function(fields.Numeric('Cash Amount (Manual)',
             digits=(16, 2)), 'get_totals')
     party_amount = fields.Function(fields.Numeric(
