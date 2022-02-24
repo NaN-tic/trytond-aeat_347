@@ -587,18 +587,22 @@ class PartyRecord(ModelSQL, ModelView):
             or Decimal('0.0')
         record.fiscalyear_cash_operation = str(
             self.fiscalyear_code_cash_operation or '')
-        record.first_quarter_amount = self.first_quarter_amount
+        record.first_quarter_amount = (self.first_quarter_amount or
+            Decimal('0.0'))
         record.first_quarter_property_amount = (
-            self.first_quarter_property_amount)
-        record.second_quarter_amount = self.second_quarter_amount
+            self.first_quarter_property_amount or Decimal('0.0'))
+        record.second_quarter_amount = (self.second_quarter_amount or
+            Decimal('0.0'))
         record.second_quarter_property_amount = (
-            self.second_quarter_property_amount)
-        record.third_quarter_amount = self.third_quarter_amount
+            self.second_quarter_property_amount or Decimal('0.0'))
+        record.third_quarter_amount = (self.third_quarter_amount or
+            Decimal('0.0'))
         record.third_quarter_property_amount = (
-            self.third_quarter_property_amount)
-        record.fourth_quarter_amount = self.fourth_quarter_amount
+            self.third_quarter_property_amount or Decimal('0.0'))
+        record.fourth_quarter_amount = (self.fourth_quarter_amount or
+            Decimal('0.0'))
         record.fourth_quarter_property_amount = (
-            self.fourth_quarter_property_amount)
+            self.fourth_quarter_property_amount or Decimal('0.0'))
         record.cash_vat_operation = self.cash_vat_operation
         record.cash_vat_criteria = (self.cash_vat_criteria or Decimal('0.0')
             if self.cash_vat_operation else Decimal('0.0'))
