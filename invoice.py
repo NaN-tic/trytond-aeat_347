@@ -33,7 +33,8 @@ class Record(ModelSQL, ModelView):
         required=True, readonly=True)
     amount = fields.Numeric('Operation Amount', digits=(16, 2),
         readonly=True)
-    invoice = fields.Many2One('account.invoice', 'Invoice', readonly=True)
+    invoice = fields.Many2One('account.invoice', 'Invoice', readonly=True,
+        ondelete='CASCADE')
     party_record = fields.Many2One('aeat.347.report.party', 'Party Record',
         readonly=True)
     party_tax_identifier = fields.Many2One('party.identifier',
