@@ -645,7 +645,7 @@ msgstr "Ignorar"
 
 msgctxt "selection:account.tax,operation_347:"
 msgid "Include Base Amount"
-msgstr "Icluir base e impuesto"
+msgstr "Incluir base e impuesto"
 
 msgctxt "selection:account.tax.template,operation_347:"
 msgid "Amount Only"
@@ -661,7 +661,7 @@ msgstr "Ignorar"
 
 msgctxt "selection:account.tax.template,operation_347:"
 msgid "Include Base Amount"
-msgstr "Icluir base e impuesto"
+msgstr "Incluir base e impuesto"
 
 msgctxt "selection:aeat.347.reasign.records.start,aeat347_operation_key:"
 msgid "A - Good and service adquisitions above limit (1)"
