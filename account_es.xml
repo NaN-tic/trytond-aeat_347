@@ -39,17 +39,10 @@ this repository contains the full copyright notices and license terms. -->
         <record model="account.tax.template" id="account_es.iva_ISP_obra_0">
             <field name="operation_347">base_amount</field>
         </record>
-        <!-- #TODO: Remove Intracomunitaries from 347 -->
         <record model="account.tax.template" id="account_es.iva_IO">
             <field name="operation_347">exclude_invoice</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_IO_serv">
-            <field name="operation_347">exclude_invoice</field>
-        </record>
-        <record model="account.tax.template" id="account_es.iva_ded_AI">
-            <field name="operation_347">exclude_invoice</field>
-        </record>
-        <record model="account.tax.template" id="account_es.iva_ded_AI_serv">
             <field name="operation_347">exclude_invoice</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_IC_compras_4_bc_1">
