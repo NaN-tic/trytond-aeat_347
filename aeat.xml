@@ -155,7 +155,7 @@ contains the full copyright notices and license terms. -->
         </record>
         <record model="ir.rule" id="rule_aeat_347_1">
             <field name="domain"
-                eval="[('company', '=', Eval('user', {}).get('company', None))]"
+                eval="[('company', 'in', Eval('companies', []))]"
                 pyson="1"/>
             <field name="rule_group" ref="rule_group_aeat347"/>
         </record>
@@ -167,7 +167,7 @@ contains the full copyright notices and license terms. -->
         </record>
         <record model="ir.rule" id="rule_aeat_347_party_1">
             <field name="domain"
-                eval="[('company', '=', Eval('user', {}).get('company', None))]"
+                eval="[('company', 'in', Eval('companies', []))]"
                 pyson="1"/>
             <field name="rule_group" ref="rule_group_aeat347_party"/>
         </record>
@@ -181,7 +181,7 @@ contains the full copyright notices and license terms. -->
         </record>
         <record model="ir.rule" id="rule_aeat_347_property_1">
             <field name="domain"
-                eval="[('company', '=', Eval('user', {}).get('company', None))]"
+                eval="[('company', 'in', Eval('companies', []))]"
                 pyson="1"/>
             <field name="rule_group" ref="rule_group_aeat347_property"/>
         </record>
@@ -192,7 +192,7 @@ contains the full copyright notices and license terms. -->
         </record>
         <record model="ir.rule" id="rule_aeat_347_record_1">
             <field name="domain"
-                eval="[('company', '=', Eval('user', {}).get('company', None))]"
+                eval="[('company', 'in', Eval('companies', []))]"
                 pyson="1"/>
             <field name="rule_group" ref="rule_group_aeat347_record"/>
         </record>
