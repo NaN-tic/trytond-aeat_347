@@ -15,6 +15,7 @@ from trytond.pyson import Bool, Eval, Not
 from trytond.transaction import Transaction
 from trytond.i18n import gettext
 from trytond.exceptions import UserError
+from sql.functions import Extract
 
 __all__ = ['Report', 'PartyRecord', 'PropertyRecord']
 
