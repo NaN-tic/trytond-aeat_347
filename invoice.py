@@ -41,6 +41,14 @@ class Record(ModelSQL, ModelView):
         'Party Tax Identifier')
 
     @classmethod
+    def __setup__(cls):
+        super(Record, cls).__setup__()
+        cls._order = [
+            ('year', 'DESC'),
+            ('id', 'DESC'),
+            ]
+
+    @classmethod
     def __register__(cls, module_name):
         pool = Pool()
         Invoice = pool.get('account.invoice')
