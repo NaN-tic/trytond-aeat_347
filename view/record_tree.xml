@@ -2,7 +2,7 @@
 <!--The COPYRIGHT file at the top level of this repository
 contains the full copyright notices and license terms. -->
 <tree>
-    <field name="fiscalyear"/>
+    <field name="year"/>
     <field name="month"/>
     <field name="party_tax_identifier"/>
     <field name="invoice"/>

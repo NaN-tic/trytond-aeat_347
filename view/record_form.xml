@@ -2,8 +2,8 @@
 <!--The COPYRIGHT file at the top level of this repository
 contains the full copyright notices and license terms. -->
 <form>
-    <label name="fiscalyear"/>
-    <field name="fiscalyear"/>
+    <label name="year"/>
+    <field name="year"/>
     <label name="month"/>
     <field name="month"/>
     <label name="party_tax_identifier"/>

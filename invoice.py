@@ -6,6 +6,7 @@ from trytond.wizard import Wizard, StateView, StateTransition, Button
 from trytond.pool import Pool, PoolMeta
 from trytond.transaction import Transaction
 from sql.operators import In
+from sql.functions import Extract
 from .aeat import OPERATION_KEY
 from sql.aggregate import Min
 ##from trytond.modules.aeat_347.aeat import OPERATION_KEY
@@ -26,8 +27,7 @@ class Record(ModelSQL, ModelView):
 
     company = fields.Many2One('company.company', 'Company', required=True,
         readonly=True)
-    fiscalyear = fields.Many2One('account.fiscalyear', 'Fiscal Year',
-        required=True, readonly=True)
+    year = fields.Integer("Year", required=True, readonly=True)
     month = fields.Integer('Month', readonly=True)
     operation_key = fields.Selection(OPERATION_KEY, 'Operation key',
         required=True, readonly=True)
@@ -42,16 +42,20 @@ class Record(ModelSQL, ModelView):
 
     @classmethod
     def __register__(cls, module_name):
-        cursor = Transaction().connection.cursor()
-        table = cls.__table_handler__(module_name)
-        sql_table = cls.__table__()
         pool = Pool()
         Invoice = pool.get('account.invoice')
-        invoice = Invoice.__table__()
         Party = pool.get('party.party')
-        party = Party.__table__()
         Identifier = pool.get('party.identifier')
+        FiscalYear = pool.get('account.fiscalyear')
+
+        table = cls.__table_handler__(module_name)
+        sql_table = cls.__table__()
+        invoice = Invoice.__table__()
+        party = Party.__table__()
         identifier = Identifier.__table__()
+        fiscalyear_table = FiscalYear.__table__()
+
+        cursor = Transaction().connection.cursor()
 
         exist_tax_identifier = table.column_exist('tax_identifier')
         exist_party = table.column_exist('party')
@@ -97,6 +101,15 @@ class Record(ModelSQL, ModelView):
                     where=sql_table.party_tax_identifier == None)),
 
             table.drop_column('party')
+
+        # migration fiscalyear to year
+        if table.column_exist('fiscalyear'):
+            query = sql_table.update(columns=[sql_table.year],
+                    values=[Extract('YEAR', fiscalyear_table.start_date)],
+                    from_=[fiscalyear_table],
+                    where=sql_table.fiscalyear == fiscalyear_table.id)
+            cursor.execute(*query)
+            table.drop_column('fiscalyear')
 
     @classmethod
     def delete_record(cls, invoices):
@@ -211,19 +224,9 @@ class Invoice(metaclass=PoolMeta):
                 operation_key = invoice.aeat347_operation_key
                 amount = invoice.get_aeat347_total_amount()
 
-                if invoice.type == 'in':
-                    accounting_date = (invoice.accounting_date
-                        or invoice.invoice_date)
-                    period_id = Period.find(
-                        invoice.company.id, date=accounting_date)
-                    period = Period(period_id)
-                    fiscalyear = period.fiscalyear
-                else:
-                    fiscalyear = invoice.move.period.fiscalyear
-
                 to_create[invoice.id] = {
                     'company': invoice.company.id,
-                    'fiscalyear': fiscalyear,
+                    'year': (invoice.accounting_date or invoice.invoice_date).year,
                     'month': invoice.invoice_date.month,
                     'amount': amount,
                     'operation_key': operation_key,
