@@ -48,7 +48,7 @@ msgstr "Identificador fiscal del tercer"
 
 msgctxt "field:aeat.347.record,year:"
 msgid "Year"
-msgstr "Año"
+msgstr "Any"
 
 msgctxt "field:aeat.347.report,amount:"
 msgid "Amount"
@@ -543,6 +543,10 @@ msgstr "Recalcula registres AEAT 347"
 msgctxt "model:ir.message,text:invalid_currency"
 msgid "Currency in AEAT 347 report \"%(report)s\" must be Euro."
 msgstr "La moneda de l'informe AEAT 347 \"%(report)s\" ha de ser Euro."
+
+msgctxt "model:ir.message,text:msg_invalid_year"
+msgid "The year \"%(year)s\" is not valid."
+msgstr "L'any \"%(year)s\" no és vàlid."
 
 msgctxt "model:ir.model.button,string:aeat_347_report_calculate_button"
 msgid "Calculate"
