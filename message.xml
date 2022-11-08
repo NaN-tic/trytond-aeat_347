@@ -6,5 +6,8 @@ this repository contains the full copyright notices and license terms. -->
       <record model="ir.message" id="invalid_currency">
           <field name="text">Currency in AEAT 347 report "%(report)s" must be Euro.</field>
       </record>
+      <record model="ir.message" id="msg_invalid_year">
+          <field name="text">The year "%(year)s" is not valid.</field>
+      </record>
     </data>
 </tryton>

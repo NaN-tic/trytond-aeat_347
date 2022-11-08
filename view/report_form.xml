@@ -7,10 +7,8 @@ contains the full copyright notices and license terms. -->
     <label string="Declaration Number" id="declaration_number"/>
     <field name="id"/>
     <newline/>
-    <label name="fiscalyear"/>
-    <field name="fiscalyear"/>
-    <label name="fiscalyear_code"/>
-    <field name="fiscalyear_code"/>
+    <label name="year"/>
+    <field name="year"/>
     <label name="company_vat"/>
     <field name="company_vat"/>
     <label name="previous_number"/>

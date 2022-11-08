@@ -3,7 +3,7 @@
 contains the full copyright notices and license terms. -->
 <tree>
     <field name="company"/>
-    <field name="fiscalyear"/>
+    <field name="year"/>
     <field name="state"/>
     <field name="calculation_date" widget="date"/>
     <button name="draft" tree_invisible="1"/>
