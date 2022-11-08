@@ -26,10 +26,6 @@ msgctxt "field:aeat.347.record,company:"
 msgid "Company"
 msgstr "Empresa"
 
-msgctxt "field:aeat.347.record,fiscalyear:"
-msgid "Fiscal Year"
-msgstr "Ejercicio fiscal"
-
 msgctxt "field:aeat.347.record,invoice:"
 msgid "Invoice"
 msgstr "Factura"
@@ -49,6 +45,10 @@ msgstr "Registro de tercero"
 msgctxt "field:aeat.347.record,party_tax_identifier:"
 msgid "Party Tax Identifier"
 msgstr "Identificador fiscal del tercero"
+
+msgctxt "field:aeat.347.record,year:"
+msgid "Year"
+msgstr "Año"
 
 msgctxt "field:aeat.347.report,amount:"
 msgid "Amount"
@@ -89,14 +89,6 @@ msgstr "Archivo"
 msgctxt "field:aeat.347.report,filename:"
 msgid "File Name"
 msgstr "Nombre archivo"
-
-msgctxt "field:aeat.347.report,fiscalyear:"
-msgid "Fiscal Year"
-msgstr "Ejercicio fiscal"
-
-msgctxt "field:aeat.347.report,fiscalyear_code:"
-msgid "Fiscal Year Code"
-msgstr "Año ejercicio fiscal"
 
 msgctxt "field:aeat.347.report,on_behalf_third_party_limit:"
 msgid "On Behalf of Third Party Limit (3)"
@@ -153,6 +145,10 @@ msgstr "Tipo soporte"
 msgctxt "field:aeat.347.report,type:"
 msgid "Statement Type"
 msgstr "Tipo de declaración"
+
+msgctxt "field:aeat.347.report,fiscalyear:"
+msgid "Year"
+msgstr "Any"
 
 msgctxt "field:aeat.347.report.party,amount:"
 msgid "Operations Amount"
@@ -548,6 +544,10 @@ msgstr "Recalcular registros AEAT 347"
 msgctxt "model:ir.message,text:invalid_currency"
 msgid "Currency in AEAT 347 report \"%(report)s\" must be Euro."
 msgstr "La moneda del informe AEAT 349 \"%(report)s\" debe ser Euro."
+
+msgctxt "model:ir.message,text:msg_invalid_year"
+msgid "The year \"%(year)s\" is not valid."
+msgstr "El año \"%(year)s\" no es correcto."
 
 msgctxt "model:ir.model.button,string:aeat_347_report_calculate_button"
 msgid "Calculate"
