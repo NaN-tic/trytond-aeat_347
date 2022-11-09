@@ -488,7 +488,7 @@ class PartyRecord(ModelSQL, ModelView):
 
     company = fields.Many2One('company.company', 'Company', required=True)
     report = fields.Many2One('aeat.347.report', 'AEAT 347 Report',
-        ondelete='CASCADE', select=1)
+        ondelete='CASCADE')
     party_name = fields.Char('Party Name', size=40)
     party_vat = fields.Char('VAT', size=9)
     representative_vat = fields.Char('L.R. VAT number', size=9,
@@ -642,7 +642,7 @@ class PropertyRecord(ModelSQL, ModelView):
 
     company = fields.Many2One('company.company', 'Company', required=True)
     report = fields.Many2One('aeat.347.report', 'AEAT 347 Report',
-        ondelete='CASCADE', select=1)
+        ondelete='CASCADE')
     party_vat = fields.Char('VAT number', size=9)
     representative_vat = fields.Char('L.R. VAT number', size=9,
         help='Legal Representative VAT number')
