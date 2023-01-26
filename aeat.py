@@ -345,12 +345,13 @@ class Report(Workflow, ModelSQL, ModelView):
                     aeat_347_record as r
                 WHERE
                     r.year = %s AND
-                    r.party_tax_identifier is not null
+                    r.party_tax_identifier is not null AND
+                    r.company = %s
                 GROUP BY
                     r.party_tax_identifier, r.operation_key
                 HAVING
                     sum(amount) > %s
-                """ % (cls.aggregate_function(), report.year,
+                """ % (cls.aggregate_function(), report.year, report.company.id,
                     report.operation_limit)
             cursor.execute(query)
             result = cursor.fetchall()
