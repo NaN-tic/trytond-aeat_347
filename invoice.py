@@ -9,7 +9,6 @@ from sql.operators import In
 from sql.functions import Extract
 from .aeat import OPERATION_KEY
 from sql.aggregate import Min
-##from trytond.modules.aeat_347.aeat import OPERATION_KEY
 
 __all__ = ['Record', 'Invoice', 'Recalculate347RecordStart',
     'Recalculate347RecordEnd', 'Recalculate347Record', 'Reasign347RecordStart',
@@ -75,8 +74,8 @@ class Record(ModelSQL, ModelView):
         if exist_tax_identifier or exist_party:
             # Don't use UPDATE FROM because SQLite nor MySQL support it.
             value = identifier.join(invoice,
-                condition=invoice.party_tax_identifier == identifier.id).select(
-                    identifier.id,
+                condition=invoice.party_tax_identifier == identifier.id
+                ).select(identifier.id,
                     where=(identifier.type == 'eu_vat') &
                     (invoice.id == sql_table.invoice))
             cursor.execute(*sql_table.update([sql_table.party_tax_identifier],
@@ -211,7 +210,6 @@ class Invoice(metaclass=PoolMeta):
     def create_aeat347_records(cls, invoices):
         pool = Pool()
         Record = pool.get('aeat.347.record')
-        Period = pool.get('account.period')
 
         to_create = {}
         to_update = []
@@ -233,8 +231,10 @@ class Invoice(metaclass=PoolMeta):
 
                 to_create[invoice.id] = {
                     'company': invoice.company.id,
-                    'year': (invoice.accounting_date or invoice.invoice_date).year,
-                    'month': invoice.invoice_date.month,
+                    'year': (invoice.accounting_date
+                        or invoice.invoice_date).year,
+                    'month': (invoice.accounting_date
+                        or invoice.invoice_date).month,
                     'amount': amount,
                     'operation_key': operation_key,
                     'invoice': invoice.id,
@@ -244,13 +244,12 @@ class Invoice(metaclass=PoolMeta):
         Record.delete_record(invoices)
         with Transaction().set_context(check_modify_invoice=False):
             cls.save(to_update)
-            #cls.save(cls.browse([x.id for x in to_update]))
         with Transaction().set_user(0, set_context=True):
             Record.create(to_create.values())
 
     @classmethod
     def check_modify(cls, invoices):
-        check =Transaction().context.get('check_modify_invoice', True)
+        check = Transaction().context.get('check_modify_invoice', True)
         if check:
             super(Invoice, cls).check_modify(invoices)
 
@@ -278,8 +277,8 @@ class Invoice(metaclass=PoolMeta):
         vlist = [v.copy() for v in vlist]
         for values in vlist:
             if not values.get('aeat347_operation_key'):
-                values['aeat347_operation_key'] = cls.get_aeat347_operation_key(
-                    values.get('type'))
+                values['aeat347_operation_key'] = (
+                    cls.get_aeat347_operation_key(values.get('type')))
         return super(Invoice, cls).create(vlist)
 
 
@@ -366,7 +365,8 @@ class Reasign347Record(Wizard):
         value = self.start.aeat347_operation_key
         invoice = Invoice.__table__()
         # Update to allow to modify key for posted invoices
-        cursor.execute(*invoice.update(columns=[invoice.aeat347_operation_key,],
+        cursor.execute(*invoice.update(
+                columns=[invoice.aeat347_operation_key,],
                 values=[value], where=In(invoice.id, invoice_ids)))
 
         Invoice.create_aeat347_records(invoices)
