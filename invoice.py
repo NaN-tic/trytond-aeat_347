@@ -178,12 +178,14 @@ class Invoice(metaclass=PoolMeta):
                 if tax.operation_347 in ('ignore', 'exclude_invoice'):
                     continue
                 if tax.operation_347 == 'amount_only':
-                    values = Tax.compute([tax], line.amount, 1)
+                    tax_date = self.tax_date
+                    values = Tax.compute([tax], line.amount, 1, tax_date)
                     amount += (Decimal(0)
                         if not values else values[0].get('amount', Decimal(0)))
                 elif tax.operation_347 == 'base_amount':
+                    tax_date = self.tax_date
                     base = line.amount
-                    values = Tax.compute([tax], base, 1)
+                    values = Tax.compute([tax], base, 1, tax_date)
                     value = (Decimal(0)
                         if not values else values[0].get('amount', Decimal(0)))
                     amount += (base + value)
