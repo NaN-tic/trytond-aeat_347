@@ -1,6 +1,7 @@
 # This file is part aeat_347 module for Tryton.
 # The COPYRIGHT file at the top level of this repository contains
 # the full copyright notices and license terms.
+from decimal import Decimal
 from trytond.model import ModelSQL, ModelView, fields
 from trytond.wizard import Wizard, StateView, StateTransition, Button
 from trytond.pool import Pool, PoolMeta
@@ -77,8 +78,8 @@ class Record(ModelSQL, ModelView):
             value = identifier.join(invoice,
                 condition=invoice.party_tax_identifier == identifier.id
                 ).select(identifier.id,
-                    where=(identifier.type == 'eu_vat') &
-                    (invoice.id == sql_table.invoice))
+                    where=(identifier.type == 'eu_vat')
+                    & (invoice.id == sql_table.invoice))
             cursor.execute(*sql_table.update([sql_table.party_tax_identifier],
                     [value])),
 
@@ -88,8 +89,8 @@ class Record(ModelSQL, ModelView):
                 condition=party.id == identifier.party).join(invoice,
                     condition=invoice.party == party.id).select(
                         Min(identifier.id),
-                        where=(identifier.type == 'eu_vat') &
-                        (invoice.id == sql_table.invoice),
+                        where=(identifier.type == 'eu_vat')
+                        & (invoice.id == sql_table.invoice),
                         group_by=party.id)
             cursor.execute(*sql_table.update([sql_table.party_tax_identifier],
                     [value],
@@ -100,8 +101,8 @@ class Record(ModelSQL, ModelView):
             value = party.join(identifier,
                 condition=identifier.party == party.id).select(
                     Min(identifier.id),
-                    where=(identifier.type == 'eu_vat') &
-                    (party.id == sql_table.party),
+                    where=(identifier.type == 'eu_vat')
+                    & (party.id == sql_table.party),
                     group_by=party.id)
             cursor.execute(*sql_table.update([sql_table.party_tax_identifier],
                     [value],
@@ -169,17 +170,23 @@ class Invoice(metaclass=PoolMeta):
     def get_aeat347_total_amount(self):
         pool = Pool()
         Currency = pool.get('currency.currency')
+        Tax = pool.get('account.tax')
 
         amount = 0
-        for tax in self.taxes:
-            if not tax.tax:
-                continue
-            if tax.tax.operation_347 in ('ignore', 'exclude_invoice'):
-                continue
-            if tax.tax.operation_347 == 'amount_only':
-                amount += tax.amount
-            elif tax.tax.operation_347 == 'base_amount':
-                amount += (tax.base + tax.amount)
+        for line in self.lines:
+            for tax in line.taxes:
+                if tax.operation_347 in ('ignore', 'exclude_invoice'):
+                    continue
+                if tax.operation_347 == 'amount_only':
+                    values = Tax.compute([tax], line.amount, 1)
+                    amount += (Decimal(0)
+                        if not values else values[0].get('amount', Decimal(0)))
+                elif tax.operation_347 == 'base_amount':
+                    base = line.amount
+                    values = Tax.compute([tax], base, 1)
+                    value = (Decimal(0)
+                        if not values else values[0].get('amount', Decimal(0)))
+                    amount += (base + value)
         if amount > self.total_amount:
             amount = self.total_amount
         if self.currency != self.company.currency:
@@ -190,11 +197,11 @@ class Invoice(metaclass=PoolMeta):
 
     def check_347_taxes(self):
         include = False
-        for tax in self.taxes:
-            if tax.tax:
-                if tax.tax.operation_347 == 'exclude_invoice':
+        for line in self.lines:
+            for tax in line.taxes:
+                if tax.operation_347 == 'exclude_invoice':
                     return False
-                if tax.tax.operation_347 != 'ignore':
+                if tax.operation_347 != 'ignore':
                     include = True
         return include
 
