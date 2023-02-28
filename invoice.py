@@ -189,10 +189,9 @@ class Invoice(metaclass=PoolMeta):
                     amount += (base + value)
         if amount > self.total_amount:
             amount = self.total_amount
-        if self.currency != self.company.currency:
-            with Transaction().set_context(date=self.currency_date):
-                amount = Currency.compute(self.currency, amount,
-                    self.company.currency, round=True)
+        with Transaction().set_context(date=self.currency_date):
+            amount = Currency.compute(self.currency, amount,
+                self.company.currency, round=True)
         return amount
 
     def check_347_taxes(self):
