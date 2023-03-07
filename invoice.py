@@ -1,7 +1,6 @@
 # This file is part aeat_347 module for Tryton.
 # The COPYRIGHT file at the top level of this repository contains
 # the full copyright notices and license terms.
-from decimal import Decimal
 from trytond.model import ModelSQL, ModelView, fields
 from trytond.wizard import Wizard, StateView, StateTransition, Button
 from trytond.pool import Pool, PoolMeta
@@ -170,25 +169,17 @@ class Invoice(metaclass=PoolMeta):
     def get_aeat347_total_amount(self):
         pool = Pool()
         Currency = pool.get('currency.currency')
-        Tax = pool.get('account.tax')
 
         amount = 0
-        for line in self.lines:
-            for tax in line.taxes:
-                if tax.operation_347 in ('ignore', 'exclude_invoice'):
-                    continue
-                if tax.operation_347 == 'amount_only':
-                    tax_date = self.tax_date
-                    values = Tax.compute([tax], line.amount, 1, tax_date)
-                    amount += (Decimal(0)
-                        if not values else values[0].get('amount', Decimal(0)))
-                elif tax.operation_347 == 'base_amount':
-                    tax_date = self.tax_date
-                    base = line.amount
-                    values = Tax.compute([tax], base, 1, tax_date)
-                    value = (Decimal(0)
-                        if not values else values[0].get('amount', Decimal(0)))
-                    amount += (base + value)
+        for tax in self.taxes:
+            if not tax.tax:
+                continue
+            if tax.tax.operation_347 in ('ignore', 'exclude_invoice'):
+                continue
+            if tax.tax.operation_347 == 'amount_only':
+                amount += tax.amount
+            elif tax.tax.operation_347 == 'base_amount':
+                amount += (tax.base + tax.amount)
         if amount > self.total_amount:
             amount = self.total_amount
         with Transaction().set_context(date=self.currency_date):
@@ -198,11 +189,11 @@ class Invoice(metaclass=PoolMeta):
 
     def check_347_taxes(self):
         include = False
-        for line in self.lines:
-            for tax in line.taxes:
-                if tax.operation_347 == 'exclude_invoice':
+        for tax in self.taxes:
+            if tax.tax:
+                if tax.tax.operation_347 == 'exclude_invoice':
                     return False
-                if tax.operation_347 != 'ignore':
+                if tax.tax.operation_347 != 'ignore':
                     include = True
         return include
 
