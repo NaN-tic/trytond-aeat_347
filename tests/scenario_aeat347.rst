@@ -146,14 +146,7 @@ Create out invoice over limit, but changing manually the operation key::
     True
     >>> invoice.aeat347_operation_key = 'empty'
     >>> invoice.click('post')
-    >>> rec1, = Record.find([('invoice', '=', invoice.id)])
-    >>> rec1.party_tax_identifier.code == identifier1.code
-    True
-    >>> rec1.month == today.month
-    True
-    >>> rec1.operation_key
-    'empty'
-    >>> rec1.amount == Decimal('3520.00')
+    >>> Record.find([('invoice', '=', invoice.id)]) == []
     True
 
 Create out invoice not over limit::
@@ -298,9 +291,9 @@ Generate 347 Report::
     >>> report.reload()
     >>> report.property_count == 0
     True
-    >>> report.party_count == 3
+    >>> report.party_count == 2
     True
-    >>> report.party_amount == Decimal('10472.00')
+    >>> report.party_amount == Decimal('6952.00')
     True
     >>> report.cash_amount == Decimal('0.0')
     True
@@ -314,3 +307,30 @@ Reassign 347 lines::
     >>> invoice.reload()
     >>> invoice.aeat347_operation_key
     'A'
+
+Create out invoice an empty leave::
+
+    >>> invoice = Invoice()
+    >>> invoice.party = party1
+    >>> invoice.payment_term = payment_term
+    >>> line = invoice.lines.new()
+    >>> line.product = product
+    >>> line.unit_price = Decimal(40)
+    >>> line.quantity = 80
+    >>> len(line.taxes)
+    1
+    >>> line.amount == Decimal('3200.00')
+    True
+    >>> invoice.click('post')
+    >>> rec1, = Record.find([('invoice', '=', invoice.id)])
+    >>> rec1.party_tax_identifier.code == identifier1.code
+    True
+
+    >>> reasign = Wizard('aeat.347.reasign.records', models=[invoice])
+    >>> reasign.form.aeat347_operation_key = 'empty'
+    >>> reasign.execute('reasign')
+    >>> invoice.reload()
+    >>> invoice.aeat347_operation_key
+    'empty'
+    >>> Record.find([('invoice', '=', invoice.id)]) == []
+    True
