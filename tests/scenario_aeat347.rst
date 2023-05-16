@@ -227,8 +227,8 @@ Create out credit note::
 Create in invoice::
 
     >>> invoice = Invoice()
-    >>> invoice.party = party1
     >>> invoice.type = 'in'
+    >>> invoice.party = party1
     >>> invoice.aeat347_operation_key = 'A'
     >>> invoice.payment_term = payment_term
     >>> invoice.invoice_date = today
