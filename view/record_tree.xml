@@ -7,5 +7,5 @@ contains the full copyright notices and license terms. -->
     <field name="party_tax_identifier"/>
     <field name="invoice"/>
     <field name="operation_key"/>
-    <field name="amount" sum="Operation Amount"/>
+    <field name="amount" sum="1"/>
 </tree>

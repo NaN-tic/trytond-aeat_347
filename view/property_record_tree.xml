@@ -5,7 +5,7 @@ contains the full copyright notices and license terms. -->
     <field name="report"/>
     <field name="party_name"/>
     <field name="party_vat"/>
-    <field name="amount" sum="Amount"/>
+    <field name="amount" sum="1"/>
     <field name="cadaster_number"/>
     <field name="street"/>
     <field name="zip"/>

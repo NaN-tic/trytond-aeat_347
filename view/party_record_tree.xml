@@ -8,7 +8,7 @@ contains the full copyright notices and license terms. -->
     <field name="operation_key"/>
     <field name="province_code"/>
     <field name="country_code"/>
-    <field name="amount" sum="Operations Amount"/>
+    <field name="amount" sum="1"/>
     <field name="cash_amount"/>
     <field name="property_amount"/>
 </tree>
