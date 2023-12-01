@@ -123,6 +123,9 @@ this repository contains the full copyright notices and license terms. -->
         <record model="account.tax.template" id="account_es.iva_rep_no_sujeto_2">
             <field name="operation_347">base_amount</field>
         </record>
+        <record model="account.tax.template" id="account_es.iva_rep_no_sujeto_2_serv">
+            <field name="operation_347">base_amount</field>
+        </record>
         <record model="account.tax.template" id="account_es.iva_sop_no_sujeto">
             <field name="operation_347">base_amount</field>
         </record>
