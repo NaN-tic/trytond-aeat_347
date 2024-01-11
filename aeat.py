@@ -68,35 +68,35 @@ class Report(Workflow, ModelSQL, ModelView):
     company = fields.Many2One('company.company', 'Company', required=True,
         states={
             'readonly': Eval('state') == 'done',
-            }, depends=['state'])
+            })
     currency = fields.Function(fields.Many2One('currency.currency',
         'Currency'), 'get_currency')
     previous_number = fields.Char('Previous Declaration Number', size=13,
         states={
             'readonly': Eval('state') == 'done',
-            }, depends=['state'])
+            })
     representative_vat = fields.Char('L.R. VAT number', size=9,
         help='Legal Representative VAT number.', states={
             'readonly': Eval('state') == 'done',
-            }, depends=['state'])
+            })
     year = fields.Integer("Year", required=True)
     company_vat = fields.Char('VAT number', size=9, states={
             'required': True,
             'readonly': Eval('state') == 'done',
-            }, depends=['state'])
+            })
     type = fields.Selection([
             ('N', 'Normal'),
             ('C', 'Complementary'),
             ('S', 'Substitutive')
             ], 'Statement Type', required=True, states={
                 'readonly': Eval('state') == 'done',
-            }, depends=['state'])
+            })
     support_type = fields.Selection([
             ('C', 'DVD'),
             ('T', 'Telematics'),
             ], 'Support Type', required=True, states={
                 'readonly': Eval('state') == 'done',
-            }, depends=['state'])
+            })
     calculation_date = fields.DateTime('Calculation Date')
     state = fields.Selection([
             ('draft', 'Draft'),
@@ -131,11 +131,11 @@ class Report(Workflow, ModelSQL, ModelView):
     parties = fields.One2Many('aeat.347.report.party', 'report',
         'Party Records', states={
             'readonly': Eval('state') == 'done',
-            }, depends=['state'])
+            })
     properties = fields.One2Many('aeat.347.report.property', 'report',
         'Property Records', states={
             'readonly': Eval('state') == 'done',
-            }, depends=['state'])
+            })
     file_ = fields.Binary('File', filename='filename', states={
             'invisible': Eval('state') != 'done',
             })
