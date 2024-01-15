@@ -232,12 +232,13 @@ class Report(Workflow, ModelSQL, ModelView):
     @classmethod
     def search_rec_name(self, name, clause):
         _, operator, value = clause
-        value = value.replace('%', '').replace('*', '\\*')
-        if operator in ('ilike', 'like'):
-            operator = '='
-        elif operator in ('not ilike', 'not like'):
-            operator = '!='
+        if value is not None:
             value = value.replace('%', '').replace('*', '\\*')
+            if operator in ('ilike', 'like'):
+                operator = '='
+            elif operator in ('not ilike', 'not like'):
+                operator = '!='
+                value = value.replace('%', '').replace('*', '\\*')
 
         return ['OR',
            ('company.rec_name',) + tuple(clause[1:]),
