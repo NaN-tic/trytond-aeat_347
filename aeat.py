@@ -336,6 +336,7 @@ class Report(Workflow, ModelSQL, ModelView):
                 return Decimal(value)
             return value
 
+        to_create = {}
         for report in reports:
             query = """
                 SELECT
@@ -365,7 +366,6 @@ class Report(Workflow, ModelSQL, ModelView):
             cursor.execute(query)
             result = cursor.fetchall()
 
-            to_create = {}
             for (tax_identifier_id, opkey, q1, q2, q3, q4, amount, records
                     ) in result:
                 tax_identifier = PartyIdentifier(tax_identifier_id)
@@ -421,8 +421,9 @@ class Report(Workflow, ModelSQL, ModelView):
                 to_create[key]['third_quarter_amount'] += is_decimal(q3)
                 to_create[key]['fourth_quarter_amount'] += is_decimal(q4)
 
-        with Transaction().set_user(0, set_context=True):
-            Operation.create(to_create.values())
+        if to_create:
+            with Transaction().set_user(0, set_context=True):
+                Operation.create(to_create.values())
 
         cls.write(reports, {
             'calculation_date': datetime.datetime.now(),
