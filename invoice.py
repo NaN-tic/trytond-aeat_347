@@ -141,12 +141,11 @@ class Invoice(metaclass=PoolMeta):
         super(Invoice, cls).__register__(module_name)
         if exist_347:
             table.drop_column('include_347')
-        cursor.execute(*sql_table.update(
-                columns=[sql_table.aeat347_operation_key],
-                values=['empty'],
-                where=(sql_table.aeat347_operation_key == '')
-                | (sql_table.aeat347_operation_key == 'none')
-                | (sql_table.aeat347_operation_key == None)))
+            cursor.execute(*sql_table.update(
+                    columns=[sql_table.aeat347_operation_key],
+                    values=['empty'],
+                    where=(sql_table.aeat347_operation_key == '')
+                    | (sql_table.aeat347_operation_key == 'none')))
 
     @classmethod
     def __setup__(cls):
@@ -200,8 +199,8 @@ class Invoice(metaclass=PoolMeta):
     @fields.depends('type', 'aeat347_operation_key')
     def _on_change_lines_taxes(self):
         super(Invoice, self)._on_change_lines_taxes()
-        if not self.check_347_taxes():
-            self.aeat347_operation_key = None
+        if self.taxes and not self.check_347_taxes():
+            self.aeat347_operation_key = 'empty'
         elif not self.aeat347_operation_key:
             self.aeat347_operation_key = self.get_aeat347_operation_key(
                 self.type)
@@ -219,14 +218,13 @@ class Invoice(metaclass=PoolMeta):
             if invoice.aeat347_operation_key == 'empty':
                 continue
             if not invoice.check_347_taxes():
-                invoice.aeat347_operation_key = None
+                invoice.aeat347_operation_key = 'empty'
                 to_update.append(invoice)
                 continue
             if not invoice.aeat347_operation_key:
                 invoice.aeat347_operation_key = \
                     invoice.get_aeat347_operation_key(invoice.type)
                 to_update.append(invoice)
-
             if invoice.aeat347_operation_key:
                 operation_key = invoice.aeat347_operation_key
                 amount = invoice.get_aeat347_total_amount()
