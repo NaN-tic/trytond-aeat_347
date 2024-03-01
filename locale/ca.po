@@ -6,13 +6,29 @@ msgctxt "field:account.invoice,aeat347_operation_key:"
 msgid "AEAT 347 Operation Key"
 msgstr "Clau operació AEAT 347"
 
+msgctxt "field:account.tax,isp:"
+msgid "Inversion del Sujeto Pasivo"
+msgstr "Inversió del Subjecte Passiu"
+
 msgctxt "field:account.tax,operation_347:"
 msgid "Operation for 347"
 msgstr "Operació pel 347"
 
+msgctxt "field:account.tax,service:"
+msgid "Service Rate"
+msgstr "Taxa del servei"
+
+msgctxt "field:account.tax.template,isp:"
+msgid "Inversion del Sujeto Pasivo"
+msgstr "Inversió del Subjecte Passiu"
+
 msgctxt "field:account.tax.template,operation_347:"
 msgid "Operation for 347"
 msgstr "Operació pel 347"
+
+msgctxt "field:account.tax.template,service:"
+msgid "Service Rate"
+msgstr "Taxa del servei"
 
 msgctxt "field:aeat.347.reasign.records.start,aeat347_operation_key:"
 msgid "Operation Key"
@@ -49,10 +65,6 @@ msgstr "Identificador fiscal del tercer"
 msgctxt "field:aeat.347.record,year:"
 msgid "Year"
 msgstr "Any"
-
-msgctxt "field:aeat.347.report,amount:"
-msgid "Amount"
-msgstr "Import"
 
 msgctxt "field:aeat.347.report,calculation_date:"
 msgid "Calculation Date"
@@ -146,7 +158,7 @@ msgctxt "field:aeat.347.report,type:"
 msgid "Statement Type"
 msgstr "Tipus de declaració"
 
-msgctxt "field:aeat.347.report,fiscalyear:"
+msgctxt "field:aeat.347.report,year:"
 msgid "Year"
 msgstr "Any"
 
@@ -358,6 +370,22 @@ msgctxt "field:aeat.347.report.property,zip:"
 msgid "Zip"
 msgstr "Codi postal"
 
+msgctxt "help:account.tax,isp:"
+msgid "Indicates if the tax is Inversion del sujeto Pasivo"
+msgstr "Indica si l'impost és Inversion del sujeto Pasivo"
+
+msgctxt "help:account.tax,service:"
+msgid "Indicates if the tax is used for services"
+msgstr "Indica si l'impost s'usa en els serveis"
+
+msgctxt "help:account.tax.template,isp:"
+msgid "Indicates if the tax is Inversion del sujeto Pasivo"
+msgstr "Indica si l'impost és Inversion del sujeto Pasivo"
+
+msgctxt "help:account.tax.template,service:"
+msgid "Indicates if the tax is used for services"
+msgstr "Indica si l'impost s'usa en els serveis"
+
 msgctxt "help:aeat.347.report,contact_name:"
 msgid ""
 "The full name must appear in a correct order: First surname, blank space, "
@@ -543,6 +571,14 @@ msgstr "Recalcula registres AEAT 347"
 msgctxt "model:ir.message,text:invalid_currency"
 msgid "Currency in AEAT 347 report \"%(report)s\" must be Euro."
 msgstr "La moneda de l'informe AEAT 347 \"%(report)s\" ha de ser Euro."
+
+msgctxt "model:ir.message,text:msg_invalid_encode"
+msgid ""
+"Error. Codec can't encode character file:\n"
+"\"%(message)s\""
+msgstr ""
+"Error. El còdec no pot codificar el fitxer de caràcters\n"
+"\"%(message)s\""
 
 msgctxt "model:ir.message,text:msg_invalid_year"
 msgid "The year \"%(year)s\" is not valid."
