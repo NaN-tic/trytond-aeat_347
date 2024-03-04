@@ -10,10 +10,10 @@ this repository contains the full copyright notices and license terms. -->
           <field name="text">The year "%(year)s" is not valid.</field>
       </record>
       <record model="ir.message" id="msg_invalid_encode">
-          <field name="text">Error. Codec can't encode character file:
-"%(message)s"</field>
+          <field name="text">Error. Codec can't encode character file.</field>
       </record>
-
-
+      <record model="ir.message" id="msg_invalid_encode_party">
+          <field name="text">Error. "%(party)s". Codec can't encode character file.</field>
+      </record>
     </data>
 </tryton>

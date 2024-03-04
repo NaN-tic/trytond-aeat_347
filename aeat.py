@@ -61,6 +61,14 @@ def remove_accents(unicode_string):
     # It converts nfd to nfc to allow unicode.decode()
     return unicodedata.normalize('NFC', unicode_string_nfd)
 
+def encode_iso8859(value, show_value=True):
+    try:
+        return value.encode('iso-8859-1')
+    except UnicodeEncodeError:
+        message = (gettext('aeat_347.msg_invalid_encode_party', party=value)
+                if show_value else gettext('aeat_347.msg_invalid_encode'))
+        raise UserError(message)
+
 
 class Report(Workflow, ModelSQL, ModelView):
     'AEAT 347 Report'
@@ -474,7 +482,8 @@ class Report(Workflow, ModelSQL, ModelView):
         record.presenter_name = self.company.party.name
         record.support_type = self.support_type
         record.contact_phone = self.contact_phone
-        record.contact_name = self.contact_name
+        record.contact_name = encode_iso8859(
+            remove_accents(self.contact_name), show_value=True)
         record.declaration_number = int('347{}{:0>6}'.format(
             self.year,
             self.auto_sequence()))
@@ -496,11 +505,7 @@ class Report(Workflow, ModelSQL, ModelView):
             raise UserError(str(e))
         data = remove_accents(data).upper()
         if isinstance(data, str):
-            try:
-                data = data.encode('iso-8859-1')
-            except UnicodeEncodeError as e:
-                raise UserError(gettext('aeat_347.msg_invalid_encode',
-                    message=str(e)))
+            data = encode_iso8859(data)
         self.file_ = self.__class__.file_.cast(data)
         self.save()
 
@@ -620,7 +625,8 @@ class PartyRecord(ModelSQL, ModelView):
         record.party_nif = self.party_vat
         record.community_vat = self.community_vat or ''
         record.representative_nif = self.representative_vat or ''
-        record.party_name = remove_accents(self.party_name)
+        record.party_name = encode_iso8859(
+            remove_accents(self.party_name), show_value=True)
         record.province_code = self.province_code
         if self.country_code == 'ES':
             record.country_code = ''

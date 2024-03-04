@@ -574,12 +574,13 @@ msgid "Currency in AEAT 347 report \"%(report)s\" must be Euro."
 msgstr "La moneda del informe AEAT 349 \"%(report)s\" debe ser Euro."
 
 msgctxt "model:ir.message,text:msg_invalid_encode"
-msgid ""
-"Error. Codec can't encode character file:\n"
-"\"%(message)s\""
+msgid "Error. Codec can't encode character file."
+msgstr "Error. El códec no puede codificar el archivo de carácteres."
+
+msgctxt "model:ir.message,text:msg_invalid_encode_party"
+msgid "Error. \"%(party)s\". Codec can't encode character file."
 msgstr ""
-"Error. El códec no puede codificar el archivo de carácteres:\n"
-"\"%(message)s\""
+"Error. \"%(party)s\". El códec no puede codificar el archivo de carácteres."
 
 msgctxt "model:ir.message,text:msg_invalid_year"
 msgid "The year \"%(year)s\" is not valid."
