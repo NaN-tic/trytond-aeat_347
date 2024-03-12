@@ -496,7 +496,7 @@ class Report(Workflow, ModelSQL, ModelView):
             raise UserError(str(e))
         data = remove_accents(data).upper()
         if isinstance(data, str):
-            data = data.encode('iso-8859-1')
+            data = data.encode('iso-8859-1', errors='ignore')
         self.file_ = self.__class__.file_.cast(data)
         self.save()
 
