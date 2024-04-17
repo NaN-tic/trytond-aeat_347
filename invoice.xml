@@ -86,14 +86,14 @@ contains the full copyright notices and license terms. -->
             <field name="act_window" ref="act_aeat_347_record"/>
         </record>
         <record model="ir.model.access" id="access_aeat_347_record">
-            <field name="model" search="[('model', '=', 'aeat.347.record')]"/>
+            <field name="model">aeat.347.record</field>
             <field name="perm_read" eval="True"/>
             <field name="perm_write" eval="False"/>
             <field name="perm_create" eval="False"/>
             <field name="perm_delete" eval="False"/>
         </record>
         <record model="ir.model.access" id="access_aeat_347_record_admin">
-            <field name="model" search="[('model', '=', 'aeat.347.record')]"/>
+            <field name="model">aeat.347.record</field>
             <field name="group" ref="account.group_account"/>
             <field name="perm_read" eval="True"/>
             <field name="perm_write" eval="True"/>
