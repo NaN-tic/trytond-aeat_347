@@ -19,7 +19,7 @@ from sql.functions import Extract
 
 __all__ = ['Report', 'PartyRecord', 'PropertyRecord']
 
-_ZERO = Decimal('0.0')
+_ZERO = Decimal(0)
 
 OPERATION_KEY = [
     (None, ''),
@@ -482,7 +482,7 @@ class Report(Workflow, ModelSQL, ModelView):
         record.party_count = len(self.parties)
         record.party_amount = self.party_amount
         record.property_count = len(self.properties)
-        record.property_amount = self.property_amount or Decimal('0.0')
+        record.property_amount = self.property_amount or Decimal(0)
         record.representative_nif = self.representative_vat
         records.append(record)
         for line in itertools.chain(self.parties, self.properties):
@@ -573,43 +573,43 @@ class PartyRecord(ModelSQL, ModelView):
 
     @staticmethod
     def default_amount():
-        return Decimal('0.0')
+        return Decimal(0)
 
     @staticmethod
     def default_cash_amount():
-        return Decimal('0.0')
+        return Decimal(0)
 
     @staticmethod
     def default_first_quarter_amount():
-        return Decimal('0.0')
+        return Decimal(0)
 
     @staticmethod
     def default_second_quarter_amount():
-        return Decimal('0.0')
+        return Decimal(0)
 
     @staticmethod
     def default_third_quarter_amount():
-        return Decimal('0.0')
+        return Decimal(0)
 
     @staticmethod
     def default_fourth_quarter_amount():
-        return Decimal('0.0')
+        return Decimal(0)
 
     @staticmethod
     def default_first_quarter_property_amount():
-        return Decimal('0.0')
+        return Decimal(0)
 
     @staticmethod
     def default_second_quarter_property_amount():
-        return Decimal('0.0')
+        return Decimal(0)
 
     @staticmethod
     def default_third_quarter_property_amount():
-        return Decimal('0.0')
+        return Decimal(0)
 
     @staticmethod
     def default_fourth_quarter_property_amount():
-        return Decimal('0.0')
+        return Decimal(0)
 
     def get_record(self):
         record = Record(aeat347.PARTY_RECORD)
@@ -628,28 +628,28 @@ class PartyRecord(ModelSQL, ModelView):
         record.business_premises_rent = self.business_premises_rent
         record.cash_amount = self.cash_amount or _ZERO
         record.vat_liable_property_amount = self.property_amount \
-            or Decimal('0.0')
+            or Decimal(0)
         record.fiscalyear_cash_operation = str(
             self.fiscalyear_code_cash_operation or '')
         record.first_quarter_amount = (self.first_quarter_amount or
-            Decimal('0.0'))
+            Decimal(0))
         record.first_quarter_property_amount = (
-            self.first_quarter_property_amount or Decimal('0.0'))
+            self.first_quarter_property_amount or Decimal(0))
         record.second_quarter_amount = (self.second_quarter_amount or
-            Decimal('0.0'))
+            Decimal(0))
         record.second_quarter_property_amount = (
-            self.second_quarter_property_amount or Decimal('0.0'))
+            self.second_quarter_property_amount or Decimal(0))
         record.third_quarter_amount = (self.third_quarter_amount or
-            Decimal('0.0'))
+            Decimal(0))
         record.third_quarter_property_amount = (
-            self.third_quarter_property_amount or Decimal('0.0'))
+            self.third_quarter_property_amount or Decimal(0))
         record.fourth_quarter_amount = (self.fourth_quarter_amount or
-            Decimal('0.0'))
+            Decimal(0))
         record.fourth_quarter_property_amount = (
-            self.fourth_quarter_property_amount or Decimal('0.0'))
+            self.fourth_quarter_property_amount or Decimal(0))
         record.cash_vat_operation = self.cash_vat_operation
-        record.cash_vat_criteria = (self.cash_vat_criteria or Decimal('0.0')
-            if self.cash_vat_operation else Decimal('0.0'))
+        record.cash_vat_criteria = (self.cash_vat_criteria or Decimal(0)
+            if self.cash_vat_operation else Decimal(0))
         record.tax_person_operation = self.tax_person_operation
         record.related_goods_operation = self.related_goods_operation
         return record
