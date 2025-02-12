@@ -173,6 +173,21 @@ class Test(unittest.TestCase):
         self.assertEqual(rec1.operation_key, 'B')
         self.assertEqual(rec1.amount, Decimal('3520.00'))
 
+        # Create self out invoice
+        Record = Model.get('aeat.347.record')
+        Invoice = Model.get('account.invoice')
+        invoice = Invoice()
+        invoice.party = company.party
+        invoice.payment_term = payment_term
+        line = invoice.lines.new()
+        line.product = product
+        line.unit_price = Decimal(40)
+        line.quantity = 80
+        self.assertEqual(len(line.taxes), 1)
+        self.assertEqual(line.amount, Decimal('3200.00'))
+        invoice.click('post')
+        self.assertEqual(Record.find([('invoice', '=', invoice.id)]), [])
+
         # Create out credit note
         invoice = Invoice()
         invoice.type = 'out'
