@@ -196,10 +196,11 @@ class Invoice(metaclass=PoolMeta):
                     include = True
         return include
 
-    @fields.depends('type', 'aeat347_operation_key')
+    @fields.depends('type', 'aeat347_operation_key', 'party', 'company')
     def _on_change_lines_taxes(self):
         super(Invoice, self)._on_change_lines_taxes()
-        if self.taxes and not self.check_347_taxes():
+        if ((self.taxes and not self.check_347_taxes())
+                or (self.company and self.party == self.company.party)):
             self.aeat347_operation_key = 'empty'
         elif not self.aeat347_operation_key:
             self.aeat347_operation_key = self.get_aeat347_operation_key(
@@ -220,6 +221,8 @@ class Invoice(metaclass=PoolMeta):
             if not invoice.check_347_taxes():
                 invoice.aeat347_operation_key = 'empty'
                 to_update.append(invoice)
+                continue
+            if invoice.party == invoice.company.party:
                 continue
             if not invoice.aeat347_operation_key:
                 invoice.aeat347_operation_key = \

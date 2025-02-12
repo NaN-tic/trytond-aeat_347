@@ -376,6 +376,8 @@ class Report(Workflow, ModelSQL, ModelView):
             for (tax_identifier_id, opkey, q1, q2, q3, q4, amount, records
                     ) in result:
                 tax_identifier = PartyIdentifier(tax_identifier_id)
+                if not tax_identifier:
+                    continue
                 party = tax_identifier.party
                 if not party:
                     continue
