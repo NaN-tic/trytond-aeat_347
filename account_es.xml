@@ -321,5 +321,8 @@ this repository contains the full copyright notices and license terms. -->
         <record model="account.tax.template" id="account_es.irpf_sale_45">
             <field name="operation_347">exclude_invoice</field>
         </record>
+        <record model="account.tax.template" id="account_es.irpf_2_general_agrario">
+            <field name="operation_347">exclude_invoice</field>
+        </record>
     </data>
 </tryton>
