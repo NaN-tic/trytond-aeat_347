@@ -44,10 +44,7 @@ class Report(metaclass=PoolMeta):
         Operation = pool.get('aeat.347.report.property')
         Asset = pool.get('asset')
 
-        print('AAAA')
-        print(f'REPORTS: {reports}')
         super().calculate(reports)
-        print('BBBB')
 
         cursor = Transaction().connection.cursor()
 
@@ -94,8 +91,6 @@ class Report(metaclass=PoolMeta):
                 party_identifier = ''
                 if asset.party_tax_identifier:
                     party_identifier = asset.party_tax_identifier.es_code()
-                # amount
-                # situation = 1
                 cadaster_number = asset.cadaster_number
                 street = asset.street
                 if street:
@@ -118,7 +113,6 @@ class Report(metaclass=PoolMeta):
                     'records': [('add', records)],
                 })
 
-        print(f'TO CREATE:\n{to_create}\n')
         if to_create:
             with Transaction().set_user(0, set_context=True):
                 Operation.create(to_create)
