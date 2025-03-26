@@ -682,12 +682,14 @@ class PropertyRecord(ModelSQL, ModelView):
     road_type = fields.Char('Road Type', size=5)
     street = fields.Char('Street', size=50)
     number_type = fields.Selection([
+            (None, ''),
             ('NUM', 'Number'),
             ('KM.', 'Kilometer'),
             ('S/N', 'Without number'),
             ], 'Number type')
     number = fields.Char('Number', size=5)
     number_qualifier = fields.Selection([
+            (None, ''),
             ('BIS', 'Bis'),
             ('MOD', 'Mod'),
             ('DUP', 'Dup'),
@@ -705,6 +707,8 @@ class PropertyRecord(ModelSQL, ModelView):
     municipality_code = fields.Char('Municipality Code', size=5)
     province_code = fields.Char('Province Code', size=2)
     zip = fields.Char('Zip', size=5)
+    records = fields.One2Many('aeat.347.record', 'property_record',
+        'AEAT 347 Records', readonly=True)
 
     @staticmethod
     def default_company():
