@@ -4,6 +4,8 @@ from decimal import Decimal
 from trytond.model import fields
 from trytond.pool import Pool, PoolMeta
 from trytond.transaction import Transaction
+from trytond.i18n import gettext
+from trytond.exceptions import UserWarning
 
 _ZERO = Decimal(0)
 
@@ -11,19 +13,31 @@ class Asset(metaclass=PoolMeta):
     __name__ = 'asset'
 
     party = fields.Many2One('party.party', 'Party')
-    party_name = fields.Char('Party Name') #, size=40) #Nom del tercer
+    party_name = fields.Char('Party Name')
     party_tax_identifier = fields.Many2One('party.identifier',
-        'Party Tax Identifier') # CIF / NIF del tercer
-    cadaster_number = fields.Char('Cadaster Reference', size=25) #Número de cadastre
-    street = fields.Char('Street') #, size=50) # Carrer
+        'Party Tax Identifier')
+    cadaster_number = fields.Char('Cadaster Reference', size=25)
+    street = fields.Char('Street')
     number_type = fields.Selection([
             ('NUM', 'Number'),
             ('KM.', 'Kilometer'),
             ('S/N', 'Without number'),
             ], 'Number type')
-    number = fields.Char('Number') #, size=5) # i número
-    province_code = fields.Char('Province Code') #, size=2) # Codi de la província (càlculs per processos)
-    municipality_code = fields.Char('Municipality Code') #, size=5) # Codi municipal (càlculs per processos) situation, complement,
+    number = fields.Char('Number')
+    province_code = fields.Char('Province Code')
+    municipality_code = fields.Char('Municipality Code')
+
+    @fields.depends('municipality_code', 'province_code')
+    def on_change_municipality_code(self):
+        if self.municipality_code and not self.province_code:
+            self.province_code = self.municipality_code[:2]
+
+
+class PropertyRecord(metaclass=PoolMeta):
+    __name__ = 'aeat.347.report.property'
+
+    records = fields.One2Many('aeat.347.record', 'property_record',
+        'AEAT 347 Records', readonly=True)
 
 
 class Record(metaclass=PoolMeta):
@@ -116,3 +130,48 @@ class Report(metaclass=PoolMeta):
         if to_create:
             with Transaction().set_user(0, set_context=True):
                 Operation.create(to_create)
+
+
+class Invoice(metaclass=PoolMeta):
+    __name__ = 'account.invoice'
+
+    @classmethod
+    def create_aeat347_records(cls, invoices):
+        pool = Pool()
+        Record = pool.get('aeat.347.record')
+        super().create_aeat347_records(invoices)
+
+        to_save = []
+        for invoice in invoices:
+            for line in invoice.lines:
+                if line.invoice_asset:
+                    record = Record.search([
+                        ('invoice', '=', invoice.id)
+                        ], limit=1)
+                    if record and record[0].party_tax_identifier:
+                        record, = record
+                        record.asset = line.invoice_asset
+                        to_save.append(record)
+        Record.save(to_save)
+
+
+class InvoiceContract(metaclass=PoolMeta):
+    __name__ = 'account.invoice'
+
+    @classmethod
+    def create_aeat347_records(cls, invoices):
+        pool = Pool()
+        ContractConsumption = pool.get('contract.consumption')
+        Warning = pool.get('res.user.warning')
+
+        super().create_aeat347_records(invoices)
+
+        for invoice in invoices:
+            for line in invoice.lines:
+                if (line.origin and
+                        isinstance(line.origin, ContractConsumption) and
+                        line.origin.contract_line.asset != line.invoice_asset):
+                    warning_key = "wrong_asset_%s" % line.id
+                    if Warning.check(warning_key):
+                        raise UserWarning(warning_key,
+                            gettext('aeat_347.msg_wrong_asset'))

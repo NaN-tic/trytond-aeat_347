@@ -50,5 +50,4 @@ contains the full copyright notices and license terms. -->
     <field name="province_code"/>
     <label name="zip"/>
     <field name="zip"/>
-    <field name="records" colspan="4"/>
 </form>
