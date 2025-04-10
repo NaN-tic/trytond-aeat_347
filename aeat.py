@@ -682,12 +682,14 @@ class PropertyRecord(ModelSQL, ModelView):
     road_type = fields.Char('Road Type', size=5)
     street = fields.Char('Street', size=50)
     number_type = fields.Selection([
+            (None, ''),
             ('NUM', 'Number'),
             ('KM.', 'Kilometer'),
             ('S/N', 'Without number'),
             ], 'Number type')
     number = fields.Char('Number', size=5)
     number_qualifier = fields.Selection([
+            (None, ''),
             ('BIS', 'Bis'),
             ('MOD', 'Mod'),
             ('DUP', 'Dup'),
