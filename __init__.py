@@ -5,6 +5,7 @@ from trytond.pool import Pool
 from . import aeat
 from . import invoice
 from . import tax
+from . import asset
 
 
 def register():
@@ -21,6 +22,18 @@ def register():
         tax.TaxTemplate,
         tax.Tax,
         module='aeat_347', type_='model')
+    Pool.register(
+        asset.Asset,
+        asset.Record,
+        asset.PropertyRecord,
+        asset.Report,
+        module='aeat_347', type_='model', depends=['asset'])
+    Pool.register(
+        asset.Invoice,
+        module='aeat_347', type_='model', depends=['asset'])
+    Pool.register(
+        asset.InvoiceContract,
+        module='aeat_347', type_='model', depends=['contract'])
     Pool.register(
         invoice.Recalculate347Record,
         invoice.Reasign347Record,

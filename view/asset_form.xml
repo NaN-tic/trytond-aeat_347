@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!--The COPYRIGHT file at the top level of this repository
+contains the full copyright notices and license terms. -->
+<data>
+    <xpath expr="/form/notebook/page[@id='addresses']" position="after">
+        <page string="AEAT 347" id="aeat_347">
+            <label name="party"/>
+            <field name="party"/>
+            <label name="party_name"/>
+            <field name="party_name"/>
+            <label name="party_tax_identifier"/>
+            <field name="party_tax_identifier"/>
+            <label name="cadaster_number"/>
+            <field name="cadaster_number"/>
+            <label name="street"/>
+            <field name="street"/>
+            <label name="number_type"/>
+            <field name="number_type"/>
+            <label name="number"/>
+            <field name="number"/>
+            <label name="province_code"/>
+            <field name="province_code"/>
+            <label name="municipality_code"/>
+            <field name="municipality_code"/>
+        </page>
+    </xpath>
+</data>
