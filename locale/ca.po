@@ -6,13 +6,33 @@ msgctxt "field:account.invoice,aeat347_operation_key:"
 msgid "AEAT 347 Operation Key"
 msgstr "Clau operació AEAT 347"
 
+msgctxt "field:account.invoice,paid_directly:"
+msgid "Has Payed directly"
+msgstr "Ha pagat directament"
+
+msgctxt "field:account.tax,isp:"
+msgid "Inversion del Sujeto Pasivo"
+msgstr "Inversió del Subjecte Passiu"
+
 msgctxt "field:account.tax,operation_347:"
 msgid "Operation for 347"
 msgstr "Operació pel 347"
 
+msgctxt "field:account.tax,service:"
+msgid "Service Rate"
+msgstr "Tarifa de servei"
+
+msgctxt "field:account.tax.template,isp:"
+msgid "Inversion del Sujeto Pasivo"
+msgstr "Inversió del Subjecte Passiu"
+
 msgctxt "field:account.tax.template,operation_347:"
 msgid "Operation for 347"
 msgstr "Operació pel 347"
+
+msgctxt "field:account.tax.template,service:"
+msgid "Service Rate"
+msgstr "Tarifa de servei"
 
 msgctxt "field:aeat.347.reasign.records.start,aeat347_operation_key:"
 msgid "Operation Key"
@@ -21,6 +41,10 @@ msgstr "Clau operació"
 msgctxt "field:aeat.347.record,amount:"
 msgid "Operation Amount"
 msgstr "Import operació"
+
+msgctxt "field:aeat.347.record,asset:"
+msgid "Asset"
+msgstr "Actiu"
 
 msgctxt "field:aeat.347.record,company:"
 msgid "Company"
@@ -46,13 +70,13 @@ msgctxt "field:aeat.347.record,party_tax_identifier:"
 msgid "Party Tax Identifier"
 msgstr "Identificador fiscal del tercer"
 
+msgctxt "field:aeat.347.record,property_record:"
+msgid "Property Record"
+msgstr "Registre de propietats"
+
 msgctxt "field:aeat.347.record,year:"
 msgid "Year"
 msgstr "Any"
-
-msgctxt "field:aeat.347.report,amount:"
-msgid "Amount"
-msgstr "Import"
 
 msgctxt "field:aeat.347.report,calculation_date:"
 msgid "Calculation Date"
@@ -146,7 +170,7 @@ msgctxt "field:aeat.347.report,type:"
 msgid "Statement Type"
 msgstr "Tipus de declaració"
 
-msgctxt "field:aeat.347.report,fiscalyear:"
+msgctxt "field:aeat.347.report,year:"
 msgid "Year"
 msgstr "Any"
 
@@ -330,6 +354,10 @@ msgctxt "field:aeat.347.report.property,province_code:"
 msgid "Province Code"
 msgstr "Codi província"
 
+msgctxt "field:aeat.347.report.property,records:"
+msgid "AEAT 347 Records"
+msgstr "Registres AEAT 347"
+
 msgctxt "field:aeat.347.report.property,report:"
 msgid "AEAT 347 Report"
 msgstr "Informe AEAT 347"
@@ -357,6 +385,62 @@ msgstr "Carrer"
 msgctxt "field:aeat.347.report.property,zip:"
 msgid "Zip"
 msgstr "Codi postal"
+
+msgctxt "field:asset,cadaster_number:"
+msgid "Cadaster Reference"
+msgstr "Referència cadastral"
+
+msgctxt "field:asset,municipality_code:"
+msgid "Municipality Code"
+msgstr "Codi municipalitat"
+
+msgctxt "field:asset,number:"
+msgid "Number"
+msgstr "Número"
+
+msgctxt "field:asset,number_type:"
+msgid "Number type"
+msgstr "Tipus de número"
+
+msgctxt "field:asset,party:"
+msgid "Party"
+msgstr "Tercer"
+
+msgctxt "field:asset,party_name:"
+msgid "Party Name"
+msgstr "Nom tercer"
+
+msgctxt "field:asset,party_tax_identifier:"
+msgid "Party Tax Identifier"
+msgstr "Identificador fiscal del tercer"
+
+msgctxt "field:asset,province_code:"
+msgid "Province Code"
+msgstr "Codi província"
+
+msgctxt "field:asset,street:"
+msgid "Street"
+msgstr "Carrer"
+
+msgctxt "help:account.invoice,paid_directly:"
+msgid "The invoice has payed with the 'PAY' button"
+msgstr "La factura s'ha pagat amb el botó \"PAGAR\"."
+
+msgctxt "help:account.tax,isp:"
+msgid "Indicates if the tax is Inversion del sujeto Pasivo"
+msgstr "Indica si l'impost és Inversion del subjecte Pasivo"
+
+msgctxt "help:account.tax,service:"
+msgid "Indicates if the tax is used for services"
+msgstr "Indica si l'impost es destina a serveis"
+
+msgctxt "help:account.tax.template,isp:"
+msgid "Indicates if the tax is Inversion del sujeto Pasivo"
+msgstr "Indica si l'impost és Inversion del subjecte Pasivo"
+
+msgctxt "help:account.tax.template,service:"
+msgid "Indicates if the tax is used for services"
+msgstr "Indica si l'impost es destina a serveis"
 
 msgctxt "help:aeat.347.report,contact_name:"
 msgid ""
@@ -509,7 +593,7 @@ msgid "Recalculate AEAT 347 Records"
 msgstr "Recalcula registres AEAT 347"
 
 msgctxt "model:ir.action,name:act_aeat_347_record"
-msgid "AEAT 347 Record "
+msgid "AEAT 347 Record"
 msgstr "Registre AEAT 347"
 
 msgctxt "model:ir.action,name:act_aeat_347_report"
@@ -547,6 +631,10 @@ msgstr "La moneda de l'informe AEAT 347 \"%(report)s\" ha de ser Euro."
 msgctxt "model:ir.message,text:msg_invalid_year"
 msgid "The year \"%(year)s\" is not valid."
 msgstr "L'any \"%(year)s\" no és vàlid."
+
+msgctxt "model:ir.message,text:msg_wrong_asset"
+msgid "The invoice asset is different from the contract asset."
+msgstr "L'actiu de la factura és diferent de l'actiu del contracte."
 
 msgctxt "model:ir.model.button,string:aeat_347_report_calculate_button"
 msgid "Calculate"
@@ -844,6 +932,18 @@ msgctxt "selection:aeat.347.report.property,situation:"
 msgid "4 - Foreign"
 msgstr "4 - Estranger"
 
+msgctxt "selection:asset,number_type:"
+msgid "Kilometer"
+msgstr "Quilòmetre"
+
+msgctxt "selection:asset,number_type:"
+msgid "Number"
+msgstr "Número"
+
+msgctxt "selection:asset,number_type:"
+msgid "Without number"
+msgstr "Sense número"
+
 msgctxt "view:aeat.347.reasign.records.end:"
 msgid "The AEAT 347 records have been reasigned."
 msgstr "Els registres del model AEAT 347 han estat reassignats."
@@ -878,10 +978,6 @@ msgctxt "view:aeat.347.report.property:"
 msgid "Address"
 msgstr "Adreça"
 
-msgctxt "view:aeat.347.report.property:"
-msgid "Amount"
-msgstr "Import"
-
 msgctxt "view:aeat.347.report:"
 msgid "Declaration Number"
 msgstr "Número declaració"
@@ -905,6 +1001,10 @@ msgstr "Registres de propietat"
 msgctxt "view:aeat.347.report:"
 msgid "Totals"
 msgstr "Totals"
+
+msgctxt "view:asset:"
+msgid "AEAT 347"
+msgstr "AEAT 347"
 
 msgctxt "wizard_button:aeat.347.reasign.records,done,end:"
 msgid "Ok"

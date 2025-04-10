@@ -9,5 +9,8 @@ this repository contains the full copyright notices and license terms. -->
       <record model="ir.message" id="msg_invalid_year">
           <field name="text">The year "%(year)s" is not valid.</field>
       </record>
+      <record model="ir.message" id="msg_wrong_asset">
+          <field name="text">The invoice asset is different from the contract asset.</field>
+      </record>
     </data>
 </tryton>
