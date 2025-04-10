@@ -6,13 +6,19 @@ from trytond.pool import Pool, PoolMeta
 from trytond.transaction import Transaction
 from trytond.i18n import gettext
 from trytond.exceptions import UserWarning
+from trytond.pyson import Eval
 
 _ZERO = Decimal(0)
+
 
 class Asset(metaclass=PoolMeta):
     __name__ = 'asset'
 
-    party = fields.Many2One('party.party', 'Party')
+    party = fields.Many2One('party.party', 'Party',
+        context={
+            'company': Eval('company', -1),
+            },
+        depends={'company'})
     party_name = fields.Char('Party Name')
     party_tax_identifier = fields.Many2One('party.identifier',
         'Party Tax Identifier')
@@ -49,7 +55,6 @@ class Record(metaclass=PoolMeta):
 
 class Report(metaclass=PoolMeta):
     __name__ = 'aeat.347.report'
-
 
     @classmethod
     def calculate(cls, reports):
