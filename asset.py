@@ -16,7 +16,6 @@ class Asset(metaclass=PoolMeta):
     party_name = fields.Char('Party Name')
     party_tax_identifier = fields.Many2One('party.identifier',
         'Party Tax Identifier')
-    cadaster_number = fields.Char('Cadaster Reference', size=25)
     street = fields.Char('Street')
     number_type = fields.Selection([
             ('NUM', 'Number'),
@@ -105,7 +104,7 @@ class Report(metaclass=PoolMeta):
                 party_identifier = ''
                 if asset.party_tax_identifier:
                     party_identifier = asset.party_tax_identifier.es_code()
-                cadaster_number = asset.cadaster_number
+                land_register = asset.land_register
                 street = asset.street
                 if street:
                     street = street[:50]
@@ -118,7 +117,7 @@ class Report(metaclass=PoolMeta):
                     'party_name': party_name[:38],
                     'party_vat': party_identifier,
                     'situation': 1,
-                    'cadaster_number': cadaster_number,
+                    'cadaster_number': land_register,
                     'street': street,
                     'number': number,
                     'province_code': provincie_code,

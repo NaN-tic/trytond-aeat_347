@@ -10,8 +10,6 @@ contains the full copyright notices and license terms. -->
             <field name="party_name"/>
             <label name="party_tax_identifier"/>
             <field name="party_tax_identifier"/>
-            <label name="cadaster_number"/>
-            <field name="cadaster_number"/>
             <label name="street"/>
             <field name="street"/>
             <label name="number_type"/>

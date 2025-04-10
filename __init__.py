@@ -27,13 +27,15 @@ def register():
         asset.Record,
         asset.PropertyRecord,
         asset.Report,
-        module='aeat_347', type_='model', depends=['asset'])
+        module='aeat_347', type_='model', depends=['asset', 'asset_property'])
     Pool.register(
         asset.Invoice,
-        module='aeat_347', type_='model', depends=['asset'])
+        module='aeat_347', type_='model', depends=['asset', 'asset_invoice',
+            'asset_property'])
     Pool.register(
         asset.InvoiceContract,
-        module='aeat_347', type_='model', depends=['contract'])
+        module='aeat_347', type_='model', depends=['asset', 'asset_invoice',
+            'asset_property', 'contract'])
     Pool.register(
         invoice.Recalculate347Record,
         invoice.Reasign347Record,
