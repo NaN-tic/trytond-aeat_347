@@ -8,6 +8,6 @@ from trytond.tests.test_tryton import ModuleTestCase
 class Aeat347TestCase(CompanyTestMixin, ModuleTestCase):
     'Test Aeat347 module'
     module = 'aeat_347'
-
+    extras = ['asset', 'asset_property', 'contract']
 
 del ModuleTestCase

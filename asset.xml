@@ -2,7 +2,7 @@
 <!-- The COPYRIGHT file at the top level of this repository contains the full
      copyright notices and license terms. -->
 <tryton>
-    <data depends="asset, asset_property">
+    <data depends="asset,asset_property">
         <record model="ir.ui.view" id="asset_view_form">
             <field name="model">asset</field>
             <field name="inherit" ref="asset.asset_view_form"/>
@@ -14,7 +14,7 @@
             <field name="name">record_asset_form</field>
         </record>
         <record model="ir.ui.view" id="aeat_347_asset_property_record_form_view">
-            <field name="model">aeat.347.record</field>
+            <field name="model">aeat.347.report.property</field>
             <field name="inherit" ref="aeat_347.aeat_347_property_record_form_view"/>
             <field name="name">property_asset_record_form</field>
         </record>
