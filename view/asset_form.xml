@@ -20,6 +20,8 @@ contains the full copyright notices and license terms. -->
             <field name="province_code"/>
             <label name="municipality_code"/>
             <field name="municipality_code"/>
+            <separator name="parties" colspan="4"/>
+            <field name="parties" colspan="4"/>
         </page>
     </xpath>
 </data>

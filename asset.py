@@ -1,7 +1,8 @@
 # The COPYRIGHT file at the top level of this repository contains the full
 # copyright notices and license terms.
+import datetime
 from decimal import Decimal
-from trytond.model import fields
+from trytond.model import fields, ModelSQL, ModelView
 from trytond.pool import Pool, PoolMeta
 from trytond.transaction import Transaction
 from trytond.i18n import gettext
@@ -14,14 +15,15 @@ _ZERO = Decimal(0)
 class Asset(metaclass=PoolMeta):
     __name__ = 'asset'
 
-    party = fields.Many2One('party.party', 'Party',
+    parties = fields.One2Many('asset.party.party', 'asset', 'Parties')
+    party = fields.Function(fields.Many2One('party.party', 'Party',
         context={
             'company': Eval('company', -1),
             },
-        depends={'company'})
-    party_name = fields.Char('Party Name')
-    party_tax_identifier = fields.Many2One('party.identifier',
-        'Party Tax Identifier')
+        depends={'company'}), 'get_party_fields')
+    party_name = fields.Function(fields.Char('Party Name'), 'get_party_fields')
+    party_tax_identifier = fields.Function(fields.Many2One('party.identifier',
+        'Party Tax Identifier'), 'get_party_fields')
     street = fields.Char('Street')
     number_type = fields.Selection([
             ('NUM', 'Number'),
@@ -36,6 +38,53 @@ class Asset(metaclass=PoolMeta):
     def on_change_municipality_code(self):
         if self.municipality_code and not self.province_code:
             self.province_code = self.municipality_code[:2]
+
+    @classmethod
+    def get_party_fields(cls, assets, names):
+        result = {}
+        for name in ['party', 'party_name', 'party_tax_identifier']:
+            result[name] = {}
+
+        for asset in assets:
+            if not asset.parties:
+                for name in ['party', 'party_name', 'party_tax_identifier']:
+                    result[name][asset.id] = None
+                continue
+
+            party = None
+            non_end_date_parties = []
+            end_date_bigger_today = []
+            for party in asset.parties:
+                if not party.end_date:
+                    non_end_date_parties.append(party)
+                elif party.end_date > datetime.date.today():
+                    end_date_bigger_today.append(party)
+
+            # We use the first party we found with a end date bigger than
+            # today of without end date. Dont having any end date have more
+            # priority than having an end date
+            if end_date_bigger_today:
+                party = end_date_bigger_today[0]
+            if non_end_date_parties == 1:
+                party = non_end_date_parties[0]
+
+            if not party:
+                for name in ['party', 'party_name', 'party_tax_identifier']:
+                    result[name][asset.id] = None
+                continue
+
+            for name in ['party', 'party_name', 'party_tax_identifier']:
+                match name:
+                    case 'party':
+                        result[name][asset.id] = party.party.id
+                    case 'party_name':
+                        result[name][asset.id] = party.party.name
+                    case 'party_tax_identifier':
+                        if party.party.tax_identifier:
+                            result[name][asset.id] = party.party.tax_identifier.id
+                        else:
+                            result[name][asset.id] = None
+        return result
 
 
 class PropertyRecord(metaclass=PoolMeta):
@@ -61,6 +110,7 @@ class Report(metaclass=PoolMeta):
         pool = Pool()
         Operation = pool.get('aeat.347.report.property')
         Asset = pool.get('asset')
+        PartyIdentifier = pool.get('party.identifier')
 
         super().calculate(reports)
 
@@ -80,6 +130,7 @@ class Report(metaclass=PoolMeta):
             query = """
                 SELECT
                     r.asset,
+                    r.party_tax_identifier,
                     sum(amount) as total,
                     %s
                 FROM
@@ -90,7 +141,8 @@ class Report(metaclass=PoolMeta):
                     r.party_tax_identifier is not null AND
                     r.company = %s
                 GROUP BY
-                    r.asset
+                    r.asset,
+                    r.party_tax_identifier
                 HAVING
                     sum(amount) > %s
                 """ % (cls.aggregate_function(), report.year, report.company.id,
@@ -98,16 +150,19 @@ class Report(metaclass=PoolMeta):
             cursor.execute(query)
             result = cursor.fetchall()
 
-            for (asset_id, amount, records) in result:
+            for (asset_id, party_tax_identifier, amount, records) in result:
                 asset = Asset(asset_id)
+                party_tax = PartyIdentifier(party_tax_identifier)
                 if not asset:
                     continue
 
                 party_name = ''
-                if asset.party_name:
-                    party_name = asset.party_name
                 party_identifier = ''
-                if asset.party_tax_identifier:
+                if party_tax:
+                    party_name = party_tax.party.name
+                    party_identifier = party_tax.es_code()
+                elif asset.party_tax_identifier:
+                    party_name = asset.party_tax_identifier.party.name
                     party_identifier = asset.party_tax_identifier.es_code()
                 land_register = asset.land_register
                 street = asset.street
@@ -135,6 +190,23 @@ class Report(metaclass=PoolMeta):
             with Transaction().set_user(0, set_context=True):
                 Operation.create(to_create)
 
+class Party(metaclass=PoolMeta):
+    __name__ = 'party.party'
+
+    assets = fields.One2Many('asset.party.party', 'party', 'Assets')
+
+
+class AssetParty(ModelSQL, ModelView):
+    'Asset Party'
+    __name__ = 'asset.party.party'
+
+    asset = fields.Many2One('asset', 'Asset', required=True,
+        ondelete='CASCADE')
+    party = fields.Many2One('party.party', 'Party', required=True,
+        ondelete='RESTRICT')
+    start_date = fields.Date('Start Date')
+    end_date = fields.Date('End Date')
+
 
 class Invoice(metaclass=PoolMeta):
     __name__ = 'account.invoice'
@@ -143,9 +215,11 @@ class Invoice(metaclass=PoolMeta):
     def create_aeat347_records(cls, invoices):
         pool = Pool()
         Record = pool.get('aeat.347.record')
+        PartyAsset = pool.get('asset.party.party')
         super().create_aeat347_records(invoices)
 
         to_save = []
+        to_save_assets = []
         for invoice in invoices:
             for line in invoice.lines:
                 if line.invoice_asset:
@@ -153,10 +227,40 @@ class Invoice(metaclass=PoolMeta):
                         ('invoice', '=', invoice.id)
                         ], limit=1)
                     if record and record[0].party_tax_identifier:
+                        if invoice.type == 'out':
+                            create_asset_party = False
+                            if line.invoice_asset.parties:
+                                party_asset = PartyAsset.search([
+                                    ('party', '=', invoice.party.id),
+                                    ('asset', '=', line.invoice_asset.id),
+                                    ['OR',
+                                        ('end_date', '=', None),
+                                        ('end_date', '>=', invoice.invoice_date),],
+                                ])
+
+                                if not party_asset:
+                                    last_asset_party = line.invoice_asset.parties[-1]
+                                    last_asset_party.end_date = (
+                                        invoice.invoice_date - datetime.timedelta(
+                                            days=1))
+                                    to_save_assets.append(last_asset_party)
+                                    create_asset_party = True
+                            else:
+                                create_asset_party = True
+
+                            if create_asset_party:
+                                new_asset_party = AssetParty()
+                                new_asset_party.party = invoice.party
+                                new_asset_party.asset = line.invoice_asset
+                                new_asset_party.start_date = invoice.invoice_date
+                                to_save_assets.append(new_asset_party)
+
                         record, = record
                         record.asset = line.invoice_asset
                         to_save.append(record)
         Record.save(to_save)
+        if to_save_assets:
+            PartyAsset.save(to_save_assets)
 
 
 class InvoiceContract(metaclass=PoolMeta):

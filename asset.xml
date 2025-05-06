@@ -3,16 +3,51 @@
      copyright notices and license terms. -->
 <tryton>
     <data depends="asset,asset_property">
+        <!-- asset -->
         <record model="ir.ui.view" id="asset_view_form">
             <field name="model">asset</field>
             <field name="inherit" ref="asset.asset_view_form"/>
             <field name="name">asset_form</field>
         </record>
+        <!-- party.party -->
+        <record model="ir.ui.view" id="party_view_form">
+            <field name="model">party.party</field>
+            <field name="inherit" ref="party.party_view_form"/>
+            <field name="name">party_form</field>
+        </record>
+        <!-- asset-party.party -->
+        <record model="ir.ui.view" id="asset_party_view_form">
+            <field name="model">asset.party.party</field>
+            <field name="type">form</field>
+            <field name="name">asset_party_form</field>
+        </record>
+        <record model="ir.ui.view" id="asset_party_view_tree">
+            <field name="model">asset.party.party</field>
+            <field name="type">tree</field>
+            <field name="name">asset_party_tree</field>
+        </record>
+        <record model="ir.action.act_window" id="act_asset_party_party">
+            <field name="name">Asset Party Party</field>
+            <field name="res_model">asset.party.party</field>
+            <field name="search_value"></field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_asset_party_party_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="asset_party_view_tree"/>
+            <field name="act_window" ref="act_asset_party_party"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_asset_party_party_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="asset_party_view_form"/>
+            <field name="act_window" ref="act_asset_party_party"/>
+        </record>-->
+        <!-- aeat.347.record -->
         <record model="ir.ui.view" id="aeat_347_asset_record_form_view">
             <field name="model">aeat.347.record</field>
             <field name="inherit" ref="aeat_347.aeat_347_record_form_view"/>
             <field name="name">record_asset_form</field>
         </record>
+        <!-- aeat.347.report.property -->
         <record model="ir.ui.view" id="aeat_347_asset_property_record_form_view">
             <field name="model">aeat.347.report.property</field>
             <field name="inherit" ref="aeat_347.aeat_347_property_record_form_view"/>
