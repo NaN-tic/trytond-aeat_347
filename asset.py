@@ -258,9 +258,13 @@ class Invoice(metaclass=PoolMeta):
                         record, = record
                         record.asset = line.invoice_asset
                         to_save.append(record)
+                    # We need to save the party asset in each line, otherwise,
+                    # when we search the party assets the one we created in the
+                    # same transaction will no appear
+                    if to_save_assets:
+                        PartyAsset.save(to_save_assets)
+                        to_save_assets = []
         Record.save(to_save)
-        if to_save_assets:
-            PartyAsset.save(to_save_assets)
 
 
 class InvoiceContract(metaclass=PoolMeta):
