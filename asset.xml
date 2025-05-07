@@ -40,7 +40,7 @@
             <field name="sequence" eval="20"/>
             <field name="view" ref="asset_party_view_form"/>
             <field name="act_window" ref="act_asset_party_party"/>
-        </record>-->
+        </record>
         <!-- aeat.347.record -->
         <record model="ir.ui.view" id="aeat_347_asset_record_form_view">
             <field name="model">aeat.347.record</field>
