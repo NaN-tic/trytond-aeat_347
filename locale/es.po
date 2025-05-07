@@ -386,10 +386,6 @@ msgctxt "field:aeat.347.report.property,zip:"
 msgid "Zip"
 msgstr "Código postal"
 
-msgctxt "field:asset,cadaster_number:"
-msgid "Cadaster Reference"
-msgstr "Referencia catastral"
-
 msgctxt "field:asset,municipality_code:"
 msgid "Municipality Code"
 msgstr "Código municipalidad"
@@ -401,6 +397,10 @@ msgstr "Número"
 msgctxt "field:asset,number_type:"
 msgid "Number type"
 msgstr "Tipo de número"
+
+msgctxt "field:asset,parties:"
+msgid "Parties"
+msgstr "Terceros"
 
 msgctxt "field:asset,party:"
 msgid "Party"
@@ -421,6 +421,26 @@ msgstr "Código provincia"
 msgctxt "field:asset,street:"
 msgid "Street"
 msgstr "Calle"
+
+msgctxt "field:asset.party.party,asset:"
+msgid "Asset"
+msgstr "Activo"
+
+msgctxt "field:asset.party.party,end_date:"
+msgid "End Date"
+msgstr "Fecha de finalización"
+
+msgctxt "field:asset.party.party,party:"
+msgid "Party"
+msgstr "Tercero"
+
+msgctxt "field:asset.party.party,start_date:"
+msgid "Start Date"
+msgstr "Fecha de inicio"
+
+msgctxt "field:party.party,assets:"
+msgid "Assets"
+msgstr "Activos"
 
 msgctxt "help:account.invoice,paid_directly:"
 msgid "The invoice has payed with the 'PAY' button"
@@ -577,6 +597,10 @@ msgctxt "model:aeat.347.report.property,name:"
 msgid "AEAT 347 Property Record"
 msgstr "Registro de propiedad AEAT 347"
 
+msgctxt "model:asset.party.party,name:"
+msgid "Asset Party"
+msgstr "Activo Tercer"
+
 msgctxt "model:ir.action,name:act_aeat_347_party_record"
 msgid "AEAT 347 Party Record"
 msgstr "Registro de tercero AEAT 347"
@@ -600,6 +624,10 @@ msgstr "Registro AEAT 347"
 msgctxt "model:ir.action,name:act_aeat_347_report"
 msgid "AEAT 347 Report"
 msgstr "Informe AEAT 347"
+
+msgctxt "model:ir.action,name:act_asset_party_party"
+msgid "Asset Party Party"
+msgstr "Activo Tercero"
 
 msgctxt "model:ir.action.act_window,name:act_aeat_347_party_record"
 msgid "AEAT 347 Party Record"
@@ -1006,6 +1034,10 @@ msgstr "Totales"
 msgctxt "view:asset:"
 msgid "AEAT 347"
 msgstr "AEAT 347"
+
+msgctxt "view:party.party:"
+msgid "Assets"
+msgstr "Activos"
 
 msgctxt "wizard_button:aeat.347.reasign.records,done,end:"
 msgid "Ok"

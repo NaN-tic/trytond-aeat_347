@@ -386,10 +386,6 @@ msgctxt "field:aeat.347.report.property,zip:"
 msgid "Zip"
 msgstr "Codi postal"
 
-msgctxt "field:asset,cadaster_number:"
-msgid "Cadaster Reference"
-msgstr "Referència cadastral"
-
 msgctxt "field:asset,municipality_code:"
 msgid "Municipality Code"
 msgstr "Codi municipalitat"
@@ -401,6 +397,10 @@ msgstr "Número"
 msgctxt "field:asset,number_type:"
 msgid "Number type"
 msgstr "Tipus de número"
+
+msgctxt "field:asset,parties:"
+msgid "Parties"
+msgstr "Tercers"
 
 msgctxt "field:asset,party:"
 msgid "Party"
@@ -421,6 +421,26 @@ msgstr "Codi província"
 msgctxt "field:asset,street:"
 msgid "Street"
 msgstr "Carrer"
+
+msgctxt "field:asset.party.party,asset:"
+msgid "Asset"
+msgstr "Actiu"
+
+msgctxt "field:asset.party.party,end_date:"
+msgid "End Date"
+msgstr "Data de finalització"
+
+msgctxt "field:asset.party.party,party:"
+msgid "Party"
+msgstr "Tercer"
+
+msgctxt "field:asset.party.party,start_date:"
+msgid "Start Date"
+msgstr "Data d'inici"
+
+msgctxt "field:party.party,assets:"
+msgid "Assets"
+msgstr "Actius"
 
 msgctxt "help:account.invoice,paid_directly:"
 msgid "The invoice has payed with the 'PAY' button"
@@ -576,6 +596,10 @@ msgctxt "model:aeat.347.report.property,name:"
 msgid "AEAT 347 Property Record"
 msgstr "Registre propietat AEAT 347"
 
+msgctxt "model:asset.party.party,name:"
+msgid "Asset Party"
+msgstr "Tercer Actiu"
+
 msgctxt "model:ir.action,name:act_aeat_347_party_record"
 msgid "AEAT 347 Party Record"
 msgstr "Registre tercer AEAT 347"
@@ -599,6 +623,10 @@ msgstr "Registre AEAT 347"
 msgctxt "model:ir.action,name:act_aeat_347_report"
 msgid "AEAT 347 Report"
 msgstr "Informe AEAT 347"
+
+msgctxt "model:ir.action,name:act_asset_party_party"
+msgid "Asset Party Party"
+msgstr "Actiu - Tercer"
 
 msgctxt "model:ir.action.act_window,name:act_aeat_347_party_record"
 msgid "AEAT 347 Party Record"
@@ -1005,6 +1033,10 @@ msgstr "Totals"
 msgctxt "view:asset:"
 msgid "AEAT 347"
 msgstr "AEAT 347"
+
+msgctxt "view:party.party:"
+msgid "Assets"
+msgstr "Actius"
 
 msgctxt "wizard_button:aeat.347.reasign.records,done,end:"
 msgid "Ok"
