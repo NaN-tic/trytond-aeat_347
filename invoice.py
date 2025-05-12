@@ -10,10 +10,6 @@ from sql.functions import Extract
 from .aeat import OPERATION_KEY
 from sql.aggregate import Min
 
-__all__ = ['Record', 'Invoice', 'Recalculate347RecordStart',
-    'Recalculate347RecordEnd', 'Recalculate347Record', 'Reasign347RecordStart',
-    'Reasign347RecordEnd', 'Reasign347Record']
-
 
 class Record(ModelSQL, ModelView):
     """
@@ -249,12 +245,6 @@ class Invoice(metaclass=PoolMeta):
             cls.save(to_update)
         with Transaction().set_user(0, set_context=True):
             Record.create(to_create.values())
-
-    @classmethod
-    def check_modify(cls, invoices):
-        check = Transaction().context.get('check_modify_invoice', True)
-        if check:
-            super(Invoice, cls).check_modify(invoices)
 
     @classmethod
     def draft(cls, invoices):
