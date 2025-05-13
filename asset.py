@@ -33,6 +33,11 @@ class Asset(metaclass=PoolMeta):
     number = fields.Char('Number')
     province_code = fields.Char('Province Code')
     municipality_code = fields.Char('Municipality Code')
+    municipality = fields.Char('Municipality', size=30)
+    province = fields.Char('Province', size=30)
+    door = fields.Char('Door', size=3)
+    floor = fields.Char('Floor', size=3)
+    stair = fields.Char('Stair', size=3)
 
     @fields.depends('municipality_code', 'province_code')
     def on_change_municipality_code(self):
@@ -171,6 +176,11 @@ class Report(metaclass=PoolMeta):
                 number = asset.number
                 provincie_code = asset.province_code
                 municipality_code = asset.municipality_code
+                municipality = asset.municipality
+                door = asset.door
+                floor = asset.floor
+                stair = asset.stair
+                province = asset.province
 
                 to_create.append({
                     'amount': is_decimal(amount),
@@ -182,6 +192,12 @@ class Report(metaclass=PoolMeta):
                     'number': number,
                     'province_code': provincie_code,
                     'municipality_code': municipality_code,
+                    'zip': municipality_code,
+                    'municipality': municipality,
+                    'door': door,
+                    'floor': floor,
+                    'stair': stair,
+                    'city': province,
                     'report': report.id,
                     'records': [('add', records)],
                 })

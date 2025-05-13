@@ -16,10 +16,20 @@ contains the full copyright notices and license terms. -->
             <field name="number_type"/>
             <label name="number"/>
             <field name="number"/>
+            <label name="door"/>
+            <field name="door"/>
+            <label name="floor"/>
+            <field name="floor"/>
+            <label name="stair"/>
+            <field name="stair"/>
             <label name="province_code"/>
             <field name="province_code"/>
+            <label name="province"/>
+            <field name="province"/>
             <label name="municipality_code"/>
             <field name="municipality_code"/>
+            <label name="municipality"/>
+            <field name="municipality"/>
             <separator name="parties" colspan="4"/>
             <field name="parties" colspan="4"/>
         </page>
