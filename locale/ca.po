@@ -300,7 +300,7 @@ msgstr "Referència cadastral"
 
 msgctxt "field:aeat.347.report.property,city:"
 msgid "City"
-msgstr "Ciutat"
+msgstr "Província"
 
 msgctxt "field:aeat.347.report.property,company:"
 msgid "Company"
@@ -324,11 +324,11 @@ msgstr "Pis"
 
 msgctxt "field:aeat.347.report.property,municipality:"
 msgid "Municipality"
-msgstr "Municipalitat"
+msgstr "Municipi"
 
 msgctxt "field:aeat.347.report.property,municipality_code:"
 msgid "Municipality Code"
-msgstr "Codi municipalitat"
+msgstr "Codi municipi"
 
 msgctxt "field:aeat.347.report.property,number:"
 msgid "Number"
@@ -386,9 +386,21 @@ msgctxt "field:aeat.347.report.property,zip:"
 msgid "Zip"
 msgstr "Codi postal"
 
+msgctxt "field:asset,door:"
+msgid "Door"
+msgstr "Porta"
+
+msgctxt "field:asset,floor:"
+msgid "Floor"
+msgstr "Pis"
+
+msgctxt "field:asset,municipality:"
+msgid "Municipality"
+msgstr "Municipi"
+
 msgctxt "field:asset,municipality_code:"
 msgid "Municipality Code"
-msgstr "Codi municipalitat"
+msgstr "Codi Municipi"
 
 msgctxt "field:asset,number:"
 msgid "Number"
@@ -414,9 +426,17 @@ msgctxt "field:asset,party_tax_identifier:"
 msgid "Party Tax Identifier"
 msgstr "Identificador fiscal del tercer"
 
+msgctxt "field:asset,province:"
+msgid "Province"
+msgstr "Província"
+
 msgctxt "field:asset,province_code:"
 msgid "Province Code"
 msgstr "Codi província"
+
+msgctxt "field:asset,stair:"
+msgid "Stair"
+msgstr "Escala"
 
 msgctxt "field:asset,street:"
 msgid "Street"
