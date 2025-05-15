@@ -6,10 +6,6 @@ msgctxt "field:account.invoice,aeat347_operation_key:"
 msgid "AEAT 347 Operation Key"
 msgstr "Clave operación AEAT 347"
 
-msgctxt "field:account.invoice,paid_directly:"
-msgid "Has Payed directly"
-msgstr "Ha pagado directamente"
-
 msgctxt "field:account.tax,isp:"
 msgid "Inversion del Sujeto Pasivo"
 msgstr "Inversión del Sujeto Pasivo"
@@ -461,10 +457,6 @@ msgstr "Fecha de inicio"
 msgctxt "field:party.party,assets:"
 msgid "Assets"
 msgstr "Activos"
-
-msgctxt "help:account.invoice,paid_directly:"
-msgid "The invoice has payed with the 'PAY' button"
-msgstr "La factura se ha pagado con el botón \"PAGAR\"."
 
 msgctxt "help:account.tax,isp:"
 msgid "Indicates if the tax is Inversion del sujeto Pasivo"
