@@ -26,6 +26,7 @@ class Asset(metaclass=PoolMeta):
         'Party Tax Identifier'), 'get_party_fields')
     street = fields.Char('Street')
     number_type = fields.Selection([
+            (None, ''),
             ('NUM', 'Number'),
             ('KM.', 'Kilometer'),
             ('S/N', 'Without number'),
