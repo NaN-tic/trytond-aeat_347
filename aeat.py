@@ -406,7 +406,7 @@ class Report(Workflow, ModelSQL, ModelView):
                     to_create[key] = {
                         'amount': is_decimal(amount),
                         'cash_amount': _ZERO,
-                        'party_vat': code or '',
+                        'party_vat': code and code[:9] or '',
                         'party_name': party.name[:38],
                         'country_code': country_code,
                         'province_code': province_code,
