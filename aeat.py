@@ -381,7 +381,6 @@ class Report(Workflow, ModelSQL, ModelView):
                 party = tax_identifier.party
                 if not party:
                     continue
-                code = tax_identifier.es_code()
                 country_code = tax_identifier.es_country()
                 address = party.address_get(type='invoice')
                 if not country_code:
@@ -406,14 +405,15 @@ class Report(Workflow, ModelSQL, ModelView):
                     to_create[key] = {
                         'amount': is_decimal(amount),
                         'cash_amount': _ZERO,
-                        'party_vat': code and code[:9] or '',
+                        'party_vat': (tax_identifier.es_code()
+                            if tax_identifier.es_country() == 'ES' else ''),
                         'party_name': party.name[:38],
                         'country_code': country_code,
                         'province_code': province_code,
                         'operation_key': opkey,
                         'report': report.id,
-                        'community_vat': (tax_identifier.code[2:]
-                            if not code else ''),
+                        'community_vat': (tax_identifier.es_code()
+                            if tax_identifier.es_country() != 'ES' else ''),
                         'records': [('add', records)],
                     }
 
