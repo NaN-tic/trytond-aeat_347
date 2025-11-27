@@ -15,6 +15,7 @@ from trytond.pyson import Bool, Eval, Not
 from trytond.transaction import Transaction
 from trytond.i18n import gettext
 from trytond.exceptions import UserError
+from trytond.model.exceptions import ValidationError
 from sql.functions import Extract
 
 __all__ = ['Report', 'PartyRecord', 'PropertyRecord']
@@ -314,7 +315,7 @@ class Report(Workflow, ModelSQL, ModelView):
 
     def check_euro(self):
         if self.currency.code != 'EUR':
-            raise UserError(gettext('aeat_347.invalid_currency',
+            raise ValidationError(gettext('aeat_347.invalid_currency',
                 report=self.rec_name))
 
     @staticmethod
