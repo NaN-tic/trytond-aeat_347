@@ -4,6 +4,10 @@ contains the full copyright notices and license terms. -->
 <data>
     <xpath expr="/form/notebook/page[@id='addresses']" position="after">
         <page string="AEAT 347" id="aeat_347">
+            <label name="aeat347_party"/>
+            <field name="aeat347_party"/>
+            <label name="aeat347_property"/>
+            <field name="aeat347_property"/>
             <label name="party"/>
             <field name="party"/>
             <label name="party_name"/>

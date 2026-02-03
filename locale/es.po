@@ -386,6 +386,14 @@ msgctxt "field:asset,door:"
 msgid "Door"
 msgstr "Puerta"
 
+msgctxt "field:asset,aeat347_party:"
+msgid "347 Party"
+msgstr "Tercero 347"
+
+msgctxt "field:asset,aeat347_property:"
+msgid "347 Property"
+msgstr "Propiedad 347"
+
 msgctxt "field:asset,floor:"
 msgid "Floor"
 msgstr "Piso"
@@ -421,6 +429,14 @@ msgstr "Nombre tercero"
 msgctxt "field:asset,party_tax_identifier:"
 msgid "Party Tax Identifier"
 msgstr "Identificador fiscal del tercero"
+
+msgctxt "field:product.template,aeat347_party:"
+msgid "347 Party"
+msgstr "Tercero 347"
+
+msgctxt "field:product.template,aeat347_property:"
+msgid "347 Property"
+msgstr "Propiedad 347"
 
 msgctxt "field:asset,province:"
 msgid "Province"
