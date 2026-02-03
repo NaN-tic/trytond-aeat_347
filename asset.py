@@ -9,8 +9,6 @@ from trytond.i18n import gettext
 from trytond.exceptions import UserWarning
 from trytond.pyson import Eval
 
-_ZERO = Decimal(0)
-
 
 class Asset(metaclass=PoolMeta):
     __name__ = 'asset'
@@ -39,11 +37,27 @@ class Asset(metaclass=PoolMeta):
     door = fields.Char('Door', size=3)
     floor = fields.Char('Floor', size=3)
     stair = fields.Char('Stair', size=3)
+    aeat347_party = fields.Boolean('347 Party')
+    aeat347_property = fields.Boolean('347 Property',
+        states={
+            'invisible': ~Eval('aeat347_party', False),
+            'required': Eval('aeat347_party', False),
+            })
 
     @fields.depends('municipality_code', 'province_code')
     def on_change_municipality_code(self):
         if self.municipality_code and not self.province_code:
             self.province_code = self.municipality_code[:2]
+
+    @fields.depends('product')
+    def on_change_product(self):
+        try:
+            super().on_change_product()
+        except AttributeError:
+            pass
+        if self.product:
+            self.aeat347_party = bool(self.product.aeat347_party)
+            self.aeat347_property = bool(self.product.aeat347_property)
 
     @classmethod
     def get_party_fields(cls, assets, names):
@@ -233,54 +247,79 @@ class Invoice(metaclass=PoolMeta):
         pool = Pool()
         Record = pool.get('aeat.347.record')
         PartyAsset = pool.get('asset.party.party')
+
         super().create_aeat347_records(invoices)
 
         to_save = []
         to_save_assets = []
+        to_delete = []
         for invoice in invoices:
-            for line in invoice.lines:
-                if line.invoice_asset:
-                    record = Record.search([
-                        ('invoice', '=', invoice.id)
-                        ], limit=1)
-                    if record and record[0].party_tax_identifier:
-                        if invoice.type == 'out':
-                            create_asset_party = False
-                            if line.invoice_asset.parties:
-                                party_asset = PartyAsset.search([
-                                    ('party', '=', invoice.party.id),
-                                    ('asset', '=', line.invoice_asset.id),
-                                    ['OR',
-                                        ('end_date', '=', None),
-                                        ('end_date', '>=', invoice.invoice_date),],
-                                ])
+            asset_lines = [line for line in invoice.lines
+                if line.invoice_asset]
+            if not asset_lines:
+                continue
 
-                                if not party_asset:
-                                    last_asset_party = line.invoice_asset.parties[-1]
-                                    last_asset_party.end_date = (
-                                        invoice.invoice_date - datetime.timedelta(
-                                            days=1))
-                                    to_save_assets.append(last_asset_party)
-                                    create_asset_party = True
-                            else:
-                                create_asset_party = True
+            asset_line = next((
+                line for line in asset_lines
+                if line.invoice_asset.aeat347_party
+                ), None)
 
-                            if create_asset_party:
-                                new_asset_party = AssetParty()
-                                new_asset_party.party = invoice.party
-                                new_asset_party.asset = line.invoice_asset
-                                new_asset_party.start_date = invoice.invoice_date
-                                to_save_assets.append(new_asset_party)
+            record = Record.search([
+                ('invoice', '=', invoice.id)
+                ], limit=1)
 
-                        record, = record
-                        record.asset = line.invoice_asset
-                        to_save.append(record)
-                    # We need to save the party asset in each line, otherwise,
-                    # when we search the party assets the one we created in the
-                    # same transaction will no appear
-                    if to_save_assets:
-                        PartyAsset.save(to_save_assets)
-                        to_save_assets = []
+            if not asset_line:
+                if record:
+                    to_delete.extend(record)
+                continue
+
+            if not record or not record[0].party_tax_identifier:
+                continue
+
+            asset = asset_line.invoice_asset
+            record, = record
+            if asset.aeat347_property:
+                record.asset = asset
+
+                if invoice.type == 'out':
+                    create_asset_party = False
+                    if asset.parties:
+                        party_asset = PartyAsset.search([
+                            ('party', '=', invoice.party.id),
+                            ('asset', '=', asset.id),
+                            ['OR',
+                                ('end_date', '=', None),
+                                ('end_date', '>=', invoice.invoice_date),],
+                        ])
+
+                        if not party_asset:
+                            last_asset_party = asset.parties[-1]
+                            last_asset_party.end_date = (
+                                invoice.invoice_date - datetime.timedelta(
+                                    days=1))
+                            to_save_assets.append(last_asset_party)
+                            create_asset_party = True
+                    else:
+                        create_asset_party = True
+
+                    if create_asset_party:
+                        new_asset_party = AssetParty()
+                        new_asset_party.party = invoice.party
+                        new_asset_party.asset = asset
+                        new_asset_party.start_date = invoice.invoice_date
+                        to_save_assets.append(new_asset_party)
+            else:
+                record.asset = None
+            to_save.append(record)
+
+            # We need to save the party asset in each line, otherwise,
+            # when we search the party assets the one we created in the
+            # same transaction will no appear
+            if to_save_assets:
+                PartyAsset.save(to_save_assets)
+                to_save_assets = []
+        if to_delete:
+            Record.delete(to_delete)
         Record.save(to_save)
 
 
