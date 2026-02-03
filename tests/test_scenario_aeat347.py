@@ -29,8 +29,8 @@ class Test(unittest.TestCase):
         today = datetime.date.today()
 
         # Install account_invoice
-        activate_modules(['aeat_347', 'account_es',
-            'account_code_digits'])
+        activate_modules(['aeat_347', 'account_es', 'asset_invoice',
+            'asset_property', 'product', 'account_code_digits'])
 
         # Create company
         eur = get_currency('EUR')
@@ -98,6 +98,50 @@ class Test(unittest.TestCase):
         product.cost_price = Decimal('25')
         template.save()
         product, = template.products
+
+        def create_asset_product(name, party, prop):
+            template = ProductTemplate()
+            template.name = name
+            template.default_uom = unit
+            template.type = 'assets'
+            template.list_price = Decimal('40')
+            template.account_category = account_category
+            template.save()
+            product, = template.products
+            product.aeat347_party = party
+            product.aeat347_property = prop
+            product.save()
+            return product
+
+        product_347_full = create_asset_product(
+            'product-347-full', True, True)
+        product_347_party = create_asset_product(
+            'product-347-party', True, False)
+        product_347_none = create_asset_product(
+            'product-347-none', False, False)
+
+        # Create assets with 347 config from products
+        Asset = Model.get('asset')
+        asset_full = Asset()
+        asset_full.name = 'Asset Full'
+        asset_full.product = product_347_full
+        asset_full.save()
+        self.assertTrue(asset_full.aeat347_party)
+        self.assertTrue(asset_full.aeat347_property)
+
+        asset_party = Asset()
+        asset_party.name = 'Asset Party'
+        asset_party.product = product_347_party
+        asset_party.save()
+        self.assertTrue(asset_party.aeat347_party)
+        self.assertFalse(asset_party.aeat347_property)
+
+        asset_none = Asset()
+        asset_none.name = 'Asset None'
+        asset_none.product = product_347_none
+        asset_none.save()
+        self.assertFalse(asset_none.aeat347_party)
+        self.assertFalse(asset_none.aeat347_property)
 
         # Create payment term
         payment_term = create_payment_term()
@@ -287,4 +331,42 @@ class Test(unittest.TestCase):
         reasign.execute('reasign')
         invoice.reload()
         self.assertEqual(invoice.aeat347_operation_key, 'empty')
+        self.assertEqual(Record.find([('invoice', '=', invoice.id)]), [])
+
+        # Create invoices with assets and 347 flags
+        Record = Model.get('aeat.347.record')
+        Invoice = Model.get('account.invoice')
+        invoice = Invoice()
+        invoice.party = party1
+        invoice.payment_term = payment_term
+        line = invoice.lines.new()
+        line.product = product
+        line.unit_price = Decimal(40)
+        line.quantity = 80
+        line.invoice_asset = asset_full
+        invoice.click('post')
+        rec1, = Record.find([('invoice', '=', invoice.id)])
+        self.assertEqual(rec1.asset, asset_full)
+
+        invoice = Invoice()
+        invoice.party = party1
+        invoice.payment_term = payment_term
+        line = invoice.lines.new()
+        line.product = product
+        line.unit_price = Decimal(40)
+        line.quantity = 80
+        line.invoice_asset = asset_party
+        invoice.click('post')
+        rec1, = Record.find([('invoice', '=', invoice.id)])
+        self.assertEqual(rec1.asset, None)
+
+        invoice = Invoice()
+        invoice.party = party1
+        invoice.payment_term = payment_term
+        line = invoice.lines.new()
+        line.product = product
+        line.unit_price = Decimal(40)
+        line.quantity = 80
+        line.invoice_asset = asset_none
+        invoice.click('post')
         self.assertEqual(Record.find([('invoice', '=', invoice.id)]), [])

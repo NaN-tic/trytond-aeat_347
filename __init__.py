@@ -6,6 +6,7 @@ from . import aeat
 from . import invoice
 from . import tax
 from . import asset
+from . import product
 
 
 def register():
@@ -22,6 +23,9 @@ def register():
         tax.TaxTemplate,
         tax.Tax,
         module='aeat_347', type_='model')
+    Pool.register(
+        product.Product,
+        module='aeat_347', type_='model', depends=['product'])
     Pool.register(
         asset.Asset,
         asset.Record,

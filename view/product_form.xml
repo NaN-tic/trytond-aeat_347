@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!-- The COPYRIGHT file at the top level of this repository contains the full
+     copyright notices and license terms. -->
+<data>
+    <xpath expr="/form/notebook" position="inside">
+        <page string="AEAT 347" id="aeat_347">
+            <label name="aeat347_party"/>
+            <field name="aeat347_party"/>
+            <label name="aeat347_property"/>
+            <field name="aeat347_property"/>
+        </page>
+    </xpath>
+</data>
