@@ -41,7 +41,6 @@ class Asset(metaclass=PoolMeta):
     aeat347_property = fields.Boolean('347 Property',
         states={
             'invisible': ~Eval('aeat347_party', False),
-            'required': Eval('aeat347_party', False),
             })
 
     @fields.depends('municipality_code', 'province_code')
