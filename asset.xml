@@ -41,17 +41,8 @@
             <field name="view" ref="asset_party_view_form"/>
             <field name="act_window" ref="act_asset_party_party"/>
         </record>
-        <!-- aeat.347.record -->
-        <record model="ir.ui.view" id="aeat_347_asset_record_form_view">
-            <field name="model">aeat.347.record</field>
-            <field name="inherit" ref="aeat_347.aeat_347_record_form_view"/>
-            <field name="name">record_asset_form</field>
-        </record>
-        <!-- aeat.347.report.property -->
-        <record model="ir.ui.view" id="aeat_347_asset_property_record_form_view">
-            <field name="model">aeat.347.report.property</field>
-            <field name="inherit" ref="aeat_347.aeat_347_property_record_form_view"/>
-            <field name="name">property_asset_record_form</field>
-        </record>
+    </data>
+    <data depends="asset_invoice">
+        <!-- no extra views -->
     </data>
 </tryton>

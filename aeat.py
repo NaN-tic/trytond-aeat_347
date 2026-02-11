@@ -5,6 +5,7 @@ import itertools
 import datetime
 import unicodedata
 import sys
+from collections import defaultdict
 from decimal import Decimal
 from retrofix import aeat347
 from retrofix.record import Record, write as retrofix_write
@@ -16,9 +17,11 @@ from trytond.transaction import Transaction
 from trytond.i18n import gettext
 from trytond.exceptions import UserError
 from trytond.model.exceptions import ValidationError
-from sql.functions import Extract
-
-__all__ = ['Report', 'PartyRecord', 'PropertyRecord']
+from sql.functions import Extract, Substring
+from sql.conditionals import Coalesce, Case
+from sql.operators import Exists
+from sql import Literal
+from sql.aggregate import Sum, Min
 
 _ZERO = Decimal(0)
 
@@ -179,24 +182,54 @@ class Report(Workflow, ModelSQL, ModelView):
     def __register__(cls, module_name):
         pool = Pool()
         FiscalYear = pool.get('account.fiscalyear')
+        PartyRecord = pool.get('aeat.347.report.party')
+        PropertyRecord = pool.get('aeat.347.report.property')
 
         cursor = Transaction().connection.cursor()
         table = cls.__table_handler__(module_name)
+        party_table = PartyRecord.__table_handler__(module_name)
+        property_table = PropertyRecord.__table_handler__(module_name)
         sql_table = cls.__table__()
-        fiscalyear_table = FiscalYear.__table__()
+        party_sql_table = PartyRecord.__table__()
+        property_sql_table = PropertyRecord.__table__()
+        fiscalyear_sql_table = FiscalYear.__table__()
+
+        # Cleanup 2025 draft/calculated reports before migration
+        report_ids = []
+        if (party_table.column_exist('records')
+                or property_table.column_exist('records')):
+            report_ids_query = sql_table.select(
+                sql_table.id,
+                where=(sql_table.year == 2025)
+                & (sql_table.state.in_(['draft', 'calculated'])))
+            cursor.execute(*report_ids_query)
+            report_ids = [r[0] for r in cursor.fetchall()]
+            if report_ids:
+                cursor.execute(*party_sql_table.delete(
+                    where=party_sql_table.report.in_(report_ids)))
+                cursor.execute(*property_sql_table.delete(
+                    where=property_sql_table.report.in_(report_ids)))
 
         super().__register__(module_name)
 
         # migration fiscalyear to year
         if table.column_exist('fiscalyear'):
             query = sql_table.update(columns=[sql_table.year],
-                    values=[Extract('YEAR', fiscalyear_table.start_date)],
-                    from_=[fiscalyear_table],
-                    where=sql_table.fiscalyear == fiscalyear_table.id)
+                    values=[Extract('YEAR', fiscalyear_sql_table.start_date)],
+                    from_=[fiscalyear_sql_table],
+                    where=sql_table.fiscalyear == fiscalyear_sql_table.id)
             cursor.execute(*query)
             table.drop_column('fiscalyear')
         if table.column_exist('fiscalyear_code'):
             table.drop_column('fiscalyear_code')
+
+        # Recalculate 2025 draft/calculated reports with new structure
+        if report_ids:
+            with Transaction().set_user(0, set_context=True):
+                reports = cls.browse(report_ids)
+                cls.calculate(reports)
+            party_table.drop_column('records')
+            property_table.drop_column('records')
 
     @staticmethod
     def default_operation_limit():
@@ -326,14 +359,98 @@ class Report(Workflow, ModelSQL, ModelView):
         return "group_concat(r.id, ',')"
 
     @classmethod
+    def get_aeat347_party_records(cls, report):
+        pool = Pool()
+        Invoice = pool.get('account.invoice')
+        InvoiceTax = pool.get('account.invoice.tax')
+        Tax = pool.get('account.tax')
+        PartyIdentifier = pool.get('party.identifier')
+        Address = pool.get('party.address')
+        Country = pool.get('country.country')
+
+        cursor = Transaction().connection.cursor()
+        invoice = Invoice.__table__()
+        invoice_tax = InvoiceTax.__table__()
+        tax = Tax.__table__()
+        identifier = PartyIdentifier.__table__()
+        address = Address.__table__()
+        country = Country.__table__()
+
+        date = Coalesce(invoice.accounting_date, invoice.invoice_date)
+        address_min = address.select(
+            Min(address.id),
+            where=(address.party == invoice.party))
+        country_expr = Case(
+            (identifier.type == 'eu_vat', Substring(identifier.code, 1, 2)),
+            (identifier.type.in_([
+                'es_cif', 'es_dni', 'es_nie', 'es_nif', 'es_vat']), 'ES'),
+            else_=None)
+        country_code_expr = Case(
+            (country_expr == None, country.code),
+            else_=country_expr)
+        province_code_expr = Case(
+            ((country_code_expr == 'ES') & (address.postal_code != None),
+                Substring(address.postal_code, 1, 2)),
+            else_='99')
+        code_expr = Case(
+            ((identifier.type == 'eu_vat')
+                & (Substring(identifier.code, 1, 2) == 'ES'),
+                Substring(identifier.code, 3)),
+            else_=identifier.code)
+        amount_expr = Case(
+            (tax.operation_347 == 'amount_only', invoice_tax.amount),
+            (tax.operation_347 == 'base_amount',
+                invoice_tax.base + invoice_tax.amount),
+            else_=Literal(0))
+        amount_sum = Sum(amount_expr)
+        amount = amount_sum
+
+        tax_include = invoice_tax.join(tax,
+            condition=invoice_tax.tax == tax.id).select(
+                Literal(1),
+                where=(invoice_tax.invoice == invoice.id)
+                & (tax.operation_347 != 'ignore'))
+        tax_exclude = invoice_tax.join(tax,
+            condition=invoice_tax.tax == tax.id).select(
+                Literal(1),
+                where=(invoice_tax.invoice == invoice.id)
+                & (tax.operation_347 == 'exclude_invoice'))
+
+        condition = (
+            (invoice.company == report.company.id)
+            & (invoice.state.in_(['posted', 'paid']))
+            & (Extract('YEAR', date) == report.year)
+            & (invoice.party_tax_identifier != None)
+            & (invoice.aeat347_operation_key != 'empty')
+            )
+        condition &= ~Exists(tax_exclude) & Exists(tax_include)
+
+        query = invoice.join(invoice_tax,
+            condition=invoice_tax.invoice == invoice.id).join(tax,
+                condition=invoice_tax.tax == tax.id).join(identifier,
+                    condition=invoice.party_tax_identifier == identifier.id
+                ).join(address, type_='LEFT',
+                    condition=address.id == address_min).join(
+                    country, type_='LEFT',
+                    condition=address.country == country.id).select(
+                        invoice.id, invoice.party, Extract('MONTH', date),
+                        invoice.aeat347_operation_key,
+                        code_expr, country_code_expr, province_code_expr,
+                        amount,
+                        where=condition,
+                        group_by=[invoice.id, date, invoice.party,
+                            invoice.aeat347_operation_key,
+                            code_expr, country_code_expr, province_code_expr])
+        cursor.execute(*query)
+        return cursor.fetchall()
+
+    @classmethod
     @ModelView.button
     @Workflow.transition('calculated')
     def calculate(cls, reports):
         pool = Pool()
         Operation = pool.get('aeat.347.report.party')
-        PartyIdentifier = pool.get('party.identifier')
-
-        cursor = Transaction().connection.cursor()
+        Party = pool.get('party.party')
 
         with Transaction().set_user(0):
             Operation.delete(Operation.search([
@@ -344,100 +461,81 @@ class Report(Workflow, ModelSQL, ModelView):
                 return Decimal(value)
             return value
 
-        to_create = {}
+        to_create = []
         for report in reports:
-            query = """
-                SELECT
-                    r.party_tax_identifier,
-                    r.operation_key,
-                    sum(case when month <= 3 then amount else 0 end) as first,
-                    sum(case when month > 3 and month <= 6
-                        then amount else 0 end) as second,
-                    sum(case when month > 6 and month <= 9
-                        then amount else 0 end) as third,
-                    sum(case when month > 9 and month <= 12
-                        then amount else 0 end) as fourth,
-                    sum(amount) as total,
-                    %s
-                FROM
-                    aeat_347_record as r
-                WHERE
-                    r.year = %s AND
-                    r.party_tax_identifier is not null AND
-                    r.company = %s
-                GROUP BY
-                    r.party_tax_identifier, r.operation_key
-                HAVING
-                    sum(amount) > %s
-                """ % (cls.aggregate_function(), report.year, report.company.id,
-                    report.operation_limit)
-            cursor.execute(query)
-            result = cursor.fetchall()
+            aggregated = defaultdict(lambda: {
+                    'amount': _ZERO,
+                    'first_quarter_amount': _ZERO,
+                    'second_quarter_amount': _ZERO,
+                    'third_quarter_amount': _ZERO,
+                    'fourth_quarter_amount': _ZERO,
+                    })
+            details = {}
+            records = cls.get_aeat347_party_records(report)
 
-            for (tax_identifier_id, opkey, q1, q2, q3, q4, amount, records
-                    ) in result:
-                tax_identifier = PartyIdentifier(tax_identifier_id)
-                if not tax_identifier:
-                    continue
-                party = tax_identifier.party
-                if not party:
-                    continue
-                country_code = tax_identifier.es_country()
-                address = party.address_get(type='invoice')
-                if not country_code:
-                    if address and address.country:
-                        country_code = address.country.code
-                province_code = '99'
-                if address and address.postal_code and country_code == 'ES':
-                    province_code = address.postal_code.strip()[:2]
-                    try:
-                        int(province_code)
-                    except ValueError:
-                        province_code = '99'
-                records = (records if isinstance(records, (list))
-                    else records.split(','))
-
-                key = '%s-%s-%s' % (report.id, tax_identifier_id, opkey)
-                if key in to_create:
-                    to_create[key]['amount'] += amount
-                    to_create[key]['records'] = [('add',
-                        to_create[key]['records'][0][1] + records)]
-                else:
-                    to_create[key] = {
-                        'amount': is_decimal(amount),
-                        'cash_amount': _ZERO,
-                        'party_vat': (tax_identifier.es_code()
-                            if tax_identifier.es_country() == 'ES' else ''),
-                        'party_name': party.name[:38],
+            for (invoice_id, party_id, month, opkey, code, country_code,
+                    province_code, amount) in records:
+                key = (code, opkey)
+                if key not in details:
+                    details[key] = {
+                        'party': party_id,
                         'country_code': country_code,
                         'province_code': province_code,
+                        'invoices': [invoice_id],
+                        }
+                else:
+                    details[key]['invoices'].append(invoice_id)
+
+                amount = is_decimal(amount)
+                aggregated[key]['amount'] += amount
+                if month <= 3:
+                    aggregated[key]['first_quarter_amount'] += amount
+                elif month <= 6:
+                    aggregated[key]['second_quarter_amount'] += amount
+                elif month <= 9:
+                    aggregated[key]['third_quarter_amount'] += amount
+                else:
+                    aggregated[key]['fourth_quarter_amount'] += amount
+
+            for (code, opkey), totals in aggregated.items():
+                if totals['amount'] <= report.operation_limit:
+                    continue
+                detail = details.get((code, opkey))
+                if not detail:
+                    continue
+                party = Party(detail['party'])
+                to_create.append({
+                        'amount': totals['amount'],
+                        'cash_amount': _ZERO,
+                        'party_vat': (code
+                            if detail['country_code'] == 'ES' else ''),
+                        'party_name': party.name[:38],
+                        'country_code': detail['country_code'],
+                        'province_code': detail['province_code'],
                         'operation_key': opkey,
                         'report': report.id,
-                        'community_vat': (tax_identifier.es_code()
-                            if tax_identifier.es_country() != 'ES' else ''),
-                        'records': [('add', records)],
-                    }
-
-                for f in ['first', 'second', 'third', 'fourth']:
-                    qkey = "%s_quarter_amount" % f
-                    if qkey not in to_create[key]:
-                        to_create[key][qkey] = _ZERO
-
-                    qkey = "%s_quarter_property_amount" % f
-                    to_create[key][qkey] = _ZERO
-
-                to_create[key]['first_quarter_amount'] += is_decimal(q1)
-                to_create[key]['second_quarter_amount'] += is_decimal(q2)
-                to_create[key]['third_quarter_amount'] += is_decimal(q3)
-                to_create[key]['fourth_quarter_amount'] += is_decimal(q4)
+                        'community_vat': (code
+                            if detail['country_code'] != 'ES' else ''),
+                        'first_quarter_amount': totals['first_quarter_amount'],
+                        'second_quarter_amount': totals[
+                            'second_quarter_amount'],
+                        'third_quarter_amount': totals['third_quarter_amount'],
+                        'fourth_quarter_amount': totals[
+                            'fourth_quarter_amount'],
+                        'first_quarter_property_amount': _ZERO,
+                        'second_quarter_property_amount': _ZERO,
+                        'third_quarter_property_amount': _ZERO,
+                        'fourth_quarter_property_amount': _ZERO,
+                        'invoices': [('add', detail['invoices'])],
+                        })
 
         if to_create:
             with Transaction().set_user(0, set_context=True):
-                Operation.create(to_create.values())
+                Operation.create(to_create)
 
         cls.write(reports, {
-            'calculation_date': datetime.datetime.now(),
-            })
+                'calculation_date': datetime.datetime.now(),
+                })
 
     @classmethod
     @ModelView.button
@@ -546,6 +644,10 @@ class PartyRecord(ModelSQL, ModelView):
     related_goods_operation = fields.Boolean('Related Goods Operation',
         help='Only for related goods operations. Set to identify related '
             'goods operations aside from the rest.')
+    bdns_call_number = fields.Char('BDNS call number', size=6,
+        states={
+            'readonly': Eval('operation_key') != 'E',
+            })
     cash_amount = fields.Numeric('Cash Amount Received', digits=(16, 2))
     property_amount = fields.Numeric('VAT Liable Property Amount',
         digits=(16, 2))
@@ -567,8 +669,9 @@ class PartyRecord(ModelSQL, ModelView):
         digits=(16, 2))
     fourth_quarter_property_amount = fields.Numeric('Fourth '
         'Quarter Property Amount', digits=(16, 2))
-    records = fields.One2Many('aeat.347.record', 'party_record',
-        'AEAT 347 Records', readonly=True)
+    invoices = fields.Many2Many(
+        'aeat.347.report.party-account.invoice', 'party_record', 'invoice',
+        'Invoices', readonly=True)
 
     @staticmethod
     def default_company():
@@ -708,6 +811,9 @@ class PropertyRecord(ModelSQL, ModelView):
     municipality_code = fields.Char('Municipality Code', size=5)
     province_code = fields.Char('Province Code', size=2)
     zip = fields.Char('Zip', size=5)
+    invoice_lines = fields.Many2Many(
+        'aeat.347.report.property-account.invoice.line', 'property_record',
+        'line', 'Invoices', readonly=True)
 
     @staticmethod
     def default_company():
@@ -738,3 +844,23 @@ class PropertyRecord(ModelSQL, ModelView):
         record.province_code = self.province_code
         record.zip = self.zip
         return record
+
+
+class PartyRecordInvoice(ModelSQL):
+    'AEAT 347 Party Record - Invoice'
+    __name__ = 'aeat.347.report.party-account.invoice'
+
+    party_record = fields.Many2One('aeat.347.report.party', 'Party Record',
+        required=True, ondelete='CASCADE')
+    invoice = fields.Many2One('account.invoice', 'Invoice',
+        required=True, ondelete='CASCADE')
+
+
+class PropertyRecordInvoiceLine(ModelSQL):
+    'AEAT 347 Property Record - Invoice Line'
+    __name__ = 'aeat.347.report.property-account.invoice.line'
+
+    property_record = fields.Many2One('aeat.347.report.property',
+        'Property Record', required=True, ondelete='CASCADE')
+    line = fields.Many2One('account.invoice.line', 'Invoice Line',
+        required=True, ondelete='CASCADE')

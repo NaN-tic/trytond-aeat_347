@@ -23,6 +23,8 @@ contains the full copyright notices and license terms. -->
     <field name="insurance"/>
     <label name="business_premises_rent"/>
     <field name="business_premises_rent"/>
+    <label name="bdns_call_number"/>
+    <field name="bdns_call_number"/>
     <group colspan="2" col="4" id="cash_vat">
         <label name="cash_vat_operation"/>
         <field name="cash_vat_operation"/>
@@ -59,5 +61,7 @@ contains the full copyright notices and license terms. -->
     <field name="fourth_quarter_amount"/>
     <label name="fourth_quarter_property_amount"/>
     <field name="fourth_quarter_property_amount"/>
-    <field name="records" colspan="4"/>
+    <separator string="Invoices" id="aeat_347_party_invoices" colspan="4"/>
+    <field name="invoices" colspan="4"
+        view_ids="aeat_347.aeat_347_invoice_tree_view"/>
 </form>
