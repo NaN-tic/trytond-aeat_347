@@ -103,7 +103,6 @@ class Test(unittest.TestCase):
         payment_term.save()
 
         # Create out invoice over limit
-        Record = Model.get('aeat.347.record')
         Invoice = Model.get('account.invoice')
         invoice = Invoice()
         invoice.party = party1
@@ -115,14 +114,10 @@ class Test(unittest.TestCase):
         self.assertEqual(len(line.taxes), 1)
         self.assertEqual(line.amount, Decimal('3200.00'))
         invoice.click('post')
-        rec1, = Record.find([('invoice', '=', invoice.id)])
-        self.assertEqual(rec1.party_tax_identifier.code, identifier1.code)
-        self.assertEqual(rec1.month, today.month)
-        self.assertEqual(rec1.operation_key, 'B')
-        self.assertEqual(rec1.amount, Decimal('3520.00'))
+        invoice.reload()
+        self.assertEqual(invoice.aeat347_operation_key, 'B')
 
         # Create out invoice over limit, but changing manually the operation key
-        Record = Model.get('aeat.347.record')
         Invoice = Model.get('account.invoice')
         invoice = Invoice()
         invoice.party = party1
@@ -135,7 +130,8 @@ class Test(unittest.TestCase):
         self.assertEqual(line.amount, Decimal('3200.00'))
         invoice.aeat347_operation_key = 'empty'
         invoice.click('post')
-        self.assertEqual(Record.find([('invoice', '=', invoice.id)]), [])
+        invoice.reload()
+        self.assertEqual(invoice.aeat347_operation_key, 'empty')
 
         # Create out invoice not over limit
         invoice = Invoice()
@@ -148,14 +144,10 @@ class Test(unittest.TestCase):
         self.assertEqual(len(line.taxes), 1)
         self.assertEqual(line.amount, Decimal('200.00'))
         invoice.click('post')
-        rec1, = Record.find([('invoice', '=', invoice.id)])
-        self.assertEqual(rec1.party_tax_identifier.code, identifier2.code)
-        self.assertEqual(rec1.month, today.month)
-        self.assertEqual(rec1.operation_key, 'B')
-        self.assertEqual(rec1.amount, Decimal('220.00'))
+        invoice.reload()
+        self.assertEqual(invoice.aeat347_operation_key, 'B')
 
         # Create out invoice over limit and with foreign Tax Identifier
-        Record = Model.get('aeat.347.record')
         Invoice = Model.get('account.invoice')
         invoice = Invoice()
         invoice.party = party3
@@ -167,14 +159,10 @@ class Test(unittest.TestCase):
         self.assertEqual(len(line.taxes), 1)
         self.assertEqual(line.amount, Decimal('3200.00'))
         invoice.click('post')
-        rec1, = Record.find([('invoice', '=', invoice.id)])
-        self.assertEqual(rec1.party_tax_identifier.code, identifier3.code)
-        self.assertEqual(rec1.month, today.month)
-        self.assertEqual(rec1.operation_key, 'B')
-        self.assertEqual(rec1.amount, Decimal('3520.00'))
+        invoice.reload()
+        self.assertEqual(invoice.aeat347_operation_key, 'B')
 
         # Create self out invoice
-        Record = Model.get('aeat.347.record')
         Invoice = Model.get('account.invoice')
         invoice = Invoice()
         invoice.party = company.party
@@ -186,7 +174,8 @@ class Test(unittest.TestCase):
         self.assertEqual(len(line.taxes), 1)
         self.assertEqual(line.amount, Decimal('3200.00'))
         invoice.click('post')
-        self.assertEqual(Record.find([('invoice', '=', invoice.id)]), [])
+        invoice.reload()
+        self.assertEqual(invoice.aeat347_operation_key, 'empty')
 
         # Create out credit note
         invoice = Invoice()
@@ -200,11 +189,8 @@ class Test(unittest.TestCase):
         self.assertEqual(len(line.taxes), 1)
         self.assertEqual(line.amount, Decimal('-80.00'))
         invoice.click('post')
-        rec1, = Record.find([('invoice', '=', invoice.id)])
-        self.assertEqual(rec1.party_tax_identifier.code, identifier1.code)
-        self.assertEqual(rec1.month, today.month)
-        self.assertEqual(rec1.operation_key, 'B')
-        self.assertEqual(rec1.amount, Decimal('-88.00'))
+        invoice.reload()
+        self.assertEqual(invoice.aeat347_operation_key, 'B')
 
         # Create in invoice
         invoice = Invoice()
@@ -220,11 +206,8 @@ class Test(unittest.TestCase):
         self.assertEqual(len(line.taxes), 1)
         self.assertEqual(line.amount, Decimal('125.00'))
         invoice.click('post')
-        rec1, = Record.find([('invoice', '=', invoice.id)])
-        self.assertEqual(rec1.party_tax_identifier.code, identifier1.code)
-        self.assertEqual(rec1.month, today.month)
-        self.assertEqual(rec1.operation_key, 'A')
-        self.assertEqual(rec1.amount, Decimal('137.50'))
+        invoice.reload()
+        self.assertEqual(invoice.aeat347_operation_key, 'A')
 
         # Create in credit note
         invoice = Invoice()
@@ -240,11 +223,8 @@ class Test(unittest.TestCase):
         self.assertEqual(len(line.taxes), 1)
         self.assertEqual(line.amount, Decimal('-25.00'))
         invoice.click('post')
-        rec1, = Record.find([('invoice', '=', invoice.id)])
-        self.assertEqual(rec1.party_tax_identifier.code, identifier1.code)
-        self.assertEqual(rec1.month, today.month)
-        self.assertEqual(rec1.operation_key, 'A')
-        self.assertEqual(rec1.amount, Decimal('-27.50'))
+        invoice.reload()
+        self.assertEqual(invoice.aeat347_operation_key, 'A')
 
         # Generate 347 Report
         Report = Model.get('aeat.347.report')
@@ -279,11 +259,8 @@ class Test(unittest.TestCase):
         self.assertEqual(len(line.taxes), 1)
         self.assertEqual(line.amount, Decimal('3200.00'))
         invoice.click('post')
-        rec1, = Record.find([('invoice', '=', invoice.id)])
-        self.assertEqual(rec1.party_tax_identifier.code, identifier1.code)
         reasign = Wizard('aeat.347.reasign.records', models=[invoice])
         reasign.form.aeat347_operation_key = 'empty'
         reasign.execute('reasign')
         invoice.reload()
         self.assertEqual(invoice.aeat347_operation_key, 'empty')
-        self.assertEqual(Record.find([('invoice', '=', invoice.id)]), [])
