@@ -50,4 +50,7 @@ contains the full copyright notices and license terms. -->
     <field name="province_code"/>
     <label name="zip"/>
     <field name="zip"/>
+    <separator string="Invoice Lines" id="aeat_347_property_invoice_lines" colspan="4"/>
+    <field name="invoice_lines" colspan="4"
+        view_ids="aeat_347.aeat_347_invoice_line_tree_view"/>
 </form>

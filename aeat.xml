@@ -3,6 +3,16 @@
 contains the full copyright notices and license terms. -->
 <tryton>
     <data>
+        <record model="ir.ui.view" id="aeat_347_invoice_tree_view">
+            <field name="model">account.invoice</field>
+            <field name="type">tree</field>
+            <field name="name">invoice_tree_347</field>
+        </record>
+        <record model="ir.ui.view" id="aeat_347_invoice_line_tree_view">
+            <field name="model">account.invoice.line</field>
+            <field name="type">tree</field>
+            <field name="name">invoice_line_tree_347</field>
+        </record>
         <record model="ir.ui.view" id="aeat_347_party_record_form_view">
             <field name="model">aeat.347.report.party</field>
             <field name="type">form</field>
@@ -184,18 +194,6 @@ contains the full copyright notices and license terms. -->
                 pyson="1"/>
             <field name="rule_group" ref="rule_group_aeat347_property"/>
         </record>
-        <record model="ir.rule.group" id="rule_group_aeat347_record">
-            <field name="name">Aeat 347 Record</field>
-            <field name="model">aeat.347.record</field>
-            <field name="global_p" eval="True"/>
-        </record>
-        <record model="ir.rule" id="rule_aeat_347_record_1">
-            <field name="domain"
-                eval="[('company', 'in', Eval('companies', []))]"
-                pyson="1"/>
-            <field name="rule_group" ref="rule_group_aeat347_record"/>
-        </record>
-
         <!-- Menus -->
         <menuitem action="act_aeat_347_report" id="menu_aeat_347_report"
             parent="account.menu_reporting" sequence="347"
