@@ -14,32 +14,6 @@ contains the full copyright notices and license terms. -->
             <field name="name">invoice_tree</field>
         </record>
 
-        <record model="ir.ui.view" id="aeat_347_recalculate_start_view">
-            <field name="model">aeat.347.recalculate.records.start</field>
-            <field name="type">form</field>
-            <field name="name">recalculate_start</field>
-        </record>
-        <record model="ir.ui.view" id="aeat_347_recalculate_end_view">
-            <field name="model">aeat.347.recalculate.records.end</field>
-            <field name="type">form</field>
-            <field name="name">recalculate_end</field>
-        </record>
-
-        <record model="ir.action.wizard" id="act_aeat_347_recalculate">
-            <field name="name">Recalculate AEAT 347 Records</field>
-            <field name="wiz_name">aeat.347.recalculate.records</field>
-        </record>
-        <record model="ir.action.keyword" id="act_aeat_347_recalculate_keyword1">
-            <field name="action" ref="act_aeat_347_recalculate"/>
-            <field name="keyword">form_action</field>
-            <field name="model">account.invoice,-1</field>
-        </record>
-        <record model="ir.action-res.group"
-            id="act_recalculate-group_aeat347">
-            <field name="action" ref="act_aeat_347_recalculate"/>
-            <field name="group" ref="account.group_account"/>
-        </record>
-
         <record model="ir.ui.view" id="aeat_347_reasign_start_view">
             <field name="model">aeat.347.reasign.records.start</field>
             <field name="type">form</field>
@@ -66,49 +40,5 @@ contains the full copyright notices and license terms. -->
             <field name="group" ref="account.group_account"/>
         </record>
 
-        <record model="ir.ui.view" id="aeat_347_record_tree_view">
-            <field name="model">aeat.347.record</field>
-            <field name="type">tree</field>
-            <field name="name">record_tree</field>
-        </record>
-        <record model="ir.ui.view" id="aeat_347_record_form_view">
-            <field name="model">aeat.347.record</field>
-            <field name="type">form</field>
-            <field name="name">record_form</field>
-        </record>
-        <record model="ir.action.act_window" id="act_aeat_347_record">
-            <field name="name">AEAT 347 Record </field>
-            <field name="res_model">aeat.347.record</field>
-        </record>
-        <record model="ir.action.act_window.view" id="act_aeat_347_record_view1">
-            <field name="sequence" eval="10"/>
-            <field name="view" ref="aeat_347_record_tree_view"/>
-            <field name="act_window" ref="act_aeat_347_record"/>
-        </record>
-        <record model="ir.action.act_window.view" id="act_aeat_347_record_view2">
-            <field name="sequence" eval="20"/>
-            <field name="view" ref="aeat_347_record_form_view"/>
-            <field name="act_window" ref="act_aeat_347_record"/>
-        </record>
-        <record model="ir.model.access" id="access_aeat_347_record">
-            <field name="model">aeat.347.record</field>
-            <field name="perm_read" eval="True"/>
-            <field name="perm_write" eval="False"/>
-            <field name="perm_create" eval="False"/>
-            <field name="perm_delete" eval="False"/>
-        </record>
-        <record model="ir.model.access" id="access_aeat_347_record_admin">
-            <field name="model">aeat.347.record</field>
-            <field name="group" ref="account.group_account"/>
-            <field name="perm_read" eval="True"/>
-            <field name="perm_write" eval="True"/>
-            <field name="perm_create" eval="True"/>
-            <field name="perm_delete" eval="True"/>
-        </record>
-
-        <menuitem action="act_aeat_347_record"
-            id="menu_aeat_347_record"
-            parent="menu_aeat_347_report" sequence="30"
-            name="AEAT 347 Record"/>
     </data>
 </tryton>
