@@ -111,6 +111,33 @@ class Report(metaclass=PoolMeta):
     __name__ = 'aeat.347.report'
 
     @classmethod
+    def get_aeat347_party_records(cls, report):
+        pool = Pool()
+        InvoiceLine = pool.get('account.invoice.line')
+        Asset = pool.get('asset')
+
+        results = super().get_aeat347_party_records(report)
+        if not results:
+            return results
+
+        cursor = Transaction().connection.cursor()
+        line = InvoiceLine.__table__()
+        asset = Asset.__table__()
+
+        invoice_ids = list({r[0] for r in results})
+        query = line.join(asset,
+            condition=line.invoice_asset == asset.id).select(
+                line.invoice,
+                where=In(line.invoice, invoice_ids)
+                & (asset.aeat347_party == False))
+        cursor.execute(*query)
+        exclude_invoices = {invoice_id for (invoice_id,) in cursor.fetchall()}
+        if not exclude_invoices:
+            return results
+
+        return [r for r in results if r[0] not in exclude_invoices]
+
+    @classmethod
     def get_aeat347_property_records(cls, report):
         pool = Pool()
         PartyOperation = pool.get('aeat.347.report.party')
