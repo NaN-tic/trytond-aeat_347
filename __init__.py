@@ -20,7 +20,6 @@ def register():
         invoice.InvoiceLine,
         invoice.Reasign347RecordStart,
         invoice.Reasign347RecordEnd,
-        product.Product,
         tax.TaxTemplate,
         tax.Tax,
         module='aeat_347', type_='model')
