@@ -728,6 +728,7 @@ class PartyRecord(ModelSQL, ModelView):
             record.country_code = ''
         else:
             record.country_code = self.country_code
+        record.bdns_call_number = self.bdns_call_number or ''
         record.operation_key = self.operation_key
         record.amount = self.amount
         record.insurance = self.insurance
