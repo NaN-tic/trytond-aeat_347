@@ -23,6 +23,26 @@ class Asset(metaclass=PoolMeta):
     party_name = fields.Function(fields.Char('Party Name'), 'get_party_fields')
     party_tax_identifier = fields.Function(fields.Many2One('party.identifier',
         'Party Tax Identifier'), 'get_party_fields')
+    situation = fields.Selection([
+            ('1', '1 - Spain but Basque Country and Navarra'),
+            ('2', '2 - Basque Country and Navarra'),
+            ('3', '3 - Spain, without catastral reference'),
+            ('4', '4 - Foreign'),
+            ], 'Property Situation', required=True)
+    road_type = fields.Selection([
+            ('CL', 'Street'),
+            ('AV', 'Avenue'),
+            ('CR', 'Road'),
+            ('PZ', 'Square'),
+            ('PS', 'Promenade'),
+            ('CM', 'Path'),
+            ('PG', 'Industrial Park'),
+            ('RD', 'Ring Road'),
+            ('TR', 'Cross Street'),
+            ('GV', 'Grand Avenue'),
+            ('RB', 'Rambla'),
+            ('SL', 'Plot'),
+            ], 'Road Type')
     street = fields.Char('Street')
     number_type = fields.Selection([
             (None, ''),
@@ -31,18 +51,39 @@ class Asset(metaclass=PoolMeta):
             ('S/N', 'Without number'),
             ], 'Number type')
     number = fields.Char('Number')
-    province_code = fields.Char('Province Code')
-    municipality_code = fields.Char('Municipality Code')
-    municipality = fields.Char('Municipality', size=30)
-    province = fields.Char('Province', size=30)
-    door = fields.Char('Door', size=3)
-    floor = fields.Char('Floor', size=3)
+    number_qualifier = fields.Selection([
+            (None, ''),
+            ('BIS', 'Bis'),
+            ('MOD', 'Mod'),
+            ('DUP', 'Dup'),
+            ('ANT', 'Ant'),
+            ], 'Number Qualifier')
+    block = fields.Char('Block', size=3)
+    doorway = fields.Char('Doorway', size=3)
     stair = fields.Char('Stair', size=3)
+    floor = fields.Char('Floor', size=3)
+    door = fields.Char('Door', size=3)
+    complement = fields.Char('Complement', size=40,
+        help='Complement (urbanization, industrial park...)')
+    city = fields.Char('City', size=30)
+    municipality = fields.Char('Municipality', size=30)
+    municipality_code = fields.Char('Municipality Code', size=5,
+        help="Get code from INE")
+    province_code = fields.Char('Province Code', size=2)
+    zip = fields.Char('Zip', size=5)
     aeat347_party = fields.Boolean('347 Party')
     aeat347_property = fields.Boolean('347 Property',
         states={
             'invisible': ~Eval('aeat347_party', False),
             })
+
+    @staticmethod
+    def default_situation():
+        return '1'
+
+    @staticmethod
+    def default_road_type():
+        return 'CL'
 
     @fields.depends('municipality_code', 'province_code')
     def on_change_municipality_code(self):
@@ -206,19 +247,24 @@ class Report(metaclass=PoolMeta):
                         'amount': amount,
                         'party_name': party_name[:38],
                         'party_vat': party_vat,
-                        'situation': 1,
                         'cadaster_number': asset.land_register,
+                        'situation': asset.situation,
+                        'road_type': asset.road_type,
                         'street': asset.street[:50] if asset.street else '',
                         'number_type': asset.number_type,
-                        'number': asset.number,
-                        'province_code': asset.province_code,
-                        'municipality_code': asset.municipality_code,
-                        'zip': asset.municipality_code,
-                        'municipality': asset.municipality,
-                        'door': asset.door,
-                        'floor': asset.floor,
+                        'number': asset.number.zfill(5),
+                        'number_qualifier': asset.number_qualifier,
+                        'block': asset.block,
+                        'doorway': asset.doorway,
                         'stair': asset.stair,
+                        'floor': asset.floor,
+                        'door': asset.door,
+                        'complement': asset.complement[:40],
                         'city': asset.province,
+                        'municipality': asset.municipality,
+                        'municipality_code': asset.municipality_code,
+                        'province_code': asset.province_code,
+                        'zip': asset.municipality_code,
                         'report': report.id,
                         'invoice_lines': [('add', list(values['lines']))],
                 })

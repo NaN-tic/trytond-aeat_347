@@ -370,9 +370,25 @@ msgctxt "field:asset,aeat347_property:"
 msgid "347 Property"
 msgstr "347 Propiedad"
 
+msgctxt "field:asset,block:"
+msgid "Block"
+msgstr "Bloque"
+
+msgctxt "field:asset,city:"
+msgid "City"
+msgstr "Ciudad"
+
+msgctxt "field:asset,complement:"
+msgid "Complement"
+msgstr "Complemento"
+
 msgctxt "field:asset,door:"
 msgid "Door"
 msgstr "Puerta"
+
+msgctxt "field:asset,doorway:"
+msgid "Doorway"
+msgstr "Portal"
 
 msgctxt "field:asset,floor:"
 msgid "Floor"
@@ -389,6 +405,10 @@ msgstr "Código municipio"
 msgctxt "field:asset,number:"
 msgid "Number"
 msgstr "Número"
+
+msgctxt "field:asset,number_qualifier:"
+msgid "Number Qualifier"
+msgstr "Calificador de número"
 
 msgctxt "field:asset,number_type:"
 msgid "Number type"
@@ -410,21 +430,17 @@ msgctxt "field:asset,party_tax_identifier:"
 msgid "Party Tax Identifier"
 msgstr "Identificador fiscal del tercero"
 
-msgctxt "field:product.template,aeat347_party:"
-msgid "347 Party"
-msgstr "Tercero 347"
-
-msgctxt "field:product.template,aeat347_property:"
-msgid "347 Property"
-msgstr "Propiedad 347"
-
-msgctxt "field:asset,province:"
-msgid "Province"
-msgstr "Provincia"
-
 msgctxt "field:asset,province_code:"
 msgid "Province Code"
 msgstr "Código provincia"
+
+msgctxt "field:asset,road_type:"
+msgid "Road Type"
+msgstr "Tipo de vía"
+
+msgctxt "field:asset,situation:"
+msgid "Property Situation"
+msgstr "Situación de la propiedad"
 
 msgctxt "field:asset,stair:"
 msgid "Stair"
@@ -433,6 +449,10 @@ msgstr "Escalera"
 msgctxt "field:asset,street:"
 msgid "Street"
 msgstr "Calle"
+
+msgctxt "field:asset,zip:"
+msgid "Zip"
+msgstr "Código postal"
 
 msgctxt "field:asset.party.party,asset:"
 msgid "Asset"
@@ -572,6 +592,14 @@ msgctxt "help:aeat.347.report.property,representative_vat:"
 msgid "Legal Representative VAT number"
 msgstr "NIF del representante legal."
 
+msgctxt "help:asset,complement:"
+msgid "Complement (urbanization, industrial park...)"
+msgstr "Complemento (urbanización, polígono industrial...)"
+
+msgctxt "help:asset,municipality_code:"
+msgid "Get code from INE"
+msgstr "Obtener código del INE"
+
 msgctxt "model:aeat.347.reasign.records.end,name:"
 msgid "Reasign AEAT 347 Records End"
 msgstr "Final Reasignar registros AEAT 347"
@@ -648,10 +676,12 @@ msgctxt "model:ir.action.wizard,name:act_aeat_347_reasign"
 msgid "Reasign AEAT 347 Records"
 msgstr "Reasignar registros AEAT 347"
 
+#, python-format
 msgctxt "model:ir.message,text:invalid_currency"
 msgid "Currency in AEAT 347 report \"%(report)s\" must be Euro."
 msgstr "La moneda del informe AEAT 349 \"%(report)s\" debe ser Euro."
 
+#, python-format
 msgctxt "model:ir.message,text:msg_invalid_year"
 msgid "The year \"%(year)s\" is not valid."
 msgstr "El año \"%(year)s\" no es correcto."
@@ -906,6 +936,54 @@ msgctxt "selection:aeat.347.report.property,number_type:"
 msgid "Without number"
 msgstr "Sin número"
 
+msgctxt "selection:aeat.347.report.property,road_type:"
+msgid "Avenue"
+msgstr "Avenida"
+
+msgctxt "selection:aeat.347.report.property,road_type:"
+msgid "Cross Street"
+msgstr "Travesía"
+
+msgctxt "selection:aeat.347.report.property,road_type:"
+msgid "Grand Avenue"
+msgstr "Gran Vía"
+
+msgctxt "selection:aeat.347.report.property,road_type:"
+msgid "Industrial Park"
+msgstr "Polígono"
+
+msgctxt "selection:aeat.347.report.property,road_type:"
+msgid "Path"
+msgstr "Camino"
+
+msgctxt "selection:aeat.347.report.property,road_type:"
+msgid "Plot"
+msgstr "Solar"
+
+msgctxt "selection:aeat.347.report.property,road_type:"
+msgid "Promenade"
+msgstr "Paseo"
+
+msgctxt "selection:aeat.347.report.property,road_type:"
+msgid "Rambla"
+msgstr "Rambla"
+
+msgctxt "selection:aeat.347.report.property,road_type:"
+msgid "Ring Road"
+msgstr "Ronda"
+
+msgctxt "selection:aeat.347.report.property,road_type:"
+msgid "Road"
+msgstr "Carretera"
+
+msgctxt "selection:aeat.347.report.property,road_type:"
+msgid "Square"
+msgstr "Plaza"
+
+msgctxt "selection:aeat.347.report.property,road_type:"
+msgid "Street"
+msgstr "Calle"
+
 msgctxt "selection:aeat.347.report.property,situation:"
 msgid "1 - Spain but Basque Country and Navarra"
 msgstr "1 - España excepto Euskadi y Navarra"
@@ -922,6 +1000,22 @@ msgctxt "selection:aeat.347.report.property,situation:"
 msgid "4 - Foreign"
 msgstr "4 - Extranjero"
 
+msgctxt "selection:asset,number_qualifier:"
+msgid "Ant"
+msgstr "Ant"
+
+msgctxt "selection:asset,number_qualifier:"
+msgid "Bis"
+msgstr "Bis"
+
+msgctxt "selection:asset,number_qualifier:"
+msgid "Dup"
+msgstr "Dup"
+
+msgctxt "selection:asset,number_qualifier:"
+msgid "Mod"
+msgstr "Mod"
+
 msgctxt "selection:asset,number_type:"
 msgid "Kilometer"
 msgstr "Kilómetro"
@@ -933,6 +1027,70 @@ msgstr "Número"
 msgctxt "selection:asset,number_type:"
 msgid "Without number"
 msgstr "Sin número"
+
+msgctxt "selection:asset,road_type:"
+msgid "Avenue"
+msgstr "Avenida"
+
+msgctxt "selection:asset,road_type:"
+msgid "Cross Street"
+msgstr "Travesía"
+
+msgctxt "selection:asset,road_type:"
+msgid "Grand Avenue"
+msgstr "Gran Vía"
+
+msgctxt "selection:asset,road_type:"
+msgid "Industrial Park"
+msgstr "Polígono"
+
+msgctxt "selection:asset,road_type:"
+msgid "Path"
+msgstr "Camino"
+
+msgctxt "selection:asset,road_type:"
+msgid "Plot"
+msgstr "Solar"
+
+msgctxt "selection:asset,road_type:"
+msgid "Promenade"
+msgstr "Paseo"
+
+msgctxt "selection:asset,road_type:"
+msgid "Rambla"
+msgstr "Rambla"
+
+msgctxt "selection:asset,road_type:"
+msgid "Ring Road"
+msgstr "Ronda"
+
+msgctxt "selection:asset,road_type:"
+msgid "Road"
+msgstr "Carretera"
+
+msgctxt "selection:asset,road_type:"
+msgid "Square"
+msgstr "Plaza"
+
+msgctxt "selection:asset,road_type:"
+msgid "Street"
+msgstr "Calle"
+
+msgctxt "selection:asset,situation:"
+msgid "1 - Spain but Basque Country and Navarra"
+msgstr "1 - España excepto País Vasco y Navarra"
+
+msgctxt "selection:asset,situation:"
+msgid "2 - Basque Country and Navarra"
+msgstr "2 - País Vasco y Navarra"
+
+msgctxt "selection:asset,situation:"
+msgid "3 - Spain, without catastral reference"
+msgstr "3 - España, sin referencia catastral"
+
+msgctxt "selection:asset,situation:"
+msgid "4 - Foreign"
+msgstr "4 - Extranjero"
 
 msgctxt "view:aeat.347.reasign.records.end:"
 msgid "The AEAT 347 records have been reasigned."

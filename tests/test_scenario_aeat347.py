@@ -29,7 +29,7 @@ class Test(unittest.TestCase):
         today = datetime.date.today()
 
         # Install account_invoice
-        activate_modules(['aeat_347', 'account_es', 'asset_invoice',
+        activate_modules(['aeat_347', 'account_es', 'asset', 'asset_invoice',
             'asset_property', 'product', 'account_code_digits'])
 
         # Create company
