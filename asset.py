@@ -245,7 +245,7 @@ class Report(metaclass=PoolMeta):
                     for t in InvoiceLine(line)._get_taxes().values())
                 to_create.append({
                         'amount': amount,
-                        'party_name': party_name[:38],
+                        'party_name': party_name[:38] if party_name else '',
                         'party_vat': party_vat,
                         'cadaster_number': asset.land_register,
                         'situation': asset.situation,
@@ -259,7 +259,8 @@ class Report(metaclass=PoolMeta):
                         'stair': asset.stair,
                         'floor': asset.floor,
                         'door': asset.door,
-                        'complement': asset.complement[:40],
+                        'complement': (asset.complement[:40]
+                            if asset.complement else ''),
                         'city': asset.province,
                         'municipality': asset.municipality,
                         'municipality_code': asset.municipality_code,
