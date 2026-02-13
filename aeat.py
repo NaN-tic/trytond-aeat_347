@@ -784,7 +784,20 @@ class PropertyRecord(ModelSQL, ModelView):
             ('4', '4 - Foreign'),
             ], 'Property Situation', required=True)
     cadaster_number = fields.Char('Cadaster Reference', size=25)
-    road_type = fields.Char('Road Type', size=5)
+    road_type = fields.Selection([
+            ('CL', 'Street'),
+            ('AV', 'Avenue'),
+            ('CR', 'Road'),
+            ('PZ', 'Square'),
+            ('PS', 'Promenade'),
+            ('CM', 'Path'),
+            ('PG', 'Industrial Park'),
+            ('RD', 'Ring Road'),
+            ('TR', 'Cross Street'),
+            ('GV', 'Grand Avenue'),
+            ('RB', 'Rambla'),
+            ('SL', 'Plot'),
+            ], 'Road Type')
     street = fields.Char('Street', size=50)
     number_type = fields.Selection([
             (None, ''),
