@@ -29,7 +29,7 @@ class Test(unittest.TestCase):
         today = datetime.date.today()
 
         # Install account_invoice
-        activate_modules(['aeat_347', 'account_es'])
+        activate_modules(['aeat_347', 'account_es', 'asset', 'product'])
 
         # Create company
         eur = get_currency('EUR')
