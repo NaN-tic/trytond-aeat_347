@@ -15,12 +15,12 @@ contains the full copyright notices and license terms. -->
         </record>
 
         <record model="ir.ui.view" id="aeat_347_reasign_start_view">
-            <field name="model">aeat.347.reasign.records.start</field>
+            <field name="model">aeat.347.reasign.start</field>
             <field name="type">form</field>
             <field name="name">reasign_start</field>
         </record>
         <record model="ir.ui.view" id="aeat_347_reasign_end_view">
-            <field name="model">aeat.347.reasign.records.end</field>
+            <field name="model">aeat.347.reasign.end</field>
             <field name="type">form</field>
             <field name="name">reasign_end</field>
         </record>
