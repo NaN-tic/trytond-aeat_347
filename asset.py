@@ -290,12 +290,12 @@ class Invoice(metaclass=PoolMeta):
                 break
 
     @classmethod
-    def create_aeat347_records(cls, invoices):
+    def check_aeat347_operation_key(cls, invoices):
         pool = Pool()
         PartyAsset = pool.get('asset.party.party')
         cursor = Transaction().connection.cursor()
         invoice_table = cls.__table__()
-        super().create_aeat347_records(invoices)
+        super().check_aeat347_operation_key(invoices)
 
         to_save_assets = []
         to_empty = []
@@ -375,12 +375,12 @@ class InvoiceContract(metaclass=PoolMeta):
     __name__ = 'account.invoice'
 
     @classmethod
-    def create_aeat347_records(cls, invoices):
+    def check_aeat347_operation_key(cls, invoices):
         pool = Pool()
         ContractConsumption = pool.get('contract.consumption')
         Warning = pool.get('res.user.warning')
 
-        super().create_aeat347_records(invoices)
+        super().check_aeat347_operation_key(invoices)
 
         for invoice in invoices:
             for line in invoice.lines:
