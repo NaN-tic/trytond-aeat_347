@@ -18,8 +18,8 @@ def register():
         aeat.PropertyRecordInvoiceLine,
         invoice.Invoice,
         invoice.InvoiceLine,
-        invoice.Reasign347RecordStart,
-        invoice.Reasign347RecordEnd,
+        invoice.Reasign347Start,
+        invoice.Reasign347End,
         product.Product,
         tax.TaxTemplate,
         tax.Tax,
@@ -40,5 +40,5 @@ def register():
         module='aeat_347', type_='model', depends=['asset', 'party',
             'asset_invoice', 'asset_property', 'contract'])
     Pool.register(
-        invoice.Reasign347Record,
+        invoice.Reasign347,
         module='aeat_347', type_='wizard')
