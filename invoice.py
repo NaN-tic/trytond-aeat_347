@@ -70,7 +70,7 @@ class Invoice(metaclass=PoolMeta):
                 self.type)
 
     @classmethod
-    def create_aeat347_records(cls, invoices):
+    def check_aeat347_operation_key(cls, invoices):
         to_update = []
         for invoice in invoices:
             if (not invoice.move or invoice.state == 'cancelled'):
@@ -102,7 +102,7 @@ class Invoice(metaclass=PoolMeta):
     @classmethod
     def post(cls, invoices):
         super(Invoice, cls).post(invoices)
-        cls.create_aeat347_records(invoices)
+        cls.check_aeat347_operation_key(invoices)
 
     @classmethod
     def cancel(cls, invoices):
@@ -130,11 +130,11 @@ class InvoiceLine(metaclass=PoolMeta):
             return self.invoice.invoice_date
 
 
-class Reasign347RecordStart(ModelView):
+class Reasign347Start(ModelView):
     """
-    Reasign AEAT 347 Records Start
+    Reasign AEAT 347 Start
     """
-    __name__ = "aeat.347.reasign.records.start"
+    __name__ = "aeat.347.reasign.start"
 
     aeat347_operation_key = fields.Selection(OPERATION_KEY, 'Operation Key',
         required=True)
@@ -144,25 +144,25 @@ class Reasign347RecordStart(ModelView):
         return None
 
 
-class Reasign347RecordEnd(ModelView):
+class Reasign347End(ModelView):
     """
-    Reasign AEAT 347 Records End
+    Reasign AEAT 347 End
     """
-    __name__ = "aeat.347.reasign.records.end"
+    __name__ = "aeat.347.reasign.end"
 
 
-class Reasign347Record(Wizard):
+class Reasign347(Wizard):
     """
-    Reasign AEAT 347 Records
+    Reasign AEAT 347
     """
-    __name__ = "aeat.347.reasign.records"
-    start = StateView('aeat.347.reasign.records.start',
+    __name__ = "aeat.347.reasign"
+    start = StateView('aeat.347.reasign.start',
         'aeat_347.aeat_347_reasign_start_view', [
             Button('Cancel', 'end', 'tryton-cancel'),
             Button('Reasign', 'reasign', 'tryton-ok', default=True),
             ])
     reasign = StateTransition()
-    done = StateView('aeat.347.reasign.records.end',
+    done = StateView('aeat.347.reasign.end',
         'aeat_347.aeat_347_reasign_end_view', [
             Button('Ok', 'end', 'tryton-ok', default=True),
             ])
@@ -180,5 +180,5 @@ class Reasign347Record(Wizard):
                 columns=[invoice.aeat347_operation_key,],
                 values=[value], where=In(invoice.id, invoice_ids)))
 
-        Invoice.create_aeat347_records(invoices)
+        Invoice.check_aeat347_operation_key(invoices)
         return 'done'
