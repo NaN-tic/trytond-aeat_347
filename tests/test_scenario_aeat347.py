@@ -243,7 +243,7 @@ class Test(unittest.TestCase):
         self.assertEqual(report.property_amount, Decimal('0.0'))
 
         # Reassign 347 lines
-        reasign = Wizard('aeat.347.reasign.records', models=[invoice])
+        reasign = Wizard('aeat.347.reasign', models=[invoice])
         reasign.execute('reasign')
         invoice.reload()
         self.assertEqual(invoice.aeat347_operation_key, 'A')
@@ -259,7 +259,7 @@ class Test(unittest.TestCase):
         self.assertEqual(len(line.taxes), 1)
         self.assertEqual(line.amount, Decimal('3200.00'))
         invoice.click('post')
-        reasign = Wizard('aeat.347.reasign.records', models=[invoice])
+        reasign = Wizard('aeat.347.reasign', models=[invoice])
         reasign.form.aeat347_operation_key = 'empty'
         reasign.execute('reasign')
         invoice.reload()
