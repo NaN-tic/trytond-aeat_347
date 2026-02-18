@@ -283,7 +283,7 @@ class Invoice(metaclass=PoolMeta):
         super()._on_change_lines_taxes()
 
         for line in self.lines:
-            if not line.invoice_asset:
+            if not hasattr(line, 'invoice_asset') or not line.invoice_asset:
                 continue
             if not line.invoice_asset.aeat347_party:
                 self.aeat347_operation_key = 'empty'
