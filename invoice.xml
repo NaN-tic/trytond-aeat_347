@@ -26,8 +26,8 @@ contains the full copyright notices and license terms. -->
         </record>
 
         <record model="ir.action.wizard" id="act_aeat_347_reasign">
-            <field name="name">Reasign AEAT 347 Records</field>
-            <field name="wiz_name">aeat.347.reasign.records</field>
+            <field name="name">Reasign AEAT 347</field>
+            <field name="wiz_name">aeat.347.reasign</field>
         </record>
         <record model="ir.action.keyword" id="act_aeat_347_reasign_keyword1">
             <field name="action" ref="act_aeat_347_reasign"/>
