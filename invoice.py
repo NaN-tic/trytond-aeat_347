@@ -59,9 +59,10 @@ class Invoice(metaclass=PoolMeta):
                     include = True
         return include
 
-    @fields.depends('type', 'aeat347_operation_key', 'party', 'company')
+    @fields.depends('taxes', 'type', 'aeat347_operation_key', 'party',
+        'company', methods=['check_347_taxes', 'get_aeat347_operation_key'])
     def _on_change_lines_taxes(self):
-        super(Invoice, self)._on_change_lines_taxes()
+        super()._on_change_lines_taxes()
         if ((self.taxes and not self.check_347_taxes())
                 or (self.company and self.party == self.company.party)):
             self.aeat347_operation_key = 'empty'
