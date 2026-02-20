@@ -71,7 +71,7 @@ class Asset(metaclass=PoolMeta):
 
     @staticmethod
     def default_road_type():
-        return 'CL'
+        return 'CALLE'
 
     @fields.depends('municipality_code', 'province_code')
     def on_change_municipality_code(self):

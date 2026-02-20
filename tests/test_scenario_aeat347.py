@@ -125,6 +125,7 @@ class Test(unittest.TestCase):
         asset_full = Asset()
         asset_full.name = 'Asset Full'
         asset_full.product = product_347_full
+        asset_full.number = '1'
         asset_full.save()
         self.assertTrue(asset_full.aeat347_party)
         self.assertTrue(asset_full.aeat347_property)
@@ -132,6 +133,7 @@ class Test(unittest.TestCase):
         asset_party = Asset()
         asset_party.name = 'Asset Party'
         asset_party.product = product_347_party
+        asset_party.number = '2'
         asset_party.save()
         self.assertTrue(asset_party.aeat347_party)
         self.assertFalse(asset_party.aeat347_property)
@@ -139,6 +141,7 @@ class Test(unittest.TestCase):
         asset_none = Asset()
         asset_none.name = 'Asset None'
         asset_none.product = product_347_none
+        asset_none.number = '3'
         asset_none.save()
         self.assertFalse(asset_none.aeat347_party)
         self.assertFalse(asset_none.aeat347_property)
