@@ -7,6 +7,7 @@ from . import invoice
 from . import tax
 from . import asset
 from . import product
+from . import importer
 
 
 def register():
@@ -44,3 +45,8 @@ def register():
     Pool.register(
         invoice.Reasign347,
         module='aeat_347', type_='wizard')
+    Pool.register(
+        importer.ImporterAsset,
+        importer.Importer,
+        module='aeat_347', type_='model', depends=['importer',
+            'asset', 'asset_property'])

@@ -478,6 +478,130 @@ msgctxt "field:asset.party.party,start_date:"
 msgid "Start Date"
 msgstr "Fecha de inicio"
 
+msgctxt "field:importer.asset,active:"
+msgid "Active"
+msgstr "Activo"
+
+msgctxt "field:importer.asset,aeat347_party:"
+msgid "347 Party"
+msgstr "347 Tercer"
+
+msgctxt "field:importer.asset,aeat347_property:"
+msgid "347 Property"
+msgstr "347 Propiedad"
+
+msgctxt "field:importer.asset,asset_id:"
+msgid "Asset ID"
+msgstr "Identificación del activo"
+
+msgctxt "field:importer.asset,block:"
+msgid "Block"
+msgstr "Bloque"
+
+msgctxt "field:importer.asset,city:"
+msgid "City"
+msgstr "Ciudad"
+
+msgctxt "field:importer.asset,code:"
+msgid "Code"
+msgstr "Código"
+
+msgctxt "field:importer.asset,company_id:"
+msgid "Company ID"
+msgstr "ID de la empresa"
+
+msgctxt "field:importer.asset,company_name:"
+msgid "Company Name"
+msgstr "nombre de empresa"
+
+msgctxt "field:importer.asset,complement:"
+msgid "Complement"
+msgstr "Complementar"
+
+msgctxt "field:importer.asset,door:"
+msgid "Door"
+msgstr "Puerta"
+
+msgctxt "field:importer.asset,doorway:"
+msgid "Doorway"
+msgstr "Portal"
+
+msgctxt "field:importer.asset,floor:"
+msgid "Floor"
+msgstr "Piso"
+
+msgctxt "field:importer.asset,land_register:"
+msgid "Land Register"
+msgstr "Registro de la propiedad"
+
+msgctxt "field:importer.asset,metadata:"
+msgid "Metadata"
+msgstr "Metadatos"
+
+msgctxt "field:importer.asset,municipality:"
+msgid "Municipality"
+msgstr "Municipio"
+
+msgctxt "field:importer.asset,municipality_code:"
+msgid "Municipality Code"
+msgstr "Código Municipal"
+
+msgctxt "field:importer.asset,name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:importer.asset,number:"
+msgid "Number"
+msgstr "Número"
+
+msgctxt "field:importer.asset,number_qualifier:"
+msgid "Number Qualifier"
+msgstr "Calificador de número"
+
+msgctxt "field:importer.asset,number_type:"
+msgid "Number type"
+msgstr "Tipo de número"
+
+msgctxt "field:importer.asset,product_code:"
+msgid "Product Code"
+msgstr "Código de producto"
+
+msgctxt "field:importer.asset,product_name:"
+msgid "Product Name"
+msgstr "Nombre del producto"
+
+msgctxt "field:importer.asset,province_code:"
+msgid "Province Code"
+msgstr "Código de provincia"
+
+msgctxt "field:importer.asset,road_type:"
+msgid "Road Type"
+msgstr "Tipo de carretera"
+
+msgctxt "field:importer.asset,row_number:"
+msgid "Row Number"
+msgstr "Número de fila"
+
+msgctxt "field:importer.asset,situation:"
+msgid "Property Situation"
+msgstr "Situación de la propiedad"
+
+msgctxt "field:importer.asset,stair:"
+msgid "Stair"
+msgstr "Escalera"
+
+msgctxt "field:importer.asset,street:"
+msgid "Street"
+msgstr "Calle"
+
+msgctxt "field:importer.asset,type:"
+msgid "Type"
+msgstr "Tipo"
+
+msgctxt "field:importer.asset,zip:"
+msgid "Zip"
+msgstr "Código postal"
+
 msgctxt "field:party.party,assets:"
 msgid "Assets"
 msgstr "Activos"
@@ -652,6 +776,10 @@ msgctxt "model:asset.party.party,name:"
 msgid "Asset Party"
 msgstr "Activo Tercer"
 
+msgctxt "model:importer.asset,name:"
+msgid "Importer Asset"
+msgstr "Importador Activo"
+
 msgctxt "model:ir.action,name:"
 msgid "AEAT 347 Record"
 msgstr "Registro AEAT 347"
@@ -665,8 +793,8 @@ msgid "AEAT 347 Property Record"
 msgstr "Registro de propiedad AEAT 347"
 
 msgctxt "model:ir.action,name:act_aeat_347_reasign"
-msgid "Reasign AEAT 347 Records"
-msgstr "Reasignar registros AEAT 347"
+msgid "Reasign AEAT 347"
+msgstr "Reasignar AEAT 347"
 
 msgctxt "model:ir.action,name:act_aeat_347_report"
 msgid "AEAT 347 Report"
@@ -696,10 +824,18 @@ msgctxt "model:ir.action.wizard,name:act_aeat_347_reasign"
 msgid "Reasign AEAT 347 Records"
 msgstr "Reasignar registros AEAT 347"
 
+#, python-format
 msgctxt "model:ir.message,text:invalid_currency"
 msgid "Currency in AEAT 347 report \"%(report)s\" must be Euro."
 msgstr "La moneda del informe AEAT 349 \"%(report)s\" debe ser Euro."
 
+#, python-format
+msgctxt "model:ir.message,text:msg_asset_not_found"
+msgid "Asset not found (id: %(asset_id)s, code: %(asset_code)s)."
+msgstr ""
+"No se ha encontrado el activo (id: %(asset_id)s, código: %(asset_code)s)."
+
+#, python-format
 msgctxt "model:ir.message,text:msg_invalid_year"
 msgid "The year \"%(year)s\" is not valid."
 msgstr "El año \"%(year)s\" no es correcto."
