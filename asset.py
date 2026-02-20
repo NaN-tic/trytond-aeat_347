@@ -252,7 +252,7 @@ class Report(metaclass=PoolMeta):
                         'road_type': asset.road_type,
                         'street': asset.street[:50] if asset.street else '',
                         'number_type': asset.number_type,
-                        'number': asset.number.zfill(5),
+                        'number': asset.number.zfill(5) if asset.number else '',
                         'number_qualifier': asset.number_qualifier,
                         'block': asset.block,
                         'doorway': asset.doorway,
@@ -261,7 +261,7 @@ class Report(metaclass=PoolMeta):
                         'door': asset.door,
                         'complement': (asset.complement[:40]
                             if asset.complement else ''),
-                        'city': asset.province,
+                        'city': asset.city,
                         'municipality': asset.municipality,
                         'municipality_code': asset.municipality_code,
                         'province_code': asset.province_code,
