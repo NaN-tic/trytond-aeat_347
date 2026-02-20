@@ -9,6 +9,7 @@ from trytond.i18n import gettext
 from trytond.exceptions import UserWarning
 from trytond.pyson import Eval
 from sql.operators import In
+from .aeat import ROAD_TYPE
 
 
 class Asset(metaclass=PoolMeta):
@@ -29,20 +30,7 @@ class Asset(metaclass=PoolMeta):
             ('3', '3 - Spain, without catastral reference'),
             ('4', '4 - Foreign'),
             ], 'Property Situation', required=True)
-    road_type = fields.Selection([
-            ('CL', 'Street'),
-            ('AV', 'Avenue'),
-            ('CR', 'Road'),
-            ('PZ', 'Square'),
-            ('PS', 'Promenade'),
-            ('CM', 'Path'),
-            ('PG', 'Industrial Park'),
-            ('RD', 'Ring Road'),
-            ('TR', 'Cross Street'),
-            ('GV', 'Grand Avenue'),
-            ('RB', 'Rambla'),
-            ('SL', 'Plot'),
-            ], 'Road Type')
+    road_type = fields.Selection(ROAD_TYPE, 'Road Type')
     street = fields.Char('Street')
     number_type = fields.Selection([
             (None, ''),
@@ -50,7 +38,7 @@ class Asset(metaclass=PoolMeta):
             ('KM.', 'Kilometer'),
             ('S/N', 'Without number'),
             ], 'Number type')
-    number = fields.Char('Number')
+    number = fields.Char('Number', required=True)
     number_qualifier = fields.Selection([
             (None, ''),
             ('BIS', 'Bis'),
