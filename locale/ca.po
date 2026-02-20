@@ -1093,6 +1093,10 @@ msgid "Path"
 msgstr "Camí"
 
 msgctxt "selection:aeat.347.report.property,road_type:"
+msgid "Place"
+msgstr "Lloc"
+
+msgctxt "selection:aeat.347.report.property,road_type:"
 msgid "Plot"
 msgstr "Solar"
 
@@ -1183,6 +1187,10 @@ msgstr "Polígon industrial"
 msgctxt "selection:asset,road_type:"
 msgid "Path"
 msgstr "Camí"
+
+msgctxt "selection:asset,road_type:"
+msgid "Place"
+msgstr "Lloc"
 
 msgctxt "selection:asset,road_type:"
 msgid "Plot"
