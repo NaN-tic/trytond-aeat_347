@@ -40,6 +40,22 @@ OPERATION_KEY = [
     ('G', 'G - Travel Agency Purchases'),
     ]
 
+ROAD_TYPE = [
+    ('CALLE', 'Street'),
+    ('AV', 'Avenue'),
+    ('CRA', 'Road'),
+    ('PLAZA', 'Square'),
+    ('PASEO', 'Promenade'),
+    ('CMNO', 'Path'),
+    ('POLIG', 'Industrial Park'),
+    ('RONDA', 'Ring Road'),
+    ('TRVA', 'Cross Street'),
+    ('G.V.', 'Grand Avenue'),
+    ('RBLA', 'Rambla'),
+    ('LUGAR', 'Place'),
+    ('SL', 'Plot'),
+    ]
+
 
 def remove_accents(unicode_string):
     str_ = str if sys.version_info < (3, 0) else bytes
@@ -784,20 +800,7 @@ class PropertyRecord(ModelSQL, ModelView):
             ('4', '4 - Foreign'),
             ], 'Property Situation', required=True)
     cadaster_number = fields.Char('Cadaster Reference', size=25)
-    road_type = fields.Selection([
-            ('CL', 'Street'),
-            ('AV', 'Avenue'),
-            ('CR', 'Road'),
-            ('PZ', 'Square'),
-            ('PS', 'Promenade'),
-            ('CM', 'Path'),
-            ('PG', 'Industrial Park'),
-            ('RD', 'Ring Road'),
-            ('TR', 'Cross Street'),
-            ('GV', 'Grand Avenue'),
-            ('RB', 'Rambla'),
-            ('SL', 'Plot'),
-            ], 'Road Type')
+    road_type = fields.Selection(ROAD_TYPE, 'Road Type')
     street = fields.Char('Street', size=50)
     number_type = fields.Selection([
             (None, ''),
@@ -805,7 +808,7 @@ class PropertyRecord(ModelSQL, ModelView):
             ('KM.', 'Kilometer'),
             ('S/N', 'Without number'),
             ], 'Number type')
-    number = fields.Char('Number', size=5)
+    number = fields.Char('Number', size=5, required=True)
     number_qualifier = fields.Selection([
             (None, ''),
             ('BIS', 'Bis'),
