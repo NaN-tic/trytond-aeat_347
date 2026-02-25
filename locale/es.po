@@ -696,18 +696,19 @@ msgctxt "model:ir.action.wizard,name:act_aeat_347_reasign"
 msgid "Reasign AEAT 347 Records"
 msgstr "Reasignar registros AEAT 347"
 
-#, python-format
 msgctxt "model:ir.message,text:invalid_currency"
 msgid "Currency in AEAT 347 report \"%(report)s\" must be Euro."
 msgstr "La moneda del informe AEAT 349 \"%(report)s\" debe ser Euro."
 
-#, python-format
 msgctxt "model:ir.message,text:msg_asset_not_found"
 msgid "Asset not found (id: %(asset_id)s, code: %(asset_code)s)."
 msgstr ""
 "No se ha encontrado el activo (id: %(asset_id)s, código: %(asset_code)s)."
 
-#, python-format
+msgctxt "model:ir.message,text:msg_invalid_province_code"
+msgid "The party \"%(party_name)s\" has an invalid zip."
+msgstr "El tercero \"%(party_name)s\" tiene un código postal no válido."
+
 msgctxt "model:ir.message,text:msg_invalid_year"
 msgid "The year \"%(year)s\" is not valid."
 msgstr "El año \"%(year)s\" no es correcto."
