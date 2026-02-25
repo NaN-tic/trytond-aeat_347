@@ -15,5 +15,8 @@ this repository contains the full copyright notices and license terms. -->
       <record model="ir.message" id="msg_asset_not_found">
           <field name="text">Asset not found (id: %(asset_id)s, code: %(asset_code)s).</field>
       </record>
+      <record model="ir.message" id="msg_invalid_province_code">
+          <field name="text">The party "%(party_name)s" has an invalid zip.</field>
+      </record>
     </data>
 </tryton>
