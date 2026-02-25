@@ -152,7 +152,7 @@ class Test(unittest.TestCase):
 
         # Create out invoice over limit
         Invoice = Model.get('account.invoice')
-        invoice = Invoice()
+        invoice = Invoice(type='out')
         invoice.party = party1
         invoice.payment_term = payment_term
         line = invoice.lines.new()
@@ -167,7 +167,7 @@ class Test(unittest.TestCase):
 
         # Create out invoice over limit, but changing manually the operation key
         Invoice = Model.get('account.invoice')
-        invoice = Invoice()
+        invoice = Invoice(type='out')
         invoice.party = party1
         invoice.payment_term = payment_term
         line = invoice.lines.new()
@@ -182,7 +182,7 @@ class Test(unittest.TestCase):
         self.assertEqual(invoice.aeat347_operation_key, 'empty')
 
         # Create out invoice not over limit
-        invoice = Invoice()
+        invoice = Invoice(type='out')
         invoice.party = party2
         invoice.payment_term = payment_term
         line = invoice.lines.new()
@@ -197,7 +197,7 @@ class Test(unittest.TestCase):
 
         # Create out invoice over limit and with foreign Tax Identifier
         Invoice = Model.get('account.invoice')
-        invoice = Invoice()
+        invoice = Invoice(type='out')
         invoice.party = party3
         invoice.payment_term = payment_term
         line = invoice.lines.new()
@@ -212,7 +212,7 @@ class Test(unittest.TestCase):
 
         # Create self out invoice
         Invoice = Model.get('account.invoice')
-        invoice = Invoice()
+        invoice = Invoice(type='out')
         invoice.party = company.party
         invoice.payment_term = payment_term
         line = invoice.lines.new()
@@ -226,7 +226,7 @@ class Test(unittest.TestCase):
         self.assertEqual(invoice.aeat347_operation_key, 'empty')
 
         # Create out credit note
-        invoice = Invoice()
+        invoice = Invoice(type='out')
         invoice.type = 'out'
         invoice.party = party1
         invoice.payment_term = payment_term
@@ -241,7 +241,7 @@ class Test(unittest.TestCase):
         self.assertEqual(invoice.aeat347_operation_key, 'B')
 
         # Create in invoice
-        invoice = Invoice()
+        invoice = Invoice(type='out')
         invoice.type = 'in'
         invoice.party = party1
         invoice.aeat347_operation_key = 'A'
@@ -258,7 +258,7 @@ class Test(unittest.TestCase):
         self.assertEqual(invoice.aeat347_operation_key, 'A')
 
         # Create in credit note
-        invoice = Invoice()
+        invoice = Invoice(type='out')
         invoice.type = 'in'
         invoice.party = party1
         invoice.aeat347_operation_key = 'A'
@@ -297,7 +297,7 @@ class Test(unittest.TestCase):
         self.assertEqual(invoice.aeat347_operation_key, 'A')
 
         # Create out invoice an empty leave
-        invoice = Invoice()
+        invoice = Invoice(type='out')
         invoice.party = party1
         invoice.payment_term = payment_term
         line = invoice.lines.new()
