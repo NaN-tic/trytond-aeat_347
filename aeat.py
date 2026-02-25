@@ -520,6 +520,10 @@ class Report(Workflow, ModelSQL, ModelView):
                 if not detail:
                     continue
                 party = Party(detail['party'])
+                if not detail['province_code'].isdigit():
+                    raise UserError(
+                        gettext('aeat_347.msg_invalid_province_code',
+                            party_name=party.name))
                 to_create.append({
                         'amount': totals['amount'],
                         'cash_amount': _ZERO,
