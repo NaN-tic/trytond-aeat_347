@@ -456,7 +456,9 @@ class Report(Workflow, ModelSQL, ModelView):
                         where=condition,
                         group_by=[invoice.id, date, invoice.party,
                             invoice.aeat347_operation_key,
-                            code_expr, country_code_expr, province_code_expr])
+                            code_expr, country_code_expr, province_code_expr,
+                            identifier.type, identifier.code,
+                            country.code, address.postal_code])
         cursor.execute(*query)
         return cursor.fetchall()
 
