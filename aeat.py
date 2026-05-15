@@ -401,18 +401,21 @@ class Report(Workflow, ModelSQL, ModelView):
             (identifier.type.in_([
                 'es_cif', 'es_dni', 'es_nie', 'es_nif', 'es_vat']), 'ES'),
             else_=None)
-        country_code_expr = Case(
+        country_code = Case(
             (country_expr == None, country.code),
             else_=country_expr)
-        province_code_expr = Case(
-            ((country_code_expr == 'ES') & (address.postal_code != None),
+        country_code_expr = country_code.as_('country_code')
+        province_code = Case(
+            ((country_code == 'ES') & (address.postal_code != None),
                 Substring(address.postal_code, 1, 2)),
             else_='99')
-        code_expr = Case(
+        province_code_expr = province_code.as_('province_code')
+        code = Case(
             ((identifier.type == 'eu_vat')
                 & (Substring(identifier.code, 1, 2) == 'ES'),
                 Substring(identifier.code, 3)),
             else_=identifier.code)
+        code_expr = code.as_('code')
         amount_expr = Case(
             (tax.operation_347 == 'amount_only', invoice_tax.amount),
             (tax.operation_347 == 'base_amount',
