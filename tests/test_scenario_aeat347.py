@@ -155,8 +155,10 @@ class Test(unittest.TestCase):
         invoice = Invoice(type='out')
         invoice.party = party1
         invoice.payment_term = payment_term
+        invoice.invoice_date = today
         line = invoice.lines.new()
         line.product = product
+        line.invoice_asset = asset_full
         line.unit_price = Decimal(40)
         line.quantity = 80
         self.assertEqual(len(line.taxes), 1)
@@ -164,6 +166,9 @@ class Test(unittest.TestCase):
         invoice.click('post')
         invoice.reload()
         self.assertEqual(invoice.aeat347_operation_key, 'B')
+        self.assertEqual(len(asset_full.parties), 1)
+        self.assertEqual(asset_full.parties[0].party.id, party1.id)
+        self.assertEqual(asset_full.parties[0].start_date, invoice.invoice_date)
 
         # Create out invoice over limit, but changing manually the operation key
         Invoice = Model.get('account.invoice')

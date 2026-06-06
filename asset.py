@@ -280,7 +280,7 @@ class Invoice(metaclass=PoolMeta):
     @classmethod
     def check_aeat347_operation_key(cls, invoices):
         pool = Pool()
-        PartyAsset = pool.get('asset.party.party')
+        AssetParty = pool.get('asset.party.party')
         cursor = Transaction().connection.cursor()
         invoice_table = cls.__table__()
         super().check_aeat347_operation_key(invoices)
@@ -306,7 +306,7 @@ class Invoice(metaclass=PoolMeta):
                         and line.invoice_asset.aeat347_property):
                     create_asset_party = False
                     if line.invoice_asset.parties:
-                        party_asset = PartyAsset.search([
+                        party_asset = AssetParty.search([
                             ('party', '=', invoice.party.id),
                             ('asset', '=', line.invoice_asset.id),
                             ['OR',
@@ -331,7 +331,7 @@ class Invoice(metaclass=PoolMeta):
                         new_asset_party.start_date = invoice.invoice_date
                         to_save_assets.append(new_asset_party)
                 if to_save_assets:
-                    PartyAsset.save(to_save_assets)
+                    AssetParty.save(to_save_assets)
                     to_save_assets = []
 
         if to_empty:
