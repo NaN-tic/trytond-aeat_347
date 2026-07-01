@@ -240,7 +240,7 @@ class Report(metaclass=PoolMeta):
                         'road_type': asset.road_type,
                         'street': asset.street[:50] if asset.street else '',
                         'number_type': asset.number_type,
-                        'number': asset.number.zfill(5) if asset.number else '',
+                        'number': asset.number.zfill(5),
                         'number_qualifier': asset.number_qualifier,
                         'block': asset.block,
                         'doorway': asset.doorway,
