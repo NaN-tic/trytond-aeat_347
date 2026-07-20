@@ -9,7 +9,8 @@ from collections import defaultdict
 from decimal import Decimal
 from retrofix import aeat347
 from retrofix.record import Record, write as retrofix_write
-from trytond.config import config, parse_uri
+import trytond.config as config
+from trytond.config import parse_uri
 from trytond.model import Workflow, ModelSQL, ModelView, fields
 from trytond.pool import Pool
 from trytond.pyson import Bool, Eval, Not
