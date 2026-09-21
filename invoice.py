@@ -95,6 +95,7 @@ class Invoice(metaclass=PoolMeta):
         super(Invoice, cls).draft(invoices)
 
     @classmethod
+    @ModelView.button
     def post(cls, invoices):
         super(Invoice, cls).post(invoices)
         cls.check_aeat347_operation_key(invoices)
