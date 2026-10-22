@@ -195,6 +195,7 @@ class Report(metaclass=PoolMeta):
         return cursor.fetchall()
 
     @classmethod
+    @ModelView.button
     def calculate(cls, reports):
         pool = Pool()
         PropertyOperation = pool.get('aeat.347.report.property')
