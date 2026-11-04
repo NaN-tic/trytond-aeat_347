@@ -1,0 +1,1287 @@
+#
+msgid ""
+msgstr ""
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgctxt "field:account.invoice,aeat347_operation_key:"
+msgid "AEAT 347 Operation Key"
+msgstr "AEAT 347 交易代码"
+
+msgctxt "field:account.tax,isp:"
+msgid "Inversion del Sujeto Pasivo"
+msgstr "反向征税"
+
+msgctxt "field:account.tax,operation_347:"
+msgid "Operation for 347"
+msgstr "347 表交易"
+
+msgctxt "field:account.tax,service:"
+msgid "Service Rate"
+msgstr "服务税率"
+
+msgctxt "field:account.tax.template,isp:"
+msgid "Inversion del Sujeto Pasivo"
+msgstr "反向征税"
+
+msgctxt "field:account.tax.template,operation_347:"
+msgid "Operation for 347"
+msgstr "347 表交易"
+
+msgctxt "field:account.tax.template,service:"
+msgid "Service Rate"
+msgstr "服务税率"
+
+msgctxt "field:aeat.347.reasign.start,aeat347_operation_key:"
+msgid "Operation Key"
+msgstr "交易代码"
+
+msgctxt "field:aeat.347.report,calculation_date:"
+msgid "Calculation Date"
+msgstr "计算日期"
+
+msgctxt "field:aeat.347.report,cash_amount:"
+msgid "Cash Amount (Manual)"
+msgstr "现金金额（手工）"
+
+msgctxt "field:aeat.347.report,company:"
+msgid "Company"
+msgstr "公司"
+
+msgctxt "field:aeat.347.report,company_vat:"
+msgid "VAT number"
+msgstr "增值税号"
+
+msgctxt "field:aeat.347.report,contact_name:"
+msgid "Full Name"
+msgstr "全名"
+
+msgctxt "field:aeat.347.report,contact_phone:"
+msgid "Phone"
+msgstr "电话"
+
+msgctxt "field:aeat.347.report,currency:"
+msgid "Currency"
+msgstr "货币"
+
+msgctxt "field:aeat.347.report,file_:"
+msgid "File"
+msgstr "文件"
+
+msgctxt "field:aeat.347.report,filename:"
+msgid "File Name"
+msgstr "文件名"
+
+msgctxt "field:aeat.347.report,on_behalf_third_party_limit:"
+msgid "On Behalf of Third Party Limit (3)"
+msgstr "代第三方收款限额 (3)"
+
+msgctxt "field:aeat.347.report,operation_limit:"
+msgid "Invoiced Limit (1)"
+msgstr "开票限额 (1)"
+
+msgctxt "field:aeat.347.report,parties:"
+msgid "Party Records"
+msgstr "往来单位记录"
+
+msgctxt "field:aeat.347.report,party_amount:"
+msgid "Party Amount"
+msgstr "往来单位金额"
+
+msgctxt "field:aeat.347.report,party_count:"
+msgid "Party Record Count"
+msgstr "往来单位记录数"
+
+msgctxt "field:aeat.347.report,previous_number:"
+msgid "Previous Declaration Number"
+msgstr "上次申报编号"
+
+msgctxt "field:aeat.347.report,properties:"
+msgid "Property Records"
+msgstr "不动产记录"
+
+msgctxt "field:aeat.347.report,property_amount:"
+msgid "Property Amount"
+msgstr "不动产金额"
+
+msgctxt "field:aeat.347.report,property_count:"
+msgid "Property Record Count"
+msgstr "不动产记录数"
+
+msgctxt "field:aeat.347.report,received_cash_limit:"
+msgid "Received Cash Limit (2)"
+msgstr "现金收款限额 (2)"
+
+msgctxt "field:aeat.347.report,representative_vat:"
+msgid "L.R. VAT number"
+msgstr "法定代表人增值税号"
+
+msgctxt "field:aeat.347.report,state:"
+msgid "State"
+msgstr "状态"
+
+msgctxt "field:aeat.347.report,support_type:"
+msgid "Support Type"
+msgstr "载体类型"
+
+msgctxt "field:aeat.347.report,type:"
+msgid "Statement Type"
+msgstr "申报类型"
+
+msgctxt "field:aeat.347.report,year:"
+msgid "Year"
+msgstr "年"
+
+msgctxt "field:aeat.347.report.party,amount:"
+msgid "Operations Amount"
+msgstr "交易金额"
+
+msgctxt "field:aeat.347.report.party,bdns_call_number:"
+msgid "BDNS call number"
+msgstr "BDNS 公告编号"
+
+msgctxt "field:aeat.347.report.party,business_premises_rent:"
+msgid "Bussiness Premises Rent"
+msgstr "营业场所租赁"
+
+msgctxt "field:aeat.347.report.party,cash_amount:"
+msgid "Cash Amount Received"
+msgstr "收到的现金金额"
+
+msgctxt "field:aeat.347.report.party,cash_vat_criteria:"
+msgid "Cash VAT Criteria"
+msgstr "增值税现金收付制"
+
+msgctxt "field:aeat.347.report.party,cash_vat_operation:"
+msgid "Cash VAT Operation"
+msgstr "现金收付制增值税交易"
+
+msgctxt "field:aeat.347.report.party,community_vat:"
+msgid "Community VAT number"
+msgstr "欧盟增值税号"
+
+msgctxt "field:aeat.347.report.party,company:"
+msgid "Company"
+msgstr "公司"
+
+msgctxt "field:aeat.347.report.party,country_code:"
+msgid "Country Code"
+msgstr "国家代码"
+
+msgctxt "field:aeat.347.report.party,first_quarter_amount:"
+msgid "First Quarter Amount"
+msgstr "第一季度金额"
+
+msgctxt "field:aeat.347.report.party,first_quarter_property_amount:"
+msgid "First Quarter Property Amount"
+msgstr "第一季度不动产金额"
+
+msgctxt "field:aeat.347.report.party,fiscalyear_code_cash_operation:"
+msgid "Fiscal Year Cash Operation"
+msgstr "现金交易会计年度"
+
+msgctxt "field:aeat.347.report.party,fourth_quarter_amount:"
+msgid "Fourth Quarter Amount"
+msgstr "第四季度金额"
+
+msgctxt "field:aeat.347.report.party,fourth_quarter_property_amount:"
+msgid "Fourth Quarter Property Amount"
+msgstr "第四季度不动产金额"
+
+msgctxt "field:aeat.347.report.party,insurance:"
+msgid "Insurance Operation"
+msgstr "保险交易"
+
+msgctxt "field:aeat.347.report.party,invoices:"
+msgid "Invoices"
+msgstr "发票"
+
+msgctxt "field:aeat.347.report.party,operation_key:"
+msgid "Operation Key"
+msgstr "交易代码"
+
+msgctxt "field:aeat.347.report.party,party_name:"
+msgid "Party Name"
+msgstr "参与者名称"
+
+msgctxt "field:aeat.347.report.party,party_vat:"
+msgid "VAT"
+msgstr "增值税"
+
+msgctxt "field:aeat.347.report.party,property_amount:"
+msgid "VAT Liable Property Amount"
+msgstr "应缴增值税的不动产金额"
+
+msgctxt "field:aeat.347.report.party,province_code:"
+msgid "Province Code"
+msgstr "省份代码"
+
+msgctxt "field:aeat.347.report.party,related_goods_operation:"
+msgid "Related Goods Operation"
+msgstr "相关货物交易"
+
+msgctxt "field:aeat.347.report.party,report:"
+msgid "AEAT 347 Report"
+msgstr "AEAT 347 申报表"
+
+msgctxt "field:aeat.347.report.party,representative_vat:"
+msgid "L.R. VAT number"
+msgstr "法定代表人增值税号"
+
+msgctxt "field:aeat.347.report.party,second_quarter_amount:"
+msgid "Second Quarter Amount"
+msgstr "第二季度金额"
+
+msgctxt "field:aeat.347.report.party,second_quarter_property_amount:"
+msgid "Second Quarter Property Amount"
+msgstr "第二季度不动产金额"
+
+msgctxt "field:aeat.347.report.party,tax_person_operation:"
+msgid "Taxable Person Operation"
+msgstr "反向征税交易"
+
+msgctxt "field:aeat.347.report.party,third_quarter_amount:"
+msgid "Third Quarter Amount"
+msgstr "第三季度金额"
+
+msgctxt "field:aeat.347.report.party,third_quarter_property_amount:"
+msgid "Third Quarter Property Amount"
+msgstr "第三季度不动产金额"
+
+msgctxt "field:aeat.347.report.party-account.invoice,invoice:"
+msgid "Invoice"
+msgstr "原始凭证"
+
+msgctxt "field:aeat.347.report.party-account.invoice,party_record:"
+msgid "Party Record"
+msgstr "往来单位记录"
+
+msgctxt "field:aeat.347.report.property,amount:"
+msgid "Amount"
+msgstr "数额"
+
+msgctxt "field:aeat.347.report.property,block:"
+msgid "Block"
+msgstr "冻结"
+
+msgctxt "field:aeat.347.report.property,cadaster_number:"
+msgid "Cadaster Reference"
+msgstr "地籍编号"
+
+msgctxt "field:aeat.347.report.property,city:"
+msgid "City"
+msgstr "城市"
+
+msgctxt "field:aeat.347.report.property,company:"
+msgid "Company"
+msgstr "公司"
+
+msgctxt "field:aeat.347.report.property,complement:"
+msgid "Complement"
+msgstr "地址补充"
+
+msgctxt "field:aeat.347.report.property,door:"
+msgid "Door"
+msgstr "房门号"
+
+msgctxt "field:aeat.347.report.property,doorway:"
+msgid "Doorway"
+msgstr "入口"
+
+msgctxt "field:aeat.347.report.property,floor:"
+msgid "Floor"
+msgstr "楼层"
+
+msgctxt "field:aeat.347.report.property,invoice_lines:"
+msgid "Invoices"
+msgstr "发票"
+
+msgctxt "field:aeat.347.report.property,municipality:"
+msgid "Municipality"
+msgstr "市镇"
+
+msgctxt "field:aeat.347.report.property,municipality_code:"
+msgid "Municipality Code"
+msgstr "市镇代码"
+
+msgctxt "field:aeat.347.report.property,number:"
+msgid "Number"
+msgstr "编号"
+
+msgctxt "field:aeat.347.report.property,number_qualifier:"
+msgid "Number Qualifier"
+msgstr "门牌号后缀"
+
+msgctxt "field:aeat.347.report.property,number_type:"
+msgid "Number type"
+msgstr "门牌号类型"
+
+msgctxt "field:aeat.347.report.property,party_name:"
+msgid "Party Name"
+msgstr "参与者名称"
+
+msgctxt "field:aeat.347.report.property,party_vat:"
+msgid "VAT number"
+msgstr "增值税号"
+
+msgctxt "field:aeat.347.report.property,province_code:"
+msgid "Province Code"
+msgstr "省份代码"
+
+msgctxt "field:aeat.347.report.property,report:"
+msgid "AEAT 347 Report"
+msgstr "AEAT 347 申报表"
+
+msgctxt "field:aeat.347.report.property,representative_vat:"
+msgid "L.R. VAT number"
+msgstr "法定代表人增值税号"
+
+msgctxt "field:aeat.347.report.property,road_type:"
+msgid "Road Type"
+msgstr "道路类型"
+
+msgctxt "field:aeat.347.report.property,situation:"
+msgid "Property Situation"
+msgstr "不动产所在地类型"
+
+msgctxt "field:aeat.347.report.property,stair:"
+msgid "Stair"
+msgstr "楼梯"
+
+msgctxt "field:aeat.347.report.property,street:"
+msgid "Street"
+msgstr "街道"
+
+msgctxt "field:aeat.347.report.property,zip:"
+msgid "Zip"
+msgstr "邮政编码"
+
+msgctxt "field:aeat.347.report.property-account.invoice.line,line:"
+msgid "Invoice Line"
+msgstr "发票明细"
+
+msgctxt "field:aeat.347.report.property-account.invoice.line,property_record:"
+msgid "Property Record"
+msgstr "不动产记录"
+
+msgctxt "field:asset,aeat347_party:"
+msgid "347 Party"
+msgstr "347 表往来单位"
+
+msgctxt "field:asset,aeat347_property:"
+msgid "347 Property"
+msgstr "347 表不动产"
+
+msgctxt "field:asset,block:"
+msgid "Block"
+msgstr "冻结"
+
+msgctxt "field:asset,city:"
+msgid "City"
+msgstr "城市"
+
+msgctxt "field:asset,complement:"
+msgid "Complement"
+msgstr "地址补充"
+
+msgctxt "field:asset,door:"
+msgid "Door"
+msgstr "房门号"
+
+msgctxt "field:asset,doorway:"
+msgid "Doorway"
+msgstr "入口"
+
+msgctxt "field:asset,floor:"
+msgid "Floor"
+msgstr "楼层"
+
+msgctxt "field:asset,municipality:"
+msgid "Municipality"
+msgstr "市镇"
+
+msgctxt "field:asset,municipality_code:"
+msgid "Municipality Code"
+msgstr "市镇代码"
+
+msgctxt "field:asset,number:"
+msgid "Number"
+msgstr "编号"
+
+msgctxt "field:asset,number_qualifier:"
+msgid "Number Qualifier"
+msgstr "门牌号后缀"
+
+msgctxt "field:asset,number_type:"
+msgid "Number type"
+msgstr "门牌号类型"
+
+msgctxt "field:asset,parties:"
+msgid "Parties"
+msgstr "参与者"
+
+msgctxt "field:asset,party:"
+msgid "Party"
+msgstr "参与者"
+
+msgctxt "field:asset,party_name:"
+msgid "Party Name"
+msgstr "参与者名称"
+
+msgctxt "field:asset,party_tax_identifier:"
+msgid "Party Tax Identifier"
+msgstr "参与者税号"
+
+msgctxt "field:asset,province_code:"
+msgid "Province Code"
+msgstr "省份代码"
+
+msgctxt "field:asset,road_type:"
+msgid "Road Type"
+msgstr "道路类型"
+
+msgctxt "field:asset,situation:"
+msgid "Property Situation"
+msgstr "不动产所在地类型"
+
+msgctxt "field:asset,stair:"
+msgid "Stair"
+msgstr "楼梯"
+
+msgctxt "field:asset,street:"
+msgid "Street"
+msgstr "街道"
+
+msgctxt "field:asset,zip:"
+msgid "Zip"
+msgstr "邮政编码"
+
+msgctxt "field:asset.party.party,asset:"
+msgid "Asset"
+msgstr "资产"
+
+msgctxt "field:asset.party.party,end_date:"
+msgid "End Date"
+msgstr "结账日期"
+
+msgctxt "field:asset.party.party,party:"
+msgid "Party"
+msgstr "参与者"
+
+msgctxt "field:asset.party.party,start_date:"
+msgid "Start Date"
+msgstr "启用日期"
+
+msgctxt "field:party.party,assets:"
+msgid "Assets"
+msgstr "资产"
+
+msgctxt "help:account.tax,isp:"
+msgid "Indicates if the tax is Inversion del sujeto Pasivo"
+msgstr "表示该税项是否适用反向征税。"
+
+msgctxt "help:account.tax,service:"
+msgid "Indicates if the tax is used for services"
+msgstr "表示该税项是否用于服务。"
+
+msgctxt "help:account.tax.template,isp:"
+msgid "Indicates if the tax is Inversion del sujeto Pasivo"
+msgstr "表示该税项是否适用反向征税。"
+
+msgctxt "help:account.tax.template,service:"
+msgid "Indicates if the tax is used for services"
+msgstr "表示该税项是否用于服务。"
+
+msgctxt "help:aeat.347.report,contact_name:"
+msgid ""
+"The full name must appear in a correct order: First surname, blank space, "
+"Second surname, blank space, Name"
+msgstr "全名必须按正确顺序填写：第一姓氏、空格、第二姓氏、空格、名字"
+
+msgctxt "help:aeat.347.report,on_behalf_third_party_limit:"
+msgid ""
+"The declaration will include parties from which we received payments, on "
+"behalf of third parties, over this limit"
+msgstr "申报将包含代第三方收取款项超过此限额的往来单位"
+
+msgctxt "help:aeat.347.report,operation_limit:"
+msgid ""
+"The declaration will include parties with the total of operations over this "
+"limit"
+msgstr "申报将包含交易总额超过此限额的往来单位"
+
+msgctxt "help:aeat.347.report,received_cash_limit:"
+msgid "The declaration will show the total of cash operations over this limit"
+msgstr "申报将显示超过此限额的现金交易总额"
+
+msgctxt "help:aeat.347.report,representative_vat:"
+msgid "Legal Representative VAT number."
+msgstr "法定代表人增值税号。"
+
+msgctxt "help:aeat.347.report.party,business_premises_rent:"
+msgid ""
+"Set to identify premises rent operations aside from the rest. You'll need to"
+" fill in the premises info only when you are the one that receives the "
+"money."
+msgstr "设置后，将营业场所租赁交易与其他交易区分。仅当您是收款方时才需填写场所信息。"
+
+msgctxt "help:aeat.347.report.party,cash_vat_criteria:"
+msgid "Annual amount of transactions accrued under cash VAT criteria."
+msgstr "按增值税现金收付制确认的年度交易金额。"
+
+msgctxt "help:aeat.347.report.party,cash_vat_operation:"
+msgid ""
+"Only for cash basis operations. Set to identify cash basis operations aside "
+"from the rest."
+msgstr "仅适用于现金收付制交易。设置后，将现金收付制交易与其他交易区分。"
+
+msgctxt "help:aeat.347.report.party,community_vat:"
+msgid ""
+"VAT number for professionals established in other state member without "
+"national VAT"
+msgstr "在其他成员国注册且没有本国增值税号的专业人士的增值税号"
+
+msgctxt "help:aeat.347.report.party,insurance:"
+msgid ""
+"Only for insurance companies. Set to identify insurance operations aside "
+"from the rest."
+msgstr "仅适用于保险公司。设置后，将保险交易与其他交易区分。"
+
+msgctxt "help:aeat.347.report.party,related_goods_operation:"
+msgid ""
+"Only for related goods operations. Set to identify related goods operations "
+"aside from the rest."
+msgstr "仅适用于相关货物交易。设置后，将相关货物交易与其他交易区分。"
+
+msgctxt "help:aeat.347.report.party,representative_vat:"
+msgid "Legal Representative VAT number"
+msgstr "法定代表人增值税号"
+
+msgctxt "help:aeat.347.report.party,tax_person_operation:"
+msgid ""
+"Only for taxable person operations. Set to identify taxable person "
+"operations aside from the rest."
+msgstr "仅适用于反向征税交易。设置后，将反向征税交易与其他交易区分。"
+
+msgctxt "help:aeat.347.report.property,complement:"
+msgid "Complement (urbanization, industrial park...)"
+msgstr "地址补充（住宅区、工业园区等）"
+
+msgctxt "help:aeat.347.report.property,representative_vat:"
+msgid "Legal Representative VAT number"
+msgstr "法定代表人增值税号"
+
+msgctxt "help:asset,complement:"
+msgid "Complement (urbanization, industrial park...)"
+msgstr "地址补充（住宅区、工业园区等）"
+
+msgctxt "help:asset,municipality_code:"
+msgid "Get code from INE"
+msgstr "从 INE 获取代码"
+
+msgctxt "model:aeat.347.reasign.end,name:"
+msgid "Reasign AEAT 347 End"
+msgstr "重新分配 AEAT 347：结束"
+
+msgctxt "model:aeat.347.reasign.start,name:"
+msgid "Reasign AEAT 347 Start"
+msgstr "重新分配 AEAT 347：开始"
+
+msgctxt "model:aeat.347.report,name:"
+msgid "AEAT 347 Report"
+msgstr "AEAT 347 申报表"
+
+msgctxt "model:aeat.347.report.party,name:"
+msgid "AEAT 347 Party Record"
+msgstr "AEAT 347 往来单位记录"
+
+msgctxt "model:aeat.347.report.party-account.invoice,name:"
+msgid "AEAT 347 Party Record - Invoice"
+msgstr "AEAT 347 往来单位记录 - 发票"
+
+msgctxt "model:aeat.347.report.property,name:"
+msgid "AEAT 347 Property Record"
+msgstr "AEAT 347 不动产记录"
+
+msgctxt "model:aeat.347.report.property-account.invoice.line,name:"
+msgid "AEAT 347 Property Record - Invoice Line"
+msgstr "AEAT 347 不动产记录 - 发票明细"
+
+msgctxt "model:asset.party.party,name:"
+msgid "Asset Party"
+msgstr "资产往来单位"
+
+msgctxt "model:ir.action,name:"
+msgid "AEAT 347 Record"
+msgstr "AEAT 347 记录"
+
+msgctxt "model:ir.action,name:act_aeat_347_party_record"
+msgid "AEAT 347 Party Record"
+msgstr "AEAT 347 往来单位记录"
+
+msgctxt "model:ir.action,name:act_aeat_347_property_record"
+msgid "AEAT 347 Property Record"
+msgstr "AEAT 347 不动产记录"
+
+msgctxt "model:ir.action,name:act_aeat_347_reasign"
+msgid "Reasign AEAT 347"
+msgstr "重新分配 AEAT 347"
+
+msgctxt "model:ir.action,name:act_aeat_347_report"
+msgid "AEAT 347 Report"
+msgstr "AEAT 347 申报表"
+
+msgctxt "model:ir.action,name:act_asset_party_party"
+msgid "Asset Party Party"
+msgstr "资产往来单位：往来单位"
+
+msgctxt "model:ir.action.act_window,name:"
+msgid "AEAT 347 Record "
+msgstr "AEAT 347 记录 "
+
+msgctxt "model:ir.action.act_window,name:act_aeat_347_party_record"
+msgid "AEAT 347 Party Record"
+msgstr "AEAT 347 往来单位记录"
+
+msgctxt "model:ir.action.act_window,name:act_aeat_347_property_record"
+msgid "AEAT 347 Property Record"
+msgstr "AEAT 347 不动产记录"
+
+msgctxt "model:ir.action.act_window,name:act_aeat_347_report"
+msgid "AEAT 347 Report"
+msgstr "AEAT 347 申报表"
+
+msgctxt "model:ir.action.wizard,name:act_aeat_347_reasign"
+msgid "Reasign AEAT 347 Records"
+msgstr "重新分配 AEAT 347 记录"
+
+#, python-format
+msgctxt "model:ir.message,text:invalid_currency"
+msgid "Currency in AEAT 347 report \"%(report)s\" must be Euro."
+msgstr "AEAT 347 申报表“%(report)s”的货币必须为欧元。"
+
+#, python-format
+msgctxt "model:ir.message,text:msg_asset_not_found"
+msgid "Asset not found (id: %(asset_id)s, code: %(asset_code)s)."
+msgstr "未找到资产（ID：%(asset_id)s，代码：%(asset_code)s）。"
+
+#, python-format
+msgctxt "model:ir.message,text:msg_invalid_province_code"
+msgid "The party \"%(party_name)s\" has an invalid zip."
+msgstr "往来单位“%(party_name)s”的邮政编码无效。"
+
+#, python-format
+msgctxt "model:ir.message,text:msg_invalid_year"
+msgid "The year \"%(year)s\" is not valid."
+msgstr "年份“%(year)s”无效。"
+
+msgctxt "model:ir.message,text:msg_wrong_asset"
+msgid "The invoice asset is different from the contract asset."
+msgstr "发票资产与合同资产不一致。"
+
+msgctxt "model:ir.model.button,string:aeat_347_report_calculate_button"
+msgid "Calculate"
+msgstr "计算"
+
+msgctxt "model:ir.model.button,string:aeat_347_report_cancel_button"
+msgid "Cancel"
+msgstr "取消"
+
+msgctxt "model:ir.model.button,string:aeat_347_report_draft_button"
+msgid "Draft"
+msgstr "草案"
+
+msgctxt "model:ir.model.button,string:aeat_347_report_process_button"
+msgid "Process"
+msgstr "处理"
+
+msgctxt "model:ir.rule.group,name:"
+msgid "Aeat 347 Record"
+msgstr "AEAT 347 记录"
+
+msgctxt "model:ir.rule.group,name:rule_group_aeat347"
+msgid "Aeat 347"
+msgstr "AEAT 347"
+
+msgctxt "model:ir.rule.group,name:rule_group_aeat347_party"
+msgid "Aeat 347 Party"
+msgstr "AEAT 347 往来单位"
+
+msgctxt "model:ir.rule.group,name:rule_group_aeat347_property"
+msgid "Aeat 347 Property"
+msgstr "AEAT 347 不动产"
+
+msgctxt "model:ir.ui.menu,name:"
+msgid "AEAT 347 Record"
+msgstr "AEAT 347 记录"
+
+msgctxt "model:ir.ui.menu,name:menu_aeat_347_report"
+msgid "AEAT 347 Report"
+msgstr "AEAT 347 申报表"
+
+msgctxt "model:ir.ui.menu,name:menu_aeat_347_report_party"
+msgid "AEAT 347 Party Records"
+msgstr "AEAT 347 往来单位记录"
+
+msgctxt "model:ir.ui.menu,name:menu_aeat_347_report_property"
+msgid "AEAT 347 Property Records"
+msgstr "AEAT 347 不动产记录"
+
+msgctxt "selection:account.invoice,aeat347_operation_key:"
+msgid "A - Good and service adquisitions above limit (1)"
+msgstr "A - 超过限额 (1) 的货物和服务购入"
+
+msgctxt "selection:account.invoice,aeat347_operation_key:"
+msgid "B - Good and service deliveries above limit (1)"
+msgstr "B - 超过限额 (1) 的货物和服务交付"
+
+msgctxt "selection:account.invoice,aeat347_operation_key:"
+msgid "C - Money collection on behavlf of third parties above limit (3)"
+msgstr "C - 超过限额 (3) 的代第三方收款"
+
+msgctxt "selection:account.invoice,aeat347_operation_key:"
+msgid "D - Adquisitions by Public Institutions (...) above limit (1)"
+msgstr "D - 公共机构超过限额 (1) 的购入（……）"
+
+msgctxt "selection:account.invoice,aeat347_operation_key:"
+msgid "E - Grants and help made by public institutions above limit (1)"
+msgstr "E - 公共机构超过限额 (1) 的补贴和援助"
+
+msgctxt "selection:account.invoice,aeat347_operation_key:"
+msgid "F - Travel Agency Sales"
+msgstr "F - 旅行社销售"
+
+msgctxt "selection:account.invoice,aeat347_operation_key:"
+msgid "G - Travel Agency Purchases"
+msgstr "G - 旅行社采购"
+
+msgctxt "selection:account.invoice,aeat347_operation_key:"
+msgid "Leave Empty"
+msgstr "留空"
+
+msgctxt "selection:account.tax,operation_347:"
+msgid "Amount Only"
+msgstr "仅金额"
+
+msgctxt "selection:account.tax,operation_347:"
+msgid "Exclude Invoice"
+msgstr "排除发票"
+
+msgctxt "selection:account.tax,operation_347:"
+msgid "Ignore"
+msgstr "忽略"
+
+msgctxt "selection:account.tax,operation_347:"
+msgid "Include Base Amount"
+msgstr "包含计税基础金额"
+
+msgctxt "selection:account.tax.template,operation_347:"
+msgid "Amount Only"
+msgstr "仅金额"
+
+msgctxt "selection:account.tax.template,operation_347:"
+msgid "Exclude Invoice"
+msgstr "排除发票"
+
+msgctxt "selection:account.tax.template,operation_347:"
+msgid "Ignore"
+msgstr "忽略"
+
+msgctxt "selection:account.tax.template,operation_347:"
+msgid "Include Base Amount"
+msgstr "包含计税基础金额"
+
+msgctxt "selection:aeat.347.reasign.start,aeat347_operation_key:"
+msgid "A - Good and service adquisitions above limit (1)"
+msgstr "A - 超过限额 (1) 的货物和服务购入"
+
+msgctxt "selection:aeat.347.reasign.start,aeat347_operation_key:"
+msgid "B - Good and service deliveries above limit (1)"
+msgstr "B - 超过限额 (1) 的货物和服务交付"
+
+msgctxt "selection:aeat.347.reasign.start,aeat347_operation_key:"
+msgid "C - Money collection on behavlf of third parties above limit (3)"
+msgstr "C - 超过限额 (3) 的代第三方收款"
+
+msgctxt "selection:aeat.347.reasign.start,aeat347_operation_key:"
+msgid "D - Adquisitions by Public Institutions (...) above limit (1)"
+msgstr "D - 公共机构超过限额 (1) 的购入（……）"
+
+msgctxt "selection:aeat.347.reasign.start,aeat347_operation_key:"
+msgid "E - Grants and help made by public institutions above limit (1)"
+msgstr "E - 公共机构超过限额 (1) 的补贴和援助"
+
+msgctxt "selection:aeat.347.reasign.start,aeat347_operation_key:"
+msgid "F - Travel Agency Sales"
+msgstr "F - 旅行社销售"
+
+msgctxt "selection:aeat.347.reasign.start,aeat347_operation_key:"
+msgid "G - Travel Agency Purchases"
+msgstr "G - 旅行社采购"
+
+msgctxt "selection:aeat.347.reasign.start,aeat347_operation_key:"
+msgid "Leave Empty"
+msgstr "留空"
+
+msgctxt "selection:aeat.347.report,state:"
+msgid "Calculated"
+msgstr "已计算"
+
+msgctxt "selection:aeat.347.report,state:"
+msgid "Cancelled"
+msgstr "已取消"
+
+msgctxt "selection:aeat.347.report,state:"
+msgid "Done"
+msgstr "完成"
+
+msgctxt "selection:aeat.347.report,state:"
+msgid "Draft"
+msgstr "草案"
+
+msgctxt "selection:aeat.347.report,support_type:"
+msgid "DVD"
+msgstr "DVD"
+
+msgctxt "selection:aeat.347.report,support_type:"
+msgid "Telematics"
+msgstr "电子申报"
+
+msgctxt "selection:aeat.347.report,type:"
+msgid "Complementary"
+msgstr "补充"
+
+msgctxt "selection:aeat.347.report,type:"
+msgid "Normal"
+msgstr "普通"
+
+msgctxt "selection:aeat.347.report,type:"
+msgid "Substitutive"
+msgstr "替代"
+
+msgctxt "selection:aeat.347.report.party,operation_key:"
+msgid "A - Good and service adquisitions above limit (1)"
+msgstr "A - 超过限额 (1) 的货物和服务购入"
+
+msgctxt "selection:aeat.347.report.party,operation_key:"
+msgid "B - Good and service deliveries above limit (1)"
+msgstr "B - 超过限额 (1) 的货物和服务交付"
+
+msgctxt "selection:aeat.347.report.party,operation_key:"
+msgid "C - Money collection on behavlf of third parties above limit (3)"
+msgstr "C - 超过限额 (3) 的代第三方收款"
+
+msgctxt "selection:aeat.347.report.party,operation_key:"
+msgid "D - Adquisitions by Public Institutions (...) above limit (1)"
+msgstr "D - 公共机构超过限额 (1) 的购入（……）"
+
+msgctxt "selection:aeat.347.report.party,operation_key:"
+msgid "E - Grants and help made by public institutions above limit (1)"
+msgstr "E - 公共机构超过限额 (1) 的补贴和援助"
+
+msgctxt "selection:aeat.347.report.party,operation_key:"
+msgid "F - Travel Agency Sales"
+msgstr "F - 旅行社销售"
+
+msgctxt "selection:aeat.347.report.party,operation_key:"
+msgid "G - Travel Agency Purchases"
+msgstr "G - 旅行社采购"
+
+msgctxt "selection:aeat.347.report.party,operation_key:"
+msgid "Leave Empty"
+msgstr "留空"
+
+msgctxt "selection:aeat.347.report.property,number_qualifier:"
+msgid "Ant"
+msgstr "Ant"
+
+msgctxt "selection:aeat.347.report.property,number_qualifier:"
+msgid "Bis"
+msgstr "Bis"
+
+msgctxt "selection:aeat.347.report.property,number_qualifier:"
+msgid "Dup"
+msgstr "Dup"
+
+msgctxt "selection:aeat.347.report.property,number_qualifier:"
+msgid "Mod"
+msgstr "Mod"
+
+msgctxt "selection:aeat.347.report.property,number_type:"
+msgid "Kilometer"
+msgstr "千米"
+
+msgctxt "selection:aeat.347.report.property,number_type:"
+msgid "Number"
+msgstr "编号"
+
+msgctxt "selection:aeat.347.report.property,number_type:"
+msgid "Without number"
+msgstr "无门牌号"
+
+msgctxt "selection:aeat.347.report.property,road_type:"
+msgid "Avenue"
+msgstr "大道"
+
+msgctxt "selection:aeat.347.report.property,road_type:"
+msgid "Cross Street"
+msgstr "横街"
+
+msgctxt "selection:aeat.347.report.property,road_type:"
+msgid "Grand Avenue"
+msgstr "大街"
+
+msgctxt "selection:aeat.347.report.property,road_type:"
+msgid "Industrial Park"
+msgstr "工业园区"
+
+msgctxt "selection:aeat.347.report.property,road_type:"
+msgid "Path"
+msgstr "路径"
+
+msgctxt "selection:aeat.347.report.property,road_type:"
+msgid "Place"
+msgstr "地点"
+
+msgctxt "selection:aeat.347.report.property,road_type:"
+msgid "Plot"
+msgstr "地块"
+
+msgctxt "selection:aeat.347.report.property,road_type:"
+msgid "Promenade"
+msgstr "步行道"
+
+msgctxt "selection:aeat.347.report.property,road_type:"
+msgid "Rambla"
+msgstr "兰布拉大道"
+
+msgctxt "selection:aeat.347.report.property,road_type:"
+msgid "Ring Road"
+msgstr "环路"
+
+msgctxt "selection:aeat.347.report.property,road_type:"
+msgid "Road"
+msgstr "道路"
+
+msgctxt "selection:aeat.347.report.property,road_type:"
+msgid "Square"
+msgstr "广场"
+
+msgctxt "selection:aeat.347.report.property,road_type:"
+msgid "Street"
+msgstr "街道"
+
+msgctxt "selection:aeat.347.report.property,situation:"
+msgid "1 - Spain but Basque Country and Navarra"
+msgstr "1 - 西班牙（不含巴斯克地区和纳瓦拉）"
+
+msgctxt "selection:aeat.347.report.property,situation:"
+msgid "2 - Basque Country and Navarra"
+msgstr "2 - 巴斯克地区和纳瓦拉"
+
+msgctxt "selection:aeat.347.report.property,situation:"
+msgid "3 - Spain, without catastral reference"
+msgstr "3 - 西班牙，无地籍编号"
+
+msgctxt "selection:aeat.347.report.property,situation:"
+msgid "4 - Foreign"
+msgstr "4 - 境外"
+
+msgctxt "selection:asset,number_qualifier:"
+msgid "Ant"
+msgstr "Ant"
+
+msgctxt "selection:asset,number_qualifier:"
+msgid "Bis"
+msgstr "Bis"
+
+msgctxt "selection:asset,number_qualifier:"
+msgid "Dup"
+msgstr "Dup"
+
+msgctxt "selection:asset,number_qualifier:"
+msgid "Mod"
+msgstr "Mod"
+
+msgctxt "selection:asset,number_type:"
+msgid "Kilometer"
+msgstr "千米"
+
+msgctxt "selection:asset,number_type:"
+msgid "Number"
+msgstr "编号"
+
+msgctxt "selection:asset,number_type:"
+msgid "Without number"
+msgstr "无门牌号"
+
+msgctxt "selection:asset,road_type:"
+msgid "Avenue"
+msgstr "大道"
+
+msgctxt "selection:asset,road_type:"
+msgid "Cross Street"
+msgstr "横街"
+
+msgctxt "selection:asset,road_type:"
+msgid "Grand Avenue"
+msgstr "大街"
+
+msgctxt "selection:asset,road_type:"
+msgid "Industrial Park"
+msgstr "工业园区"
+
+msgctxt "selection:asset,road_type:"
+msgid "Path"
+msgstr "路径"
+
+msgctxt "selection:asset,road_type:"
+msgid "Place"
+msgstr "地点"
+
+msgctxt "selection:asset,road_type:"
+msgid "Plot"
+msgstr "地块"
+
+msgctxt "selection:asset,road_type:"
+msgid "Promenade"
+msgstr "步行道"
+
+msgctxt "selection:asset,road_type:"
+msgid "Rambla"
+msgstr "兰布拉大道"
+
+msgctxt "selection:asset,road_type:"
+msgid "Ring Road"
+msgstr "环路"
+
+msgctxt "selection:asset,road_type:"
+msgid "Road"
+msgstr "道路"
+
+msgctxt "selection:asset,road_type:"
+msgid "Square"
+msgstr "广场"
+
+msgctxt "selection:asset,road_type:"
+msgid "Street"
+msgstr "街道"
+
+msgctxt "selection:asset,situation:"
+msgid "1 - Spain but Basque Country and Navarra"
+msgstr "1 - 西班牙（不含巴斯克地区和纳瓦拉）"
+
+msgctxt "selection:asset,situation:"
+msgid "2 - Basque Country and Navarra"
+msgstr "2 - 巴斯克地区和纳瓦拉"
+
+msgctxt "selection:asset,situation:"
+msgid "3 - Spain, without catastral reference"
+msgstr "3 - 西班牙，无地籍编号"
+
+msgctxt "selection:asset,situation:"
+msgid "4 - Foreign"
+msgstr "4 - 境外"
+
+msgctxt "view:aeat.347.reasign.end:"
+msgid "The AEAT 347 records have been reasigned."
+msgstr "AEAT 347 记录已重新分配。"
+
+msgctxt "view:aeat.347.reasign.start:"
+msgid "Select Operation Key to reasign invoices:"
+msgstr "请选择用于重新分配发票的交易代码："
+
+msgctxt "view:aeat.347.report.party:"
+msgid "Invoices"
+msgstr "发票"
+
+msgctxt "view:aeat.347.report.property:"
+msgid "Address"
+msgstr "地址"
+
+msgctxt "view:aeat.347.report.property:"
+msgid "Invoice Lines"
+msgstr "原始凭证明细"
+
+msgctxt "view:aeat.347.report:"
+msgid "Declaration Number"
+msgstr "申报编号"
+
+msgctxt "view:aeat.347.report:"
+msgid "General"
+msgstr "普通"
+
+msgctxt "view:aeat.347.report:"
+msgid "Limits"
+msgstr "限额"
+
+msgctxt "view:aeat.347.report:"
+msgid "Party Records"
+msgstr "往来单位记录"
+
+msgctxt "view:aeat.347.report:"
+msgid "Property Records"
+msgstr "不动产记录"
+
+msgctxt "view:aeat.347.report:"
+msgid "Totals"
+msgstr "合计"
+
+msgctxt "view:asset:"
+msgid "AEAT 347"
+msgstr "AEAT 347"
+
+msgctxt "view:party.party:"
+msgid "Assets"
+msgstr "资产"
+
+msgctxt "view:product.product:"
+msgid "AEAT 347"
+msgstr "AEAT 347"
+
+msgctxt "wizard_button:aeat.347.reasign,done,end:"
+msgid "Ok"
+msgstr "确定"
+
+msgctxt "wizard_button:aeat.347.reasign,start,end:"
+msgid "Cancel"
+msgstr "取消"
+
+msgctxt "wizard_button:aeat.347.reasign,start,reasign:"
+msgid "Reasign"
+msgstr "重新分配"
+
+msgctxt "field:account.invoice.line,invoice_date:"
+msgid "Invoice Date"
+msgstr "发票日期"
+
+msgctxt "field:aeat.347.reasign.records.start,aeat347_operation_key:"
+msgid "Operation Key"
+msgstr "交易代码"
+
+msgctxt "field:aeat.347.record,company:"
+msgid "Company"
+msgstr "公司"
+
+msgctxt "field:aeat.347.record,fiscalyear:"
+msgid "Fiscal Year"
+msgstr "会计年度"
+
+msgctxt "field:aeat.347.record,invoice:"
+msgid "Invoice"
+msgstr "原始凭证"
+
+msgctxt "field:aeat.347.record,party_record:"
+msgid "Party Record"
+msgstr "往来单位记录"
+
+msgctxt "field:aeat.347.record,party_tax_identifier:"
+msgid "Party Tax Identifier"
+msgstr "参与者税号"
+
+msgctxt "field:aeat.347.record,year:"
+msgid "Year"
+msgstr "年"
+
+msgctxt "field:aeat.347.report,fiscalyear:"
+msgid "Fiscal Year"
+msgstr "会计年度"
+
+msgctxt "field:product.product,aeat347_party:"
+msgid "347 Party"
+msgstr "347 表往来单位"
+
+msgctxt "field:product.product,aeat347_property:"
+msgid "347 Property"
+msgstr "347 表不动产"
+
+msgctxt "selection:aeat.347.reasign.records.start,aeat347_operation_key:"
+msgid "E - Grants and help made by public institutions above limit (1)"
+msgstr "E - 公共机构超过限额 (1) 的补贴和援助"
+
+msgctxt "selection:aeat.347.reasign.records.start,aeat347_operation_key:"
+msgid "Leave Empty"
+msgstr "留空"
+
+msgctxt "selection:aeat.347.reasign.records.start,aeat347_operation_key:"
+msgid "A - Good and service adquisitions above limit (1)"
+msgstr "A - 超过限额 (1) 的货物和服务购入"
+
+msgctxt "selection:aeat.347.reasign.records.start,aeat347_operation_key:"
+msgid "B - Good and service deliveries above limit (1)"
+msgstr "B - 超过限额 (1) 的货物和服务交付"
+
+msgctxt "selection:aeat.347.reasign.records.start,aeat347_operation_key:"
+msgid "C - Money collection on behavlf of third parties above limit (3)"
+msgstr "C - 超过限额 (3) 的代第三方收款"
+
+msgctxt "selection:aeat.347.reasign.records.start,aeat347_operation_key:"
+msgid "D - Adquisitions by Public Institutions (...) above limit (1)"
+msgstr "D - 公共机构超过限额 (1) 的购入（……）"
+
+msgctxt "selection:aeat.347.reasign.records.start,aeat347_operation_key:"
+msgid "F - Travel Agency Sales"
+msgstr "F - 旅行社销售"
+
+msgctxt "selection:aeat.347.reasign.records.start,aeat347_operation_key:"
+msgid "G - Travel Agency Purchases"
+msgstr "G - 旅行社采购"
+
+msgctxt "selection:aeat.347.record,operation_key:"
+msgid "D - Adquisitions by Public Institutions (...) above limit (1)"
+msgstr "D - 公共机构超过限额 (1) 的购入（……）"
+
+msgctxt "selection:aeat.347.record,operation_key:"
+msgid "C - Money collection on behavlf of third parties above limit (3)"
+msgstr "C - 超过限额 (3) 的代第三方收款"
+
+msgctxt "selection:aeat.347.record,operation_key:"
+msgid "Leave Empty"
+msgstr "留空"
+
+msgctxt "selection:aeat.347.record,operation_key:"
+msgid "A - Good and service adquisitions above limit (1)"
+msgstr "A - 超过限额 (1) 的货物和服务购入"
+
+msgctxt "selection:aeat.347.record,operation_key:"
+msgid "B - Good and service deliveries above limit (1)"
+msgstr "B - 超过限额 (1) 的货物和服务交付"
+
+msgctxt "selection:aeat.347.record,operation_key:"
+msgid "G - Travel Agency Purchases"
+msgstr "G - 旅行社采购"
+
+msgctxt "selection:aeat.347.record,operation_key:"
+msgid "F - Travel Agency Sales"
+msgstr "F - 旅行社销售"
+
+msgctxt "selection:aeat.347.record,operation_key:"
+msgid "E - Grants and help made by public institutions above limit (1)"
+msgstr "E - 公共机构超过限额 (1) 的补贴和援助"
+
+msgctxt "wizard_button:aeat.347.reasign.records,done,end:"
+msgid "Ok"
+msgstr "确定"
+
+msgctxt "wizard_button:aeat.347.reasign.records,start,end:"
+msgid "Cancel"
+msgstr "取消"
+
+msgctxt "wizard_button:aeat.347.reasign.records,start,reasign:"
+msgid "Reasign"
+msgstr "重新分配"
+
+msgctxt "wizard_button:aeat.347.recalculate.records,done,end:"
+msgid "Ok"
+msgstr "确定"
+
+msgctxt "wizard_button:aeat.347.recalculate.records,start,calculate:"
+msgid "Calculate"
+msgstr "计算"
+
+msgctxt "wizard_button:aeat.347.recalculate.records,start,end:"
+msgid "Cancel"
+msgstr "取消"
