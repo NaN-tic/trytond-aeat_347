@@ -1,0 +1,1327 @@
+#
+msgid ""
+msgstr ""
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgctxt "field:account.invoice,aeat347_operation_key:"
+msgid "AEAT 347 Operation Key"
+msgstr "AEAT 347 ügyletkód"
+
+msgctxt "field:account.tax,isp:"
+msgid "Inversion del Sujeto Pasivo"
+msgstr "Fordított adózás"
+
+msgctxt "field:account.tax,operation_347:"
+msgid "Operation for 347"
+msgstr "347-es bevallás ügylete"
+
+msgctxt "field:account.tax,service:"
+msgid "Service Rate"
+msgstr "Szolgáltatási adókulcs"
+
+msgctxt "field:account.tax.template,isp:"
+msgid "Inversion del Sujeto Pasivo"
+msgstr "Fordított adózás"
+
+msgctxt "field:account.tax.template,operation_347:"
+msgid "Operation for 347"
+msgstr "347-es bevallás ügylete"
+
+msgctxt "field:account.tax.template,service:"
+msgid "Service Rate"
+msgstr "Szolgáltatási adókulcs"
+
+msgctxt "field:aeat.347.reasign.start,aeat347_operation_key:"
+msgid "Operation Key"
+msgstr "Ügyletkód"
+
+msgctxt "field:aeat.347.report,calculation_date:"
+msgid "Calculation Date"
+msgstr "Számítás dátuma"
+
+msgctxt "field:aeat.347.report,cash_amount:"
+msgid "Cash Amount (Manual)"
+msgstr "Készpénzösszeg (kézi)"
+
+msgctxt "field:aeat.347.report,company:"
+msgid "Company"
+msgstr "Cég"
+
+msgctxt "field:aeat.347.report,company_vat:"
+msgid "VAT number"
+msgstr "Adószám"
+
+msgctxt "field:aeat.347.report,contact_name:"
+msgid "Full Name"
+msgstr "Teljes név"
+
+msgctxt "field:aeat.347.report,contact_phone:"
+msgid "Phone"
+msgstr "Telefon"
+
+msgctxt "field:aeat.347.report,currency:"
+msgid "Currency"
+msgstr "Pénznem"
+
+msgctxt "field:aeat.347.report,file_:"
+msgid "File"
+msgstr "Fájl"
+
+msgctxt "field:aeat.347.report,filename:"
+msgid "File Name"
+msgstr "Fájlnév"
+
+msgctxt "field:aeat.347.report,on_behalf_third_party_limit:"
+msgid "On Behalf of Third Party Limit (3)"
+msgstr "Harmadik fél nevében beszedett összeg határa (3)"
+
+msgctxt "field:aeat.347.report,operation_limit:"
+msgid "Invoiced Limit (1)"
+msgstr "Számlázási értékhatár (1)"
+
+msgctxt "field:aeat.347.report,parties:"
+msgid "Party Records"
+msgstr "Partnerrekordok"
+
+msgctxt "field:aeat.347.report,party_amount:"
+msgid "Party Amount"
+msgstr "Partnerek összege"
+
+msgctxt "field:aeat.347.report,party_count:"
+msgid "Party Record Count"
+msgstr "Partnerrekordok száma"
+
+msgctxt "field:aeat.347.report,previous_number:"
+msgid "Previous Declaration Number"
+msgstr "Előző bevallás száma"
+
+msgctxt "field:aeat.347.report,properties:"
+msgid "Property Records"
+msgstr "Ingatlanrekordok"
+
+msgctxt "field:aeat.347.report,property_amount:"
+msgid "Property Amount"
+msgstr "Ingatlanok összege"
+
+msgctxt "field:aeat.347.report,property_count:"
+msgid "Property Record Count"
+msgstr "Ingatlanrekordok száma"
+
+msgctxt "field:aeat.347.report,received_cash_limit:"
+msgid "Received Cash Limit (2)"
+msgstr "Készpénzbevételi értékhatár (2)"
+
+msgctxt "field:aeat.347.report,representative_vat:"
+msgid "L.R. VAT number"
+msgstr "Törvényes képviselő adószáma"
+
+msgctxt "field:aeat.347.report,state:"
+msgid "State"
+msgstr "Állapot"
+
+msgctxt "field:aeat.347.report,support_type:"
+msgid "Support Type"
+msgstr "Adathordozó típusa"
+
+msgctxt "field:aeat.347.report,type:"
+msgid "Statement Type"
+msgstr "Bevallás típusa"
+
+msgctxt "field:aeat.347.report,year:"
+msgid "Year"
+msgstr "Év"
+
+msgctxt "field:aeat.347.report.party,amount:"
+msgid "Operations Amount"
+msgstr "Ügyletek összege"
+
+msgctxt "field:aeat.347.report.party,bdns_call_number:"
+msgid "BDNS call number"
+msgstr "BDNS-felhívás száma"
+
+msgctxt "field:aeat.347.report.party,business_premises_rent:"
+msgid "Bussiness Premises Rent"
+msgstr "Üzlethelyiség bérbeadása"
+
+msgctxt "field:aeat.347.report.party,cash_amount:"
+msgid "Cash Amount Received"
+msgstr "Beérkezett készpénzösszeg"
+
+msgctxt "field:aeat.347.report.party,cash_vat_criteria:"
+msgid "Cash VAT Criteria"
+msgstr "Pénzforgalmi áfaelszámolás"
+
+msgctxt "field:aeat.347.report.party,cash_vat_operation:"
+msgid "Cash VAT Operation"
+msgstr "Pénzforgalmi áfaügylet"
+
+msgctxt "field:aeat.347.report.party,community_vat:"
+msgid "Community VAT number"
+msgstr "Közösségi adószám"
+
+msgctxt "field:aeat.347.report.party,company:"
+msgid "Company"
+msgstr "Cég"
+
+msgctxt "field:aeat.347.report.party,country_code:"
+msgid "Country Code"
+msgstr "Országkód"
+
+msgctxt "field:aeat.347.report.party,first_quarter_amount:"
+msgid "First Quarter Amount"
+msgstr "Első negyedévi összeg"
+
+msgctxt "field:aeat.347.report.party,first_quarter_property_amount:"
+msgid "First Quarter Property Amount"
+msgstr "Első negyedévi ingatlanösszeg"
+
+msgctxt "field:aeat.347.report.party,fiscalyear_code_cash_operation:"
+msgid "Fiscal Year Cash Operation"
+msgstr "Készpénzes ügylet üzleti éve"
+
+msgctxt "field:aeat.347.report.party,fourth_quarter_amount:"
+msgid "Fourth Quarter Amount"
+msgstr "Negyedik negyedévi összeg"
+
+msgctxt "field:aeat.347.report.party,fourth_quarter_property_amount:"
+msgid "Fourth Quarter Property Amount"
+msgstr "Negyedik negyedévi ingatlanösszeg"
+
+msgctxt "field:aeat.347.report.party,insurance:"
+msgid "Insurance Operation"
+msgstr "Biztosítási ügylet"
+
+msgctxt "field:aeat.347.report.party,invoices:"
+msgid "Invoices"
+msgstr "Számlák"
+
+msgctxt "field:aeat.347.report.party,operation_key:"
+msgid "Operation Key"
+msgstr "Ügyletkód"
+
+msgctxt "field:aeat.347.report.party,party_name:"
+msgid "Party Name"
+msgstr "Ügyfél neve"
+
+msgctxt "field:aeat.347.report.party,party_vat:"
+msgid "VAT"
+msgstr "Áfa"
+
+msgctxt "field:aeat.347.report.party,property_amount:"
+msgid "VAT Liable Property Amount"
+msgstr "Áfaköteles ingatlanösszeg"
+
+msgctxt "field:aeat.347.report.party,province_code:"
+msgid "Province Code"
+msgstr "Tartomány kódja"
+
+msgctxt "field:aeat.347.report.party,related_goods_operation:"
+msgid "Related Goods Operation"
+msgstr "Kapcsolódó termékek ügylete"
+
+msgctxt "field:aeat.347.report.party,report:"
+msgid "AEAT 347 Report"
+msgstr "AEAT 347 bevallás"
+
+msgctxt "field:aeat.347.report.party,representative_vat:"
+msgid "L.R. VAT number"
+msgstr "Törvényes képviselő adószáma"
+
+msgctxt "field:aeat.347.report.party,second_quarter_amount:"
+msgid "Second Quarter Amount"
+msgstr "Második negyedévi összeg"
+
+msgctxt "field:aeat.347.report.party,second_quarter_property_amount:"
+msgid "Second Quarter Property Amount"
+msgstr "Második negyedévi ingatlanösszeg"
+
+msgctxt "field:aeat.347.report.party,tax_person_operation:"
+msgid "Taxable Person Operation"
+msgstr "Fordított adózású ügylet"
+
+msgctxt "field:aeat.347.report.party,third_quarter_amount:"
+msgid "Third Quarter Amount"
+msgstr "Harmadik negyedévi összeg"
+
+msgctxt "field:aeat.347.report.party,third_quarter_property_amount:"
+msgid "Third Quarter Property Amount"
+msgstr "Harmadik negyedévi ingatlanösszeg"
+
+msgctxt "field:aeat.347.report.party-account.invoice,invoice:"
+msgid "Invoice"
+msgstr "Számla"
+
+msgctxt "field:aeat.347.report.party-account.invoice,party_record:"
+msgid "Party Record"
+msgstr "Partnerrekord"
+
+msgctxt "field:aeat.347.report.property,amount:"
+msgid "Amount"
+msgstr "Összeg"
+
+msgctxt "field:aeat.347.report.property,block:"
+msgid "Block"
+msgstr "Zárolás"
+
+msgctxt "field:aeat.347.report.property,cadaster_number:"
+msgid "Cadaster Reference"
+msgstr "Kataszteri hivatkozás"
+
+msgctxt "field:aeat.347.report.property,city:"
+msgid "City"
+msgstr "Város"
+
+msgctxt "field:aeat.347.report.property,company:"
+msgid "Company"
+msgstr "Cég"
+
+msgctxt "field:aeat.347.report.property,complement:"
+msgid "Complement"
+msgstr "Címkiegészítés"
+
+msgctxt "field:aeat.347.report.property,door:"
+msgid "Door"
+msgstr "Ajtó"
+
+msgctxt "field:aeat.347.report.property,doorway:"
+msgid "Doorway"
+msgstr "Bejárat"
+
+msgctxt "field:aeat.347.report.property,floor:"
+msgid "Floor"
+msgstr "Emelet"
+
+msgctxt "field:aeat.347.report.property,invoice_lines:"
+msgid "Invoices"
+msgstr "Számlák"
+
+msgctxt "field:aeat.347.report.property,municipality:"
+msgid "Municipality"
+msgstr "Település"
+
+msgctxt "field:aeat.347.report.property,municipality_code:"
+msgid "Municipality Code"
+msgstr "Településkód"
+
+msgctxt "field:aeat.347.report.property,number:"
+msgid "Number"
+msgstr "Szám"
+
+msgctxt "field:aeat.347.report.property,number_qualifier:"
+msgid "Number Qualifier"
+msgstr "Házszám utótagja"
+
+msgctxt "field:aeat.347.report.property,number_type:"
+msgid "Number type"
+msgstr "Házszám típusa"
+
+msgctxt "field:aeat.347.report.property,party_name:"
+msgid "Party Name"
+msgstr "Ügyfél neve"
+
+msgctxt "field:aeat.347.report.property,party_vat:"
+msgid "VAT number"
+msgstr "Adószám"
+
+msgctxt "field:aeat.347.report.property,province_code:"
+msgid "Province Code"
+msgstr "Tartomány kódja"
+
+msgctxt "field:aeat.347.report.property,report:"
+msgid "AEAT 347 Report"
+msgstr "AEAT 347 bevallás"
+
+msgctxt "field:aeat.347.report.property,representative_vat:"
+msgid "L.R. VAT number"
+msgstr "Törvényes képviselő adószáma"
+
+msgctxt "field:aeat.347.report.property,road_type:"
+msgid "Road Type"
+msgstr "Közterület jellege"
+
+msgctxt "field:aeat.347.report.property,situation:"
+msgid "Property Situation"
+msgstr "Ingatlan elhelyezkedése"
+
+msgctxt "field:aeat.347.report.property,stair:"
+msgid "Stair"
+msgstr "Lépcsőház"
+
+msgctxt "field:aeat.347.report.property,street:"
+msgid "Street"
+msgstr "Utca"
+
+msgctxt "field:aeat.347.report.property,zip:"
+msgid "Zip"
+msgstr "Irányítószám"
+
+msgctxt "field:aeat.347.report.property-account.invoice.line,line:"
+msgid "Invoice Line"
+msgstr "Számlasor"
+
+msgctxt "field:aeat.347.report.property-account.invoice.line,property_record:"
+msgid "Property Record"
+msgstr "Ingatlanrekord"
+
+msgctxt "field:asset,aeat347_party:"
+msgid "347 Party"
+msgstr "347-es partner"
+
+msgctxt "field:asset,aeat347_property:"
+msgid "347 Property"
+msgstr "347-es ingatlan"
+
+msgctxt "field:asset,block:"
+msgid "Block"
+msgstr "Zárolás"
+
+msgctxt "field:asset,city:"
+msgid "City"
+msgstr "Város"
+
+msgctxt "field:asset,complement:"
+msgid "Complement"
+msgstr "Címkiegészítés"
+
+msgctxt "field:asset,door:"
+msgid "Door"
+msgstr "Ajtó"
+
+msgctxt "field:asset,doorway:"
+msgid "Doorway"
+msgstr "Bejárat"
+
+msgctxt "field:asset,floor:"
+msgid "Floor"
+msgstr "Emelet"
+
+msgctxt "field:asset,municipality:"
+msgid "Municipality"
+msgstr "Település"
+
+msgctxt "field:asset,municipality_code:"
+msgid "Municipality Code"
+msgstr "Településkód"
+
+msgctxt "field:asset,number:"
+msgid "Number"
+msgstr "Szám"
+
+msgctxt "field:asset,number_qualifier:"
+msgid "Number Qualifier"
+msgstr "Házszám utótagja"
+
+msgctxt "field:asset,number_type:"
+msgid "Number type"
+msgstr "Házszám típusa"
+
+msgctxt "field:asset,parties:"
+msgid "Parties"
+msgstr "Ügyfelek"
+
+msgctxt "field:asset,party:"
+msgid "Party"
+msgstr "Ügyfél"
+
+msgctxt "field:asset,party_name:"
+msgid "Party Name"
+msgstr "Ügyfél neve"
+
+msgctxt "field:asset,party_tax_identifier:"
+msgid "Party Tax Identifier"
+msgstr "Partner adóazonosítója"
+
+msgctxt "field:asset,province_code:"
+msgid "Province Code"
+msgstr "Tartomány kódja"
+
+msgctxt "field:asset,road_type:"
+msgid "Road Type"
+msgstr "Közterület jellege"
+
+msgctxt "field:asset,situation:"
+msgid "Property Situation"
+msgstr "Ingatlan elhelyezkedése"
+
+msgctxt "field:asset,stair:"
+msgid "Stair"
+msgstr "Lépcsőház"
+
+msgctxt "field:asset,street:"
+msgid "Street"
+msgstr "Utca"
+
+msgctxt "field:asset,zip:"
+msgid "Zip"
+msgstr "Irányítószám"
+
+msgctxt "field:asset.party.party,asset:"
+msgid "Asset"
+msgstr "Eszköz"
+
+msgctxt "field:asset.party.party,end_date:"
+msgid "End Date"
+msgstr "Befejező dátum"
+
+msgctxt "field:asset.party.party,party:"
+msgid "Party"
+msgstr "Ügyfél"
+
+msgctxt "field:asset.party.party,start_date:"
+msgid "Start Date"
+msgstr "Kezdődátum"
+
+msgctxt "field:party.party,assets:"
+msgid "Assets"
+msgstr "Eszközök"
+
+msgctxt "help:account.tax,isp:"
+msgid "Indicates if the tax is Inversion del sujeto Pasivo"
+msgstr "Jelzi, hogy az adó fordított adózás alá tartozik-e."
+
+msgctxt "help:account.tax,service:"
+msgid "Indicates if the tax is used for services"
+msgstr "Jelzi, hogy az adó szolgáltatásokra vonatkozik-e."
+
+msgctxt "help:account.tax.template,isp:"
+msgid "Indicates if the tax is Inversion del sujeto Pasivo"
+msgstr "Jelzi, hogy az adó fordított adózás alá tartozik-e."
+
+msgctxt "help:account.tax.template,service:"
+msgid "Indicates if the tax is used for services"
+msgstr "Jelzi, hogy az adó szolgáltatásokra vonatkozik-e."
+
+msgctxt "help:aeat.347.report,contact_name:"
+msgid ""
+"The full name must appear in a correct order: First surname, blank space, "
+"Second surname, blank space, Name"
+msgstr ""
+"A teljes nevet a megfelelő sorrendben kell megadni: első vezetéknév, szóköz,"
+" második vezetéknév, szóköz, utónév"
+
+msgctxt "help:aeat.347.report,on_behalf_third_party_limit:"
+msgid ""
+"The declaration will include parties from which we received payments, on "
+"behalf of third parties, over this limit"
+msgstr ""
+"A bevallás tartalmazza azokat a partnereket, akiktől harmadik fél nevében az"
+" értékhatárt meghaladó kifizetés érkezett"
+
+msgctxt "help:aeat.347.report,operation_limit:"
+msgid ""
+"The declaration will include parties with the total of operations over this "
+"limit"
+msgstr ""
+"A bevallás tartalmazza az értékhatárt meghaladó összesített ügyletértékkel "
+"rendelkező partnereket"
+
+msgctxt "help:aeat.347.report,received_cash_limit:"
+msgid "The declaration will show the total of cash operations over this limit"
+msgstr ""
+"A bevallás megjeleníti az értékhatárt meghaladó készpénzes ügyletek összegét"
+
+msgctxt "help:aeat.347.report,representative_vat:"
+msgid "Legal Representative VAT number."
+msgstr "A törvényes képviselő adószáma."
+
+msgctxt "help:aeat.347.report.party,business_premises_rent:"
+msgid ""
+"Set to identify premises rent operations aside from the rest. You'll need to"
+" fill in the premises info only when you are the one that receives the "
+"money."
+msgstr ""
+"Jelölje be az üzlethelyiség-bérleti ügyletek elkülönítéséhez. A helyiség "
+"adatait csak akkor kell kitölteni, ha Ön kapja a pénzt."
+
+msgctxt "help:aeat.347.report.party,cash_vat_criteria:"
+msgid "Annual amount of transactions accrued under cash VAT criteria."
+msgstr "A pénzforgalmi áfaelszámolás alapján elszámolt ügyletek éves összege."
+
+msgctxt "help:aeat.347.report.party,cash_vat_operation:"
+msgid ""
+"Only for cash basis operations. Set to identify cash basis operations aside "
+"from the rest."
+msgstr ""
+"Csak pénzforgalmi elszámolású ügyletekhez. Jelölje be ezek elkülönítéséhez a"
+" többi ügylettől."
+
+msgctxt "help:aeat.347.report.party,community_vat:"
+msgid ""
+"VAT number for professionals established in other state member without "
+"national VAT"
+msgstr ""
+"Más tagállamban letelepedett, belföldi adószámmal nem rendelkező vállalkozó "
+"adószáma"
+
+msgctxt "help:aeat.347.report.party,insurance:"
+msgid ""
+"Only for insurance companies. Set to identify insurance operations aside "
+"from the rest."
+msgstr ""
+"Csak biztosítótársaságoknak. Jelölje be a biztosítási ügyletek "
+"elkülönítéséhez."
+
+msgctxt "help:aeat.347.report.party,related_goods_operation:"
+msgid ""
+"Only for related goods operations. Set to identify related goods operations "
+"aside from the rest."
+msgstr ""
+"Csak kapcsolódó termékek ügyleteihez. Jelölje be ezen ügyletek "
+"elkülönítéséhez."
+
+msgctxt "help:aeat.347.report.party,representative_vat:"
+msgid "Legal Representative VAT number"
+msgstr "Törvényes képviselő adószáma"
+
+msgctxt "help:aeat.347.report.party,tax_person_operation:"
+msgid ""
+"Only for taxable person operations. Set to identify taxable person "
+"operations aside from the rest."
+msgstr ""
+"Csak fordított adózású ügyletekhez. Jelölje be ezen ügyletek "
+"elkülönítéséhez."
+
+msgctxt "help:aeat.347.report.property,complement:"
+msgid "Complement (urbanization, industrial park...)"
+msgstr "Címkiegészítés (lakópark, ipari park stb.)"
+
+msgctxt "help:aeat.347.report.property,representative_vat:"
+msgid "Legal Representative VAT number"
+msgstr "Törvényes képviselő adószáma"
+
+msgctxt "help:asset,complement:"
+msgid "Complement (urbanization, industrial park...)"
+msgstr "Címkiegészítés (lakópark, ipari park stb.)"
+
+msgctxt "help:asset,municipality_code:"
+msgid "Get code from INE"
+msgstr "Kód lekérése az INE-től"
+
+msgctxt "model:aeat.347.reasign.end,name:"
+msgid "Reasign AEAT 347 End"
+msgstr "AEAT 347 újra-hozzárendelése – befejezés"
+
+msgctxt "model:aeat.347.reasign.start,name:"
+msgid "Reasign AEAT 347 Start"
+msgstr "AEAT 347 újra-hozzárendelése – kezdés"
+
+msgctxt "model:aeat.347.report,name:"
+msgid "AEAT 347 Report"
+msgstr "AEAT 347 bevallás"
+
+msgctxt "model:aeat.347.report.party,name:"
+msgid "AEAT 347 Party Record"
+msgstr "AEAT 347 partnerrekord"
+
+msgctxt "model:aeat.347.report.party-account.invoice,name:"
+msgid "AEAT 347 Party Record - Invoice"
+msgstr "AEAT 347 partnerrekord – számla"
+
+msgctxt "model:aeat.347.report.property,name:"
+msgid "AEAT 347 Property Record"
+msgstr "AEAT 347 ingatlanrekord"
+
+msgctxt "model:aeat.347.report.property-account.invoice.line,name:"
+msgid "AEAT 347 Property Record - Invoice Line"
+msgstr "AEAT 347 ingatlanrekord – számlasor"
+
+msgctxt "model:asset.party.party,name:"
+msgid "Asset Party"
+msgstr "Eszköz partnere"
+
+msgctxt "model:ir.action,name:"
+msgid "AEAT 347 Record"
+msgstr "AEAT 347 rekord"
+
+msgctxt "model:ir.action,name:act_aeat_347_party_record"
+msgid "AEAT 347 Party Record"
+msgstr "AEAT 347 partnerrekord"
+
+msgctxt "model:ir.action,name:act_aeat_347_property_record"
+msgid "AEAT 347 Property Record"
+msgstr "AEAT 347 ingatlanrekord"
+
+msgctxt "model:ir.action,name:act_aeat_347_reasign"
+msgid "Reasign AEAT 347"
+msgstr "AEAT 347 újra-hozzárendelése"
+
+msgctxt "model:ir.action,name:act_aeat_347_report"
+msgid "AEAT 347 Report"
+msgstr "AEAT 347 bevallás"
+
+msgctxt "model:ir.action,name:act_asset_party_party"
+msgid "Asset Party Party"
+msgstr "Eszköz partnerének partnere"
+
+msgctxt "model:ir.action.act_window,name:"
+msgid "AEAT 347 Record "
+msgstr "AEAT 347 rekord "
+
+msgctxt "model:ir.action.act_window,name:act_aeat_347_party_record"
+msgid "AEAT 347 Party Record"
+msgstr "AEAT 347 partnerrekord"
+
+msgctxt "model:ir.action.act_window,name:act_aeat_347_property_record"
+msgid "AEAT 347 Property Record"
+msgstr "AEAT 347 ingatlanrekord"
+
+msgctxt "model:ir.action.act_window,name:act_aeat_347_report"
+msgid "AEAT 347 Report"
+msgstr "AEAT 347 bevallás"
+
+msgctxt "model:ir.action.wizard,name:act_aeat_347_reasign"
+msgid "Reasign AEAT 347 Records"
+msgstr "AEAT 347 rekordok újra-hozzárendelése"
+
+#, python-format
+msgctxt "model:ir.message,text:invalid_currency"
+msgid "Currency in AEAT 347 report \"%(report)s\" must be Euro."
+msgstr "A(z) „%(report)s” AEAT 347 bevallás pénznemének eurónak kell lennie."
+
+#, python-format
+msgctxt "model:ir.message,text:msg_asset_not_found"
+msgid "Asset not found (id: %(asset_id)s, code: %(asset_code)s)."
+msgstr ""
+"Az eszköz nem található (azonosító: %(asset_id)s, kód: %(asset_code)s)."
+
+#, python-format
+msgctxt "model:ir.message,text:msg_invalid_province_code"
+msgid "The party \"%(party_name)s\" has an invalid zip."
+msgstr "A(z) „%(party_name)s” partner irányítószáma érvénytelen."
+
+#, python-format
+msgctxt "model:ir.message,text:msg_invalid_year"
+msgid "The year \"%(year)s\" is not valid."
+msgstr "A(z) „%(year)s” év érvénytelen."
+
+msgctxt "model:ir.message,text:msg_wrong_asset"
+msgid "The invoice asset is different from the contract asset."
+msgstr "A számla eszköze eltér a szerződés eszközétől."
+
+msgctxt "model:ir.model.button,string:aeat_347_report_calculate_button"
+msgid "Calculate"
+msgstr "Számítás"
+
+msgctxt "model:ir.model.button,string:aeat_347_report_cancel_button"
+msgid "Cancel"
+msgstr "Mégse"
+
+msgctxt "model:ir.model.button,string:aeat_347_report_draft_button"
+msgid "Draft"
+msgstr "vázlat"
+
+msgctxt "model:ir.model.button,string:aeat_347_report_process_button"
+msgid "Process"
+msgstr "Feldolgozás"
+
+msgctxt "model:ir.rule.group,name:"
+msgid "Aeat 347 Record"
+msgstr "AEAT 347 rekord"
+
+msgctxt "model:ir.rule.group,name:rule_group_aeat347"
+msgid "Aeat 347"
+msgstr "AEAT 347"
+
+msgctxt "model:ir.rule.group,name:rule_group_aeat347_party"
+msgid "Aeat 347 Party"
+msgstr "AEAT 347 partner"
+
+msgctxt "model:ir.rule.group,name:rule_group_aeat347_property"
+msgid "Aeat 347 Property"
+msgstr "AEAT 347 ingatlan"
+
+msgctxt "model:ir.ui.menu,name:"
+msgid "AEAT 347 Record"
+msgstr "AEAT 347 rekord"
+
+msgctxt "model:ir.ui.menu,name:menu_aeat_347_report"
+msgid "AEAT 347 Report"
+msgstr "AEAT 347 bevallás"
+
+msgctxt "model:ir.ui.menu,name:menu_aeat_347_report_party"
+msgid "AEAT 347 Party Records"
+msgstr "AEAT 347 partnerrekordok"
+
+msgctxt "model:ir.ui.menu,name:menu_aeat_347_report_property"
+msgid "AEAT 347 Property Records"
+msgstr "AEAT 347 ingatlanrekordok"
+
+msgctxt "selection:account.invoice,aeat347_operation_key:"
+msgid "A - Good and service adquisitions above limit (1)"
+msgstr "A – Az (1) értékhatárt meghaladó termék- és szolgáltatásbeszerzések"
+
+msgctxt "selection:account.invoice,aeat347_operation_key:"
+msgid "B - Good and service deliveries above limit (1)"
+msgstr ""
+"B – Az (1) értékhatárt meghaladó termékértékesítések és "
+"szolgáltatásnyújtások"
+
+msgctxt "selection:account.invoice,aeat347_operation_key:"
+msgid "C - Money collection on behavlf of third parties above limit (3)"
+msgstr "C – Harmadik fél nevében a (3) értékhatárt meghaladó pénzbeszedés"
+
+msgctxt "selection:account.invoice,aeat347_operation_key:"
+msgid "D - Adquisitions by Public Institutions (...) above limit (1)"
+msgstr "D – Közintézmények beszerzései (...) az (1) értékhatár felett"
+
+msgctxt "selection:account.invoice,aeat347_operation_key:"
+msgid "E - Grants and help made by public institutions above limit (1)"
+msgstr ""
+"E – Közintézmények által nyújtott támogatások és segélyek az (1) értékhatár "
+"felett"
+
+msgctxt "selection:account.invoice,aeat347_operation_key:"
+msgid "F - Travel Agency Sales"
+msgstr "F – Utazási iroda értékesítései"
+
+msgctxt "selection:account.invoice,aeat347_operation_key:"
+msgid "G - Travel Agency Purchases"
+msgstr "G – Utazási iroda beszerzései"
+
+msgctxt "selection:account.invoice,aeat347_operation_key:"
+msgid "Leave Empty"
+msgstr "Üresen hagyás"
+
+msgctxt "selection:account.tax,operation_347:"
+msgid "Amount Only"
+msgstr "Csak összeg"
+
+msgctxt "selection:account.tax,operation_347:"
+msgid "Exclude Invoice"
+msgstr "Számla kizárása"
+
+msgctxt "selection:account.tax,operation_347:"
+msgid "Ignore"
+msgstr "Kihagyás"
+
+msgctxt "selection:account.tax,operation_347:"
+msgid "Include Base Amount"
+msgstr "Adóalap összegének figyelembevétele"
+
+msgctxt "selection:account.tax.template,operation_347:"
+msgid "Amount Only"
+msgstr "Csak összeg"
+
+msgctxt "selection:account.tax.template,operation_347:"
+msgid "Exclude Invoice"
+msgstr "Számla kizárása"
+
+msgctxt "selection:account.tax.template,operation_347:"
+msgid "Ignore"
+msgstr "Kihagyás"
+
+msgctxt "selection:account.tax.template,operation_347:"
+msgid "Include Base Amount"
+msgstr "Adóalap összegének figyelembevétele"
+
+msgctxt "selection:aeat.347.reasign.start,aeat347_operation_key:"
+msgid "A - Good and service adquisitions above limit (1)"
+msgstr "A – Az (1) értékhatárt meghaladó termék- és szolgáltatásbeszerzések"
+
+msgctxt "selection:aeat.347.reasign.start,aeat347_operation_key:"
+msgid "B - Good and service deliveries above limit (1)"
+msgstr ""
+"B – Az (1) értékhatárt meghaladó termékértékesítések és "
+"szolgáltatásnyújtások"
+
+msgctxt "selection:aeat.347.reasign.start,aeat347_operation_key:"
+msgid "C - Money collection on behavlf of third parties above limit (3)"
+msgstr "C – Harmadik fél nevében a (3) értékhatárt meghaladó pénzbeszedés"
+
+msgctxt "selection:aeat.347.reasign.start,aeat347_operation_key:"
+msgid "D - Adquisitions by Public Institutions (...) above limit (1)"
+msgstr "D – Közintézmények beszerzései (...) az (1) értékhatár felett"
+
+msgctxt "selection:aeat.347.reasign.start,aeat347_operation_key:"
+msgid "E - Grants and help made by public institutions above limit (1)"
+msgstr ""
+"E – Közintézmények által nyújtott támogatások és segélyek az (1) értékhatár "
+"felett"
+
+msgctxt "selection:aeat.347.reasign.start,aeat347_operation_key:"
+msgid "F - Travel Agency Sales"
+msgstr "F – Utazási iroda értékesítései"
+
+msgctxt "selection:aeat.347.reasign.start,aeat347_operation_key:"
+msgid "G - Travel Agency Purchases"
+msgstr "G – Utazási iroda beszerzései"
+
+msgctxt "selection:aeat.347.reasign.start,aeat347_operation_key:"
+msgid "Leave Empty"
+msgstr "Üresen hagyás"
+
+msgctxt "selection:aeat.347.report,state:"
+msgid "Calculated"
+msgstr "Kiszámítva"
+
+msgctxt "selection:aeat.347.report,state:"
+msgid "Cancelled"
+msgstr "érvénytelen"
+
+msgctxt "selection:aeat.347.report,state:"
+msgid "Done"
+msgstr "Kész"
+
+msgctxt "selection:aeat.347.report,state:"
+msgid "Draft"
+msgstr "vázlat"
+
+msgctxt "selection:aeat.347.report,support_type:"
+msgid "DVD"
+msgstr "DVD"
+
+msgctxt "selection:aeat.347.report,support_type:"
+msgid "Telematics"
+msgstr "Elektronikus benyújtás"
+
+msgctxt "selection:aeat.347.report,type:"
+msgid "Complementary"
+msgstr "Kiegészítő"
+
+msgctxt "selection:aeat.347.report,type:"
+msgid "Normal"
+msgstr "Normál"
+
+msgctxt "selection:aeat.347.report,type:"
+msgid "Substitutive"
+msgstr "Helyettesítő"
+
+msgctxt "selection:aeat.347.report.party,operation_key:"
+msgid "A - Good and service adquisitions above limit (1)"
+msgstr "A – Az (1) értékhatárt meghaladó termék- és szolgáltatásbeszerzések"
+
+msgctxt "selection:aeat.347.report.party,operation_key:"
+msgid "B - Good and service deliveries above limit (1)"
+msgstr ""
+"B – Az (1) értékhatárt meghaladó termékértékesítések és "
+"szolgáltatásnyújtások"
+
+msgctxt "selection:aeat.347.report.party,operation_key:"
+msgid "C - Money collection on behavlf of third parties above limit (3)"
+msgstr "C – Harmadik fél nevében a (3) értékhatárt meghaladó pénzbeszedés"
+
+msgctxt "selection:aeat.347.report.party,operation_key:"
+msgid "D - Adquisitions by Public Institutions (...) above limit (1)"
+msgstr "D – Közintézmények beszerzései (...) az (1) értékhatár felett"
+
+msgctxt "selection:aeat.347.report.party,operation_key:"
+msgid "E - Grants and help made by public institutions above limit (1)"
+msgstr ""
+"E – Közintézmények által nyújtott támogatások és segélyek az (1) értékhatár "
+"felett"
+
+msgctxt "selection:aeat.347.report.party,operation_key:"
+msgid "F - Travel Agency Sales"
+msgstr "F – Utazási iroda értékesítései"
+
+msgctxt "selection:aeat.347.report.party,operation_key:"
+msgid "G - Travel Agency Purchases"
+msgstr "G – Utazási iroda beszerzései"
+
+msgctxt "selection:aeat.347.report.party,operation_key:"
+msgid "Leave Empty"
+msgstr "Üresen hagyás"
+
+msgctxt "selection:aeat.347.report.property,number_qualifier:"
+msgid "Ant"
+msgstr "Ant"
+
+msgctxt "selection:aeat.347.report.property,number_qualifier:"
+msgid "Bis"
+msgstr "Bis"
+
+msgctxt "selection:aeat.347.report.property,number_qualifier:"
+msgid "Dup"
+msgstr "Dup"
+
+msgctxt "selection:aeat.347.report.property,number_qualifier:"
+msgid "Mod"
+msgstr "Mod"
+
+msgctxt "selection:aeat.347.report.property,number_type:"
+msgid "Kilometer"
+msgstr "Kilométer"
+
+msgctxt "selection:aeat.347.report.property,number_type:"
+msgid "Number"
+msgstr "Szám"
+
+msgctxt "selection:aeat.347.report.property,number_type:"
+msgid "Without number"
+msgstr "Házszám nélkül"
+
+msgctxt "selection:aeat.347.report.property,road_type:"
+msgid "Avenue"
+msgstr "Sugárút"
+
+msgctxt "selection:aeat.347.report.property,road_type:"
+msgid "Cross Street"
+msgstr "Keresztutca"
+
+msgctxt "selection:aeat.347.report.property,road_type:"
+msgid "Grand Avenue"
+msgstr "Fő sugárút"
+
+msgctxt "selection:aeat.347.report.property,road_type:"
+msgid "Industrial Park"
+msgstr "Ipari park"
+
+msgctxt "selection:aeat.347.report.property,road_type:"
+msgid "Path"
+msgstr "Útvonal"
+
+msgctxt "selection:aeat.347.report.property,road_type:"
+msgid "Place"
+msgstr "Hely"
+
+msgctxt "selection:aeat.347.report.property,road_type:"
+msgid "Plot"
+msgstr "Telek"
+
+msgctxt "selection:aeat.347.report.property,road_type:"
+msgid "Promenade"
+msgstr "Sétány"
+
+msgctxt "selection:aeat.347.report.property,road_type:"
+msgid "Rambla"
+msgstr "Rambla"
+
+msgctxt "selection:aeat.347.report.property,road_type:"
+msgid "Ring Road"
+msgstr "Körút"
+
+msgctxt "selection:aeat.347.report.property,road_type:"
+msgid "Road"
+msgstr "Út"
+
+msgctxt "selection:aeat.347.report.property,road_type:"
+msgid "Square"
+msgstr "Tér"
+
+msgctxt "selection:aeat.347.report.property,road_type:"
+msgid "Street"
+msgstr "Utca"
+
+msgctxt "selection:aeat.347.report.property,situation:"
+msgid "1 - Spain but Basque Country and Navarra"
+msgstr "1 – Spanyolország, Baszkföld és Navarra kivételével"
+
+msgctxt "selection:aeat.347.report.property,situation:"
+msgid "2 - Basque Country and Navarra"
+msgstr "2 – Baszkföld és Navarra"
+
+msgctxt "selection:aeat.347.report.property,situation:"
+msgid "3 - Spain, without catastral reference"
+msgstr "3 – Spanyolország, kataszteri hivatkozás nélkül"
+
+msgctxt "selection:aeat.347.report.property,situation:"
+msgid "4 - Foreign"
+msgstr "4 – Külföld"
+
+msgctxt "selection:asset,number_qualifier:"
+msgid "Ant"
+msgstr "Ant"
+
+msgctxt "selection:asset,number_qualifier:"
+msgid "Bis"
+msgstr "Bis"
+
+msgctxt "selection:asset,number_qualifier:"
+msgid "Dup"
+msgstr "Dup"
+
+msgctxt "selection:asset,number_qualifier:"
+msgid "Mod"
+msgstr "Mod"
+
+msgctxt "selection:asset,number_type:"
+msgid "Kilometer"
+msgstr "Kilométer"
+
+msgctxt "selection:asset,number_type:"
+msgid "Number"
+msgstr "Szám"
+
+msgctxt "selection:asset,number_type:"
+msgid "Without number"
+msgstr "Házszám nélkül"
+
+msgctxt "selection:asset,road_type:"
+msgid "Avenue"
+msgstr "Sugárút"
+
+msgctxt "selection:asset,road_type:"
+msgid "Cross Street"
+msgstr "Keresztutca"
+
+msgctxt "selection:asset,road_type:"
+msgid "Grand Avenue"
+msgstr "Fő sugárút"
+
+msgctxt "selection:asset,road_type:"
+msgid "Industrial Park"
+msgstr "Ipari park"
+
+msgctxt "selection:asset,road_type:"
+msgid "Path"
+msgstr "Útvonal"
+
+msgctxt "selection:asset,road_type:"
+msgid "Place"
+msgstr "Hely"
+
+msgctxt "selection:asset,road_type:"
+msgid "Plot"
+msgstr "Telek"
+
+msgctxt "selection:asset,road_type:"
+msgid "Promenade"
+msgstr "Sétány"
+
+msgctxt "selection:asset,road_type:"
+msgid "Rambla"
+msgstr "Rambla"
+
+msgctxt "selection:asset,road_type:"
+msgid "Ring Road"
+msgstr "Körút"
+
+msgctxt "selection:asset,road_type:"
+msgid "Road"
+msgstr "Út"
+
+msgctxt "selection:asset,road_type:"
+msgid "Square"
+msgstr "Tér"
+
+msgctxt "selection:asset,road_type:"
+msgid "Street"
+msgstr "Utca"
+
+msgctxt "selection:asset,situation:"
+msgid "1 - Spain but Basque Country and Navarra"
+msgstr "1 – Spanyolország, Baszkföld és Navarra kivételével"
+
+msgctxt "selection:asset,situation:"
+msgid "2 - Basque Country and Navarra"
+msgstr "2 – Baszkföld és Navarra"
+
+msgctxt "selection:asset,situation:"
+msgid "3 - Spain, without catastral reference"
+msgstr "3 – Spanyolország, kataszteri hivatkozás nélkül"
+
+msgctxt "selection:asset,situation:"
+msgid "4 - Foreign"
+msgstr "4 – Külföld"
+
+msgctxt "view:aeat.347.reasign.end:"
+msgid "The AEAT 347 records have been reasigned."
+msgstr "Az AEAT 347 rekordok újra-hozzárendelése megtörtént."
+
+msgctxt "view:aeat.347.reasign.start:"
+msgid "Select Operation Key to reasign invoices:"
+msgstr "Válassza ki a számlák újra-hozzárendeléséhez használandó ügyletkódot:"
+
+msgctxt "view:aeat.347.report.party:"
+msgid "Invoices"
+msgstr "Számlák"
+
+msgctxt "view:aeat.347.report.property:"
+msgid "Address"
+msgstr "Cím"
+
+msgctxt "view:aeat.347.report.property:"
+msgid "Invoice Lines"
+msgstr "Számlasorok"
+
+msgctxt "view:aeat.347.report:"
+msgid "Declaration Number"
+msgstr "Bevallás száma"
+
+msgctxt "view:aeat.347.report:"
+msgid "General"
+msgstr "Általános"
+
+msgctxt "view:aeat.347.report:"
+msgid "Limits"
+msgstr "Értékhatárok"
+
+msgctxt "view:aeat.347.report:"
+msgid "Party Records"
+msgstr "Partnerrekordok"
+
+msgctxt "view:aeat.347.report:"
+msgid "Property Records"
+msgstr "Ingatlanrekordok"
+
+msgctxt "view:aeat.347.report:"
+msgid "Totals"
+msgstr "Összesítések"
+
+msgctxt "view:asset:"
+msgid "AEAT 347"
+msgstr "AEAT 347"
+
+msgctxt "view:party.party:"
+msgid "Assets"
+msgstr "Eszközök"
+
+msgctxt "view:product.product:"
+msgid "AEAT 347"
+msgstr "AEAT 347"
+
+msgctxt "wizard_button:aeat.347.reasign,done,end:"
+msgid "Ok"
+msgstr "Rendben"
+
+msgctxt "wizard_button:aeat.347.reasign,start,end:"
+msgid "Cancel"
+msgstr "Mégse"
+
+msgctxt "wizard_button:aeat.347.reasign,start,reasign:"
+msgid "Reasign"
+msgstr "Újra-hozzárendelés"
+
+msgctxt "field:account.invoice.line,invoice_date:"
+msgid "Invoice Date"
+msgstr "Számla kelte"
+
+msgctxt "field:aeat.347.reasign.records.start,aeat347_operation_key:"
+msgid "Operation Key"
+msgstr "Ügyletkód"
+
+msgctxt "field:aeat.347.record,company:"
+msgid "Company"
+msgstr "Cég"
+
+msgctxt "field:aeat.347.record,fiscalyear:"
+msgid "Fiscal Year"
+msgstr "Üzleti év"
+
+msgctxt "field:aeat.347.record,invoice:"
+msgid "Invoice"
+msgstr "Számla"
+
+msgctxt "field:aeat.347.record,party_record:"
+msgid "Party Record"
+msgstr "Partnerrekord"
+
+msgctxt "field:aeat.347.record,party_tax_identifier:"
+msgid "Party Tax Identifier"
+msgstr "Partner adóazonosítója"
+
+msgctxt "field:aeat.347.record,year:"
+msgid "Year"
+msgstr "Év"
+
+msgctxt "field:aeat.347.report,fiscalyear:"
+msgid "Fiscal Year"
+msgstr "Üzleti év"
+
+msgctxt "field:product.product,aeat347_party:"
+msgid "347 Party"
+msgstr "347-es partner"
+
+msgctxt "field:product.product,aeat347_property:"
+msgid "347 Property"
+msgstr "347-es ingatlan"
+
+msgctxt "selection:aeat.347.reasign.records.start,aeat347_operation_key:"
+msgid "E - Grants and help made by public institutions above limit (1)"
+msgstr ""
+"E – Közintézmények által nyújtott támogatások és segélyek az (1) értékhatár "
+"felett"
+
+msgctxt "selection:aeat.347.reasign.records.start,aeat347_operation_key:"
+msgid "Leave Empty"
+msgstr "Üresen hagyás"
+
+msgctxt "selection:aeat.347.reasign.records.start,aeat347_operation_key:"
+msgid "A - Good and service adquisitions above limit (1)"
+msgstr "A – Az (1) értékhatárt meghaladó termék- és szolgáltatásbeszerzések"
+
+msgctxt "selection:aeat.347.reasign.records.start,aeat347_operation_key:"
+msgid "B - Good and service deliveries above limit (1)"
+msgstr ""
+"B – Az (1) értékhatárt meghaladó termékértékesítések és "
+"szolgáltatásnyújtások"
+
+msgctxt "selection:aeat.347.reasign.records.start,aeat347_operation_key:"
+msgid "C - Money collection on behavlf of third parties above limit (3)"
+msgstr "C – Harmadik fél nevében a (3) értékhatárt meghaladó pénzbeszedés"
+
+msgctxt "selection:aeat.347.reasign.records.start,aeat347_operation_key:"
+msgid "D - Adquisitions by Public Institutions (...) above limit (1)"
+msgstr "D – Közintézmények beszerzései (...) az (1) értékhatár felett"
+
+msgctxt "selection:aeat.347.reasign.records.start,aeat347_operation_key:"
+msgid "F - Travel Agency Sales"
+msgstr "F – Utazási iroda értékesítései"
+
+msgctxt "selection:aeat.347.reasign.records.start,aeat347_operation_key:"
+msgid "G - Travel Agency Purchases"
+msgstr "G – Utazási iroda beszerzései"
+
+msgctxt "selection:aeat.347.record,operation_key:"
+msgid "D - Adquisitions by Public Institutions (...) above limit (1)"
+msgstr "D – Közintézmények beszerzései (...) az (1) értékhatár felett"
+
+msgctxt "selection:aeat.347.record,operation_key:"
+msgid "C - Money collection on behavlf of third parties above limit (3)"
+msgstr "C – Harmadik fél nevében a (3) értékhatárt meghaladó pénzbeszedés"
+
+msgctxt "selection:aeat.347.record,operation_key:"
+msgid "Leave Empty"
+msgstr "Üresen hagyás"
+
+msgctxt "selection:aeat.347.record,operation_key:"
+msgid "A - Good and service adquisitions above limit (1)"
+msgstr "A – Az (1) értékhatárt meghaladó termék- és szolgáltatásbeszerzések"
+
+msgctxt "selection:aeat.347.record,operation_key:"
+msgid "B - Good and service deliveries above limit (1)"
+msgstr ""
+"B – Az (1) értékhatárt meghaladó termékértékesítések és "
+"szolgáltatásnyújtások"
+
+msgctxt "selection:aeat.347.record,operation_key:"
+msgid "G - Travel Agency Purchases"
+msgstr "G – Utazási iroda beszerzései"
+
+msgctxt "selection:aeat.347.record,operation_key:"
+msgid "F - Travel Agency Sales"
+msgstr "F – Utazási iroda értékesítései"
+
+msgctxt "selection:aeat.347.record,operation_key:"
+msgid "E - Grants and help made by public institutions above limit (1)"
+msgstr ""
+"E – Közintézmények által nyújtott támogatások és segélyek az (1) értékhatár "
+"felett"
+
+msgctxt "wizard_button:aeat.347.reasign.records,done,end:"
+msgid "Ok"
+msgstr "Rendben"
+
+msgctxt "wizard_button:aeat.347.reasign.records,start,end:"
+msgid "Cancel"
+msgstr "Mégse"
+
+msgctxt "wizard_button:aeat.347.reasign.records,start,reasign:"
+msgid "Reasign"
+msgstr "Újra-hozzárendelés"
+
+msgctxt "wizard_button:aeat.347.recalculate.records,done,end:"
+msgid "Ok"
+msgstr "Rendben"
+
+msgctxt "wizard_button:aeat.347.recalculate.records,start,calculate:"
+msgid "Calculate"
+msgstr "Számítás"
+
+msgctxt "wizard_button:aeat.347.recalculate.records,start,end:"
+msgid "Cancel"
+msgstr "Mégse"
