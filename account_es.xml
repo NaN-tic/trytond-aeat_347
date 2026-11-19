@@ -331,6 +331,9 @@ this repository contains the full copyright notices and license terms. -->
         <record model="account.tax.template" id="account_es.re_buy_14">
             <field name="operation_347">amount_only</field>
         </record>
+        <record model="account.tax.template" id="account_es.re_buy_175">
+            <field name="operation_347">amount_only</field>
+        </record>
         <record model="account.tax.template" id="account_es.re_buy_52">
             <field name="operation_347">amount_only</field>
         </record>
@@ -341,6 +344,9 @@ this repository contains the full copyright notices and license terms. -->
             <field name="operation_347">amount_only</field>
         </record>
         <record model="account.tax.template" id="account_es.re_14">
+            <field name="operation_347">amount_only</field>
+        </record>
+        <record model="account.tax.template" id="account_es.re_175">
             <field name="operation_347">amount_only</field>
         </record>
         <record model="account.tax.template" id="account_es.re_26">
