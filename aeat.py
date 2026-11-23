@@ -422,14 +422,11 @@ class Report(Workflow, ModelSQL, ModelView):
             (tax.operation_347 == 'base_amount',
                 invoice_tax.base + invoice_tax.amount),
             else_=Literal(0))
-        amount_sum = Sum(amount_expr)
-        amount = amount_sum
+        amount = Sum(amount_expr)
+        tax_person_operation = (
+            (invoice.type == 'in') & Coalesce(tax.isp, False)
+            ).as_('tax_person_operation')
 
-        tax_include = invoice_tax.join(tax,
-            condition=invoice_tax.tax == tax.id).select(
-                Literal(1),
-                where=(invoice_tax.invoice == invoice.id)
-                & (tax.operation_347 != 'ignore'))
         tax_exclude = invoice_tax.join(tax,
             condition=invoice_tax.tax == tax.id).select(
                 Literal(1),
@@ -443,7 +440,8 @@ class Report(Workflow, ModelSQL, ModelView):
             & (invoice.party_tax_identifier != None)
             & (invoice.aeat347_operation_key != 'empty')
             )
-        condition &= ~Exists(tax_exclude) & Exists(tax_include)
+        condition &= (tax.operation_347.in_(['base_amount', 'amount_only'])
+            & ~Exists(tax_exclude))
 
         query = invoice.join(invoice_tax,
             condition=invoice_tax.invoice == invoice.id).join(tax,
@@ -456,11 +454,12 @@ class Report(Workflow, ModelSQL, ModelView):
                         invoice.id, invoice.party, Extract('MONTH', date),
                         invoice.aeat347_operation_key,
                         code_expr, country_code_expr, province_code_expr,
-                        amount,
+                        amount, tax_person_operation,
                         where=condition,
                         group_by=[invoice.id, date, invoice.party,
                             invoice.aeat347_operation_key,
-                            code_expr, country_code_expr, province_code_expr])
+                            code_expr, country_code_expr, province_code_expr,
+                            tax_person_operation])
         cursor.execute(*query)
         return cursor.fetchall()
 
@@ -490,12 +489,14 @@ class Report(Workflow, ModelSQL, ModelView):
                     'third_quarter_amount': _ZERO,
                     'fourth_quarter_amount': _ZERO,
                     })
+            # Combine ordinary and reverse-charge amounts for the threshold.
+            annual_amounts = defaultdict(Decimal)
             details = {}
             records = cls.get_aeat347_party_records(report)
 
             for (invoice_id, party_id, month, opkey, code, country_code,
-                    province_code, amount) in records:
-                key = (code, opkey)
+                    province_code, amount, tax_person_operation) in records:
+                key = (code, opkey, tax_person_operation)
                 if key not in details:
                     details[key] = {
                         'party': party_id,
@@ -507,6 +508,7 @@ class Report(Workflow, ModelSQL, ModelView):
                     details[key]['invoices'].append(invoice_id)
 
                 amount = is_decimal(amount)
+                annual_amounts[code, opkey] += amount
                 aggregated[key]['amount'] += amount
                 if month <= 3:
                     aggregated[key]['first_quarter_amount'] += amount
@@ -517,13 +519,13 @@ class Report(Workflow, ModelSQL, ModelView):
                 else:
                     aggregated[key]['fourth_quarter_amount'] += amount
 
-            for (code, opkey), totals in aggregated.items():
-                if (report.currency.round(abs(totals['amount']))
+            for (code, opkey, tax_person_operation), totals in (
+                    aggregated.items()):
+                annual_amount = annual_amounts[code, opkey]
+                if (report.currency.round(abs(annual_amount))
                         <= report.operation_limit):
                     continue
-                detail = details.get((code, opkey))
-                if not detail:
-                    continue
+                detail = details[code, opkey, tax_person_operation]
                 party = Party(detail['party'])
                 if not detail['province_code'].isdigit():
                     raise UserError(
@@ -538,6 +540,7 @@ class Report(Workflow, ModelSQL, ModelView):
                         'country_code': detail['country_code'],
                         'province_code': detail['province_code'],
                         'operation_key': opkey,
+                        'tax_person_operation': bool(tax_person_operation),
                         'report': report.id,
                         'community_vat': (code
                             if detail['country_code'] != 'ES' else ''),
