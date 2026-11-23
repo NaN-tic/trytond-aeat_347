@@ -45,6 +45,18 @@ this repository contains the full copyright notices and license terms. -->
         <record model="account.tax.template" id="account_es.iva_X0_ser">
             <field name="operation_347">base_amount</field>
         </record>
+        <record model="account.tax.template" id="account_es.iva_X0_spanish_excluded_tax_bi">
+            <field name="operation_347">ignore</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_X0_spanish_excluded_tax_ser">
+            <field name="operation_347">base_amount</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_isp">
+            <field name="operation_347">base_amount</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_isp_bi">
+            <field name="operation_347">base_amount</field>
+        </record>
         <record model="account.tax.template" id="account_es.iva_ISP_compras_16">
             <field name="operation_347">base_amount</field>
         </record>
@@ -258,6 +270,12 @@ this repository contains the full copyright notices and license terms. -->
             <field name="operation_347">base_amount</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_ex_art_24_1_sale_ser">
+            <field name="operation_347">base_amount</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_ex_art_21_sale_bi">
+            <field name="operation_347">ignore</field>
+        </record>
+        <record model="account.tax.template" id="account_es.iva_ex_art_21_sale_ser">
             <field name="operation_347">base_amount</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_ex_art_20_1_sale">
