@@ -6,6 +6,7 @@ contains the full copyright notices and license terms. -->
     <field name="party_name"/>
     <field name="party_vat"/>
     <field name="operation_key"/>
+    <field name="tax_person_operation"/>
     <field name="province_code"/>
     <field name="country_code"/>
     <field name="amount" sum="1"/>
