@@ -4,43 +4,43 @@ this repository contains the full copyright notices and license terms. -->
 <tryton>
     <data depends="account_es" grouped="1">
         <record model="account.tax.template" id="account_es.iva_X0_compras_bc">
-            <field name="operation_347">base_amount</field>
+            <field name="operation_347">ignore</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_X0_compras_bi">
-            <field name="operation_347">base_amount</field>
+            <field name="operation_347">ignore</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_X4_compras_bc">
-            <field name="operation_347">base_amount</field>
+            <field name="operation_347">ignore</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_X4_compras_ser">
             <field name="operation_347">base_amount</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_X4_compras_bi">
-            <field name="operation_347">base_amount</field>
+            <field name="operation_347">ignore</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_X10_compras_bc">
-            <field name="operation_347">base_amount</field>
+            <field name="operation_347">ignore</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_X10_compras_ser">
             <field name="operation_347">base_amount</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_X10_compras_bi">
-            <field name="operation_347">base_amount</field>
+            <field name="operation_347">ignore</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_X21_compras_bc">
-            <field name="operation_347">base_amount</field>
+            <field name="operation_347">ignore</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_X21_compras_ser">
             <field name="operation_347">base_amount</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_X21_compras_bi">
-            <field name="operation_347">base_amount</field>
+            <field name="operation_347">ignore</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_X0">
-            <field name="operation_347">base_amount</field>
+            <field name="operation_347">ignore</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_X0_bi">
-            <field name="operation_347">base_amount</field>
+            <field name="operation_347">ignore</field>
         </record>
         <record model="account.tax.template" id="account_es.iva_X0_ser">
             <field name="operation_347">base_amount</field>
