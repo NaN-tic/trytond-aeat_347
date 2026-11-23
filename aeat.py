@@ -518,7 +518,8 @@ class Report(Workflow, ModelSQL, ModelView):
                     aggregated[key]['fourth_quarter_amount'] += amount
 
             for (code, opkey), totals in aggregated.items():
-                if totals['amount'] <= report.operation_limit:
+                if (report.currency.round(abs(totals['amount']))
+                        <= report.operation_limit):
                     continue
                 detail = details.get((code, opkey))
                 if not detail:
