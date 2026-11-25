@@ -1,0 +1,1301 @@
+#
+msgid ""
+msgstr ""
+"Language: km\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgctxt "field:account.invoice,aeat347_operation_key:"
+msgid "AEAT 347 Operation Key"
+msgstr "កូដប្រតិបត្តិការ AEAT 347"
+
+msgctxt "field:account.tax,isp:"
+msgid "Inversion del Sujeto Pasivo"
+msgstr "យន្តការបង់ពន្ធបញ្ច្រាស"
+
+msgctxt "field:account.tax,operation_347:"
+msgid "Operation for 347"
+msgstr "ប្រតិបត្តិការសម្រាប់ 347"
+
+msgctxt "field:account.tax,service:"
+msgid "Service Rate"
+msgstr "អត្រាសម្រាប់សេវា"
+
+msgctxt "field:account.tax.template,isp:"
+msgid "Inversion del Sujeto Pasivo"
+msgstr "យន្តការបង់ពន្ធបញ្ច្រាស"
+
+msgctxt "field:account.tax.template,operation_347:"
+msgid "Operation for 347"
+msgstr "ប្រតិបត្តិការសម្រាប់ 347"
+
+msgctxt "field:account.tax.template,service:"
+msgid "Service Rate"
+msgstr "អត្រាសម្រាប់សេវា"
+
+msgctxt "field:aeat.347.reasign.start,aeat347_operation_key:"
+msgid "Operation Key"
+msgstr "កូដប្រតិបត្តិការ"
+
+msgctxt "field:aeat.347.report,calculation_date:"
+msgid "Calculation Date"
+msgstr "កាលបរិច្ឆេទគណនា"
+
+msgctxt "field:aeat.347.report,cash_amount:"
+msgid "Cash Amount (Manual)"
+msgstr "ចំនួនសាច់ប្រាក់ (បញ្ចូលដោយដៃ)"
+
+msgctxt "field:aeat.347.report,company:"
+msgid "Company"
+msgstr "ក្រុមហ៊ុន"
+
+msgctxt "field:aeat.347.report,company_vat:"
+msgid "VAT number"
+msgstr "លេខអាករលើតម្លៃបន្ថែម"
+
+msgctxt "field:aeat.347.report,contact_name:"
+msgid "Full Name"
+msgstr "ឈ្មោះពេញ"
+
+msgctxt "field:aeat.347.report,contact_phone:"
+msgid "Phone"
+msgstr "ទូរសព្ទ"
+
+msgctxt "field:aeat.347.report,currency:"
+msgid "Currency"
+msgstr "រូបិយប័ណ្ណ"
+
+msgctxt "field:aeat.347.report,file_:"
+msgid "File"
+msgstr "ឯកសារ"
+
+msgctxt "field:aeat.347.report,filename:"
+msgid "File Name"
+msgstr "ឈ្មោះឯកសារ"
+
+msgctxt "field:aeat.347.report,on_behalf_third_party_limit:"
+msgid "On Behalf of Third Party Limit (3)"
+msgstr "កម្រិតសម្រាប់ប្រតិបត្តិការជំនួសតតិយជន (3)"
+
+msgctxt "field:aeat.347.report,operation_limit:"
+msgid "Invoiced Limit (1)"
+msgstr "កម្រិតចំនួនទឹកប្រាក់ចេញវិក្កយបត្រ (1)"
+
+msgctxt "field:aeat.347.report,parties:"
+msgid "Party Records"
+msgstr "កំណត់ត្រាភាគី"
+
+msgctxt "field:aeat.347.report,party_amount:"
+msgid "Party Amount"
+msgstr "ចំនួនទឹកប្រាក់របស់ភាគី"
+
+msgctxt "field:aeat.347.report,party_count:"
+msgid "Party Record Count"
+msgstr "ចំនួនកំណត់ត្រាភាគី"
+
+msgctxt "field:aeat.347.report,previous_number:"
+msgid "Previous Declaration Number"
+msgstr "លេខសេចក្តីប្រកាសមុន"
+
+msgctxt "field:aeat.347.report,properties:"
+msgid "Property Records"
+msgstr "កំណត់ត្រាអចលនទ្រព្យ"
+
+msgctxt "field:aeat.347.report,property_amount:"
+msgid "Property Amount"
+msgstr "ចំនួនទឹកប្រាក់អចលនទ្រព្យ"
+
+msgctxt "field:aeat.347.report,property_count:"
+msgid "Property Record Count"
+msgstr "ចំនួនកំណត់ត្រាអចលនទ្រព្យ"
+
+msgctxt "field:aeat.347.report,received_cash_limit:"
+msgid "Received Cash Limit (2)"
+msgstr "កម្រិតសាច់ប្រាក់ដែលបានទទួល (2)"
+
+msgctxt "field:aeat.347.report,representative_vat:"
+msgid "L.R. VAT number"
+msgstr "លេខអាករលើតម្លៃបន្ថែមរបស់តំណាងស្របច្បាប់"
+
+msgctxt "field:aeat.347.report,state:"
+msgid "State"
+msgstr "ស្ថានភាព"
+
+msgctxt "field:aeat.347.report,support_type:"
+msgid "Support Type"
+msgstr "មធ្យោបាយដាក់សេចក្តីប្រកាស"
+
+msgctxt "field:aeat.347.report,type:"
+msgid "Statement Type"
+msgstr "ប្រភេទសេចក្តីប្រកាស"
+
+msgctxt "field:aeat.347.report,year:"
+msgid "Year"
+msgstr "ឆ្នាំ"
+
+msgctxt "field:aeat.347.report.party,amount:"
+msgid "Operations Amount"
+msgstr "ចំនួនទឹកប្រាក់ប្រតិបត្តិការ"
+
+msgctxt "field:aeat.347.report.party,bdns_call_number:"
+msgid "BDNS call number"
+msgstr "លេខសេចក្តីអំពាវនាវ BDNS"
+
+msgctxt "field:aeat.347.report.party,business_premises_rent:"
+msgid "Bussiness Premises Rent"
+msgstr "ការជួលទីតាំងអាជីវកម្ម"
+
+msgctxt "field:aeat.347.report.party,cash_amount:"
+msgid "Cash Amount Received"
+msgstr "ចំនួនសាច់ប្រាក់ដែលបានទទួល"
+
+msgctxt "field:aeat.347.report.party,cash_vat_criteria:"
+msgid "Cash VAT Criteria"
+msgstr "មូលដ្ឋានសាច់ប្រាក់សម្រាប់អាករលើតម្លៃបន្ថែម"
+
+msgctxt "field:aeat.347.report.party,cash_vat_operation:"
+msgid "Cash VAT Operation"
+msgstr "ប្រតិបត្តិការអាករលើតម្លៃបន្ថែមតាមមូលដ្ឋានសាច់ប្រាក់"
+
+msgctxt "field:aeat.347.report.party,community_vat:"
+msgid "Community VAT number"
+msgstr "លេខអាករលើតម្លៃបន្ថែមក្នុងសហភាពអឺរ៉ុប"
+
+msgctxt "field:aeat.347.report.party,company:"
+msgid "Company"
+msgstr "ក្រុមហ៊ុន"
+
+msgctxt "field:aeat.347.report.party,country_code:"
+msgid "Country Code"
+msgstr "កូដប្រទេស"
+
+msgctxt "field:aeat.347.report.party,first_quarter_amount:"
+msgid "First Quarter Amount"
+msgstr "ចំនួនទឹកប្រាក់ត្រីមាសទី ១"
+
+msgctxt "field:aeat.347.report.party,first_quarter_property_amount:"
+msgid "First Quarter Property Amount"
+msgstr "ចំនួនទឹកប្រាក់អចលនទ្រព្យត្រីមាសទី ១"
+
+msgctxt "field:aeat.347.report.party,fiscalyear_code_cash_operation:"
+msgid "Fiscal Year Cash Operation"
+msgstr "ឆ្នាំសារពើពន្ធនៃប្រតិបត្តិការសាច់ប្រាក់"
+
+msgctxt "field:aeat.347.report.party,fourth_quarter_amount:"
+msgid "Fourth Quarter Amount"
+msgstr "ចំនួនទឹកប្រាក់ត្រីមាសទី ៤"
+
+msgctxt "field:aeat.347.report.party,fourth_quarter_property_amount:"
+msgid "Fourth Quarter Property Amount"
+msgstr "ចំនួនទឹកប្រាក់អចលនទ្រព្យត្រីមាសទី ៤"
+
+msgctxt "field:aeat.347.report.party,insurance:"
+msgid "Insurance Operation"
+msgstr "ប្រតិបត្តិការធានារ៉ាប់រង"
+
+msgctxt "field:aeat.347.report.party,invoices:"
+msgid "Invoices"
+msgstr "វិក្កយបត្រ"
+
+msgctxt "field:aeat.347.report.party,operation_key:"
+msgid "Operation Key"
+msgstr "កូដប្រតិបត្តិការ"
+
+msgctxt "field:aeat.347.report.party,party_name:"
+msgid "Party Name"
+msgstr "ឈ្មោះភាគី"
+
+msgctxt "field:aeat.347.report.party,party_vat:"
+msgid "VAT"
+msgstr "អាករលើតម្លៃបន្ថែម (VAT)"
+
+msgctxt "field:aeat.347.report.party,property_amount:"
+msgid "VAT Liable Property Amount"
+msgstr "ចំនួនទឹកប្រាក់អចលនទ្រព្យជាប់អាករលើតម្លៃបន្ថែម"
+
+msgctxt "field:aeat.347.report.party,province_code:"
+msgid "Province Code"
+msgstr "កូដខេត្ត"
+
+msgctxt "field:aeat.347.report.party,related_goods_operation:"
+msgid "Related Goods Operation"
+msgstr "ប្រតិបត្តិការទំនិញពាក់ព័ន្ធ"
+
+msgctxt "field:aeat.347.report.party,report:"
+msgid "AEAT 347 Report"
+msgstr "របាយការណ៍ AEAT 347"
+
+msgctxt "field:aeat.347.report.party,representative_vat:"
+msgid "L.R. VAT number"
+msgstr "លេខអាករលើតម្លៃបន្ថែមរបស់តំណាងស្របច្បាប់"
+
+msgctxt "field:aeat.347.report.party,second_quarter_amount:"
+msgid "Second Quarter Amount"
+msgstr "ចំនួនទឹកប្រាក់ត្រីមាសទី ២"
+
+msgctxt "field:aeat.347.report.party,second_quarter_property_amount:"
+msgid "Second Quarter Property Amount"
+msgstr "ចំនួនទឹកប្រាក់អចលនទ្រព្យត្រីមាសទី ២"
+
+msgctxt "field:aeat.347.report.party,tax_person_operation:"
+msgid "Taxable Person Operation"
+msgstr "ប្រតិបត្តិការរបស់អ្នកជាប់ពន្ធ"
+
+msgctxt "field:aeat.347.report.party,third_quarter_amount:"
+msgid "Third Quarter Amount"
+msgstr "ចំនួនទឹកប្រាក់ត្រីមាសទី ៣"
+
+msgctxt "field:aeat.347.report.party,third_quarter_property_amount:"
+msgid "Third Quarter Property Amount"
+msgstr "ចំនួនទឹកប្រាក់អចលនទ្រព្យត្រីមាសទី ៣"
+
+msgctxt "field:aeat.347.report.party-account.invoice,invoice:"
+msgid "Invoice"
+msgstr "វិក្កយបត្រ"
+
+msgctxt "field:aeat.347.report.party-account.invoice,party_record:"
+msgid "Party Record"
+msgstr "កំណត់ត្រាភាគី"
+
+msgctxt "field:aeat.347.report.property,amount:"
+msgid "Amount"
+msgstr "ចំនួនទឹកប្រាក់"
+
+msgctxt "field:aeat.347.report.property,block:"
+msgid "Block"
+msgstr "ប្លុក"
+
+msgctxt "field:aeat.347.report.property,cadaster_number:"
+msgid "Cadaster Reference"
+msgstr "ឯកសារយោងសុរិយោដី"
+
+msgctxt "field:aeat.347.report.property,city:"
+msgid "City"
+msgstr "ទីក្រុង"
+
+msgctxt "field:aeat.347.report.property,company:"
+msgid "Company"
+msgstr "ក្រុមហ៊ុន"
+
+msgctxt "field:aeat.347.report.property,complement:"
+msgid "Complement"
+msgstr "ព័ត៌មានអាសយដ្ឋានបន្ថែម"
+
+msgctxt "field:aeat.347.report.property,door:"
+msgid "Door"
+msgstr "លេខទ្វារ"
+
+msgctxt "field:aeat.347.report.property,doorway:"
+msgid "Doorway"
+msgstr "ច្រកចូល"
+
+msgctxt "field:aeat.347.report.property,floor:"
+msgid "Floor"
+msgstr "ជាន់"
+
+msgctxt "field:aeat.347.report.property,invoice_lines:"
+msgid "Invoices"
+msgstr "វិក្កយបត្រ"
+
+msgctxt "field:aeat.347.report.property,municipality:"
+msgid "Municipality"
+msgstr "រដ្ឋបាលក្រុង"
+
+msgctxt "field:aeat.347.report.property,municipality_code:"
+msgid "Municipality Code"
+msgstr "កូដរដ្ឋបាលក្រុង"
+
+msgctxt "field:aeat.347.report.property,number:"
+msgid "Number"
+msgstr "លេខ"
+
+msgctxt "field:aeat.347.report.property,number_qualifier:"
+msgid "Number Qualifier"
+msgstr "ប្រភេទបច្ច័យលេខ"
+
+msgctxt "field:aeat.347.report.property,number_type:"
+msgid "Number type"
+msgstr "ប្រភេទលេខ"
+
+msgctxt "field:aeat.347.report.property,party_name:"
+msgid "Party Name"
+msgstr "ឈ្មោះភាគី"
+
+msgctxt "field:aeat.347.report.property,party_vat:"
+msgid "VAT number"
+msgstr "លេខអាករលើតម្លៃបន្ថែម"
+
+msgctxt "field:aeat.347.report.property,province_code:"
+msgid "Province Code"
+msgstr "កូដខេត្ត"
+
+msgctxt "field:aeat.347.report.property,report:"
+msgid "AEAT 347 Report"
+msgstr "របាយការណ៍ AEAT 347"
+
+msgctxt "field:aeat.347.report.property,representative_vat:"
+msgid "L.R. VAT number"
+msgstr "លេខអាករលើតម្លៃបន្ថែមរបស់តំណាងស្របច្បាប់"
+
+msgctxt "field:aeat.347.report.property,road_type:"
+msgid "Road Type"
+msgstr "ប្រភេទផ្លូវ"
+
+msgctxt "field:aeat.347.report.property,situation:"
+msgid "Property Situation"
+msgstr "ទីតាំងអចលនទ្រព្យ"
+
+msgctxt "field:aeat.347.report.property,stair:"
+msgid "Stair"
+msgstr "ជណ្តើរ"
+
+msgctxt "field:aeat.347.report.property,street:"
+msgid "Street"
+msgstr "ផ្លូវ"
+
+msgctxt "field:aeat.347.report.property,zip:"
+msgid "Zip"
+msgstr "លេខកូដប្រៃសណីយ៍"
+
+msgctxt "field:aeat.347.report.property-account.invoice.line,line:"
+msgid "Invoice Line"
+msgstr "បន្ទាត់វិក្កយបត្រ"
+
+msgctxt "field:aeat.347.report.property-account.invoice.line,property_record:"
+msgid "Property Record"
+msgstr "កំណត់ត្រាអចលនទ្រព្យ"
+
+msgctxt "field:asset,aeat347_party:"
+msgid "347 Party"
+msgstr "ភាគី 347"
+
+msgctxt "field:asset,aeat347_property:"
+msgid "347 Property"
+msgstr "អចលនទ្រព្យ 347"
+
+msgctxt "field:asset,block:"
+msgid "Block"
+msgstr "ប្លុក"
+
+msgctxt "field:asset,city:"
+msgid "City"
+msgstr "ទីក្រុង"
+
+msgctxt "field:asset,complement:"
+msgid "Complement"
+msgstr "ព័ត៌មានអាសយដ្ឋានបន្ថែម"
+
+msgctxt "field:asset,door:"
+msgid "Door"
+msgstr "លេខទ្វារ"
+
+msgctxt "field:asset,doorway:"
+msgid "Doorway"
+msgstr "ច្រកចូល"
+
+msgctxt "field:asset,floor:"
+msgid "Floor"
+msgstr "ជាន់"
+
+msgctxt "field:asset,municipality:"
+msgid "Municipality"
+msgstr "រដ្ឋបាលក្រុង"
+
+msgctxt "field:asset,municipality_code:"
+msgid "Municipality Code"
+msgstr "កូដរដ្ឋបាលក្រុង"
+
+msgctxt "field:asset,number:"
+msgid "Number"
+msgstr "លេខ"
+
+msgctxt "field:asset,number_qualifier:"
+msgid "Number Qualifier"
+msgstr "ប្រភេទបច្ច័យលេខ"
+
+msgctxt "field:asset,number_type:"
+msgid "Number type"
+msgstr "ប្រភេទលេខ"
+
+msgctxt "field:asset,parties:"
+msgid "Parties"
+msgstr "ភាគី"
+
+msgctxt "field:asset,party:"
+msgid "Party"
+msgstr "ភាគី"
+
+msgctxt "field:asset,party_name:"
+msgid "Party Name"
+msgstr "ឈ្មោះភាគី"
+
+msgctxt "field:asset,party_tax_identifier:"
+msgid "Party Tax Identifier"
+msgstr "លេខអត្តសញ្ញាណសារពើពន្ធរបស់ភាគី"
+
+msgctxt "field:asset,province_code:"
+msgid "Province Code"
+msgstr "កូដខេត្ត"
+
+msgctxt "field:asset,road_type:"
+msgid "Road Type"
+msgstr "ប្រភេទផ្លូវ"
+
+msgctxt "field:asset,situation:"
+msgid "Property Situation"
+msgstr "ទីតាំងអចលនទ្រព្យ"
+
+msgctxt "field:asset,stair:"
+msgid "Stair"
+msgstr "ជណ្តើរ"
+
+msgctxt "field:asset,street:"
+msgid "Street"
+msgstr "ផ្លូវ"
+
+msgctxt "field:asset,zip:"
+msgid "Zip"
+msgstr "លេខកូដប្រៃសណីយ៍"
+
+msgctxt "field:asset.party.party,asset:"
+msgid "Asset"
+msgstr "ទ្រព្យសកម្ម"
+
+msgctxt "field:asset.party.party,end_date:"
+msgid "End Date"
+msgstr "កាលបរិច្ឆេទបញ្ចប់"
+
+msgctxt "field:asset.party.party,party:"
+msgid "Party"
+msgstr "ភាគី"
+
+msgctxt "field:asset.party.party,start_date:"
+msgid "Start Date"
+msgstr "កាលបរិច្ឆេទចាប់ផ្តើម"
+
+msgctxt "field:party.party,assets:"
+msgid "Assets"
+msgstr "ទ្រព្យសកម្ម"
+
+msgctxt "help:account.tax,isp:"
+msgid "Indicates if the tax is Inversion del sujeto Pasivo"
+msgstr "បញ្ជាក់ថាតើពន្ធនេះអនុវត្តតាមយន្តការបង់ពន្ធបញ្ច្រាសឬទេ"
+
+msgctxt "help:account.tax,service:"
+msgid "Indicates if the tax is used for services"
+msgstr "បញ្ជាក់ថាតើពន្ធនេះប្រើសម្រាប់សេវាឬទេ"
+
+msgctxt "help:account.tax.template,isp:"
+msgid "Indicates if the tax is Inversion del sujeto Pasivo"
+msgstr "បញ្ជាក់ថាតើពន្ធនេះអនុវត្តតាមយន្តការបង់ពន្ធបញ្ច្រាសឬទេ"
+
+msgctxt "help:account.tax.template,service:"
+msgid "Indicates if the tax is used for services"
+msgstr "បញ្ជាក់ថាតើពន្ធនេះប្រើសម្រាប់សេវាឬទេ"
+
+msgctxt "help:aeat.347.report,contact_name:"
+msgid ""
+"The full name must appear in a correct order: First surname, blank space, "
+"Second surname, blank space, Name"
+msgstr ""
+"ត្រូវសរសេរឈ្មោះពេញតាមលំដាប់នេះ៖ នាមត្រកូលទីមួយ ដកឃ្លា នាមត្រកូលទីពីរ ដកឃ្លា "
+"នាមខ្លួន"
+
+msgctxt "help:aeat.347.report,on_behalf_third_party_limit:"
+msgid ""
+"The declaration will include parties from which we received payments, on "
+"behalf of third parties, over this limit"
+msgstr "សេចក្តីប្រកាសរួមបញ្ចូលភាគីដែលបានទូទាត់មកយើងសម្រាប់តតិយជន លើសកម្រិតនេះ"
+
+msgctxt "help:aeat.347.report,operation_limit:"
+msgid ""
+"The declaration will include parties with the total of operations over this "
+"limit"
+msgstr "សេចក្តីប្រកាសរួមបញ្ចូលភាគីដែលមានចំនួនសរុបប្រតិបត្តិការលើសកម្រិតនេះ"
+
+msgctxt "help:aeat.347.report,received_cash_limit:"
+msgid "The declaration will show the total of cash operations over this limit"
+msgstr "សេចក្តីប្រកាសបង្ហាញចំនួនសរុបប្រតិបត្តិការជាសាច់ប្រាក់ដែលលើសកម្រិតនេះ"
+
+msgctxt "help:aeat.347.report,representative_vat:"
+msgid "Legal Representative VAT number."
+msgstr "លេខអាករលើតម្លៃបន្ថែមរបស់តំណាងស្របច្បាប់។"
+
+msgctxt "help:aeat.347.report.party,business_premises_rent:"
+msgid ""
+"Set to identify premises rent operations aside from the rest. You'll need to "
+"fill in the premises info only when you are the one that receives the money."
+msgstr ""
+"កំណត់ដើម្បីសម្គាល់ប្រតិបត្តិការជួលទីតាំងដាច់ពីប្រតិបត្តិការផ្សេងទៀត។ "
+"អ្នកត្រូវបំពេញព័ត៌មានទីតាំង តែក្នុងករណីដែលអ្នកជាអ្នកទទួលប្រាក់ប៉ុណ្ណោះ។"
+
+msgctxt "help:aeat.347.report.party,cash_vat_criteria:"
+msgid "Annual amount of transactions accrued under cash VAT criteria."
+msgstr ""
+"ចំនួនទឹកប្រាក់ប្រចាំឆ្នាំនៃប្រតិបត្តិការដែលបានទទួលស្គាល់តាមមូលដ្ឋានសាច់ប្រាក់សម្រាប់អាករលើតម្លៃបន្ថែម។"
+
+msgctxt "help:aeat.347.report.party,cash_vat_operation:"
+msgid ""
+"Only for cash basis operations. Set to identify cash basis operations aside "
+"from the rest."
+msgstr ""
+"សម្រាប់តែប្រតិបត្តិការតាមមូលដ្ឋានសាច់ប្រាក់។ "
+"កំណត់ដើម្បីសម្គាល់ប្រតិបត្តិការទាំងនេះដាច់ពីប្រតិបត្តិការផ្សេងទៀត។"
+
+msgctxt "help:aeat.347.report.party,community_vat:"
+msgid ""
+"VAT number for professionals established in other state member without "
+"national VAT"
+msgstr ""
+"លេខអាករលើតម្លៃបន្ថែមរបស់អ្នកប្រកបវិជ្ជាជីវៈដែលមានមូលដ្ឋាននៅរដ្ឋសមាជិកមួយផ្សេងទៀត"
+" និងគ្មានលេខអាករលើតម្លៃបន្ថែមក្នុងប្រទេស"
+
+msgctxt "help:aeat.347.report.party,insurance:"
+msgid ""
+"Only for insurance companies. Set to identify insurance operations aside from"
+" the rest."
+msgstr ""
+"សម្រាប់តែក្រុមហ៊ុនធានារ៉ាប់រង។ "
+"កំណត់ដើម្បីសម្គាល់ប្រតិបត្តិការធានារ៉ាប់រងដាច់ពីប្រតិបត្តិការផ្សេងទៀត។"
+
+msgctxt "help:aeat.347.report.party,related_goods_operation:"
+msgid ""
+"Only for related goods operations. Set to identify related goods operations "
+"aside from the rest."
+msgstr ""
+"សម្រាប់តែប្រតិបត្តិការទំនិញពាក់ព័ន្ធ។ "
+"កំណត់ដើម្បីសម្គាល់ប្រតិបត្តិការទាំងនេះដាច់ពីប្រតិបត្តិការផ្សេងទៀត។"
+
+msgctxt "help:aeat.347.report.party,representative_vat:"
+msgid "Legal Representative VAT number"
+msgstr "លេខអាករលើតម្លៃបន្ថែមរបស់តំណាងស្របច្បាប់"
+
+msgctxt "help:aeat.347.report.party,tax_person_operation:"
+msgid ""
+"Only for taxable person operations. Set to identify taxable person operations"
+" aside from the rest."
+msgstr ""
+"សម្រាប់តែប្រតិបត្តិការរបស់អ្នកជាប់ពន្ធ។ "
+"កំណត់ដើម្បីសម្គាល់ប្រតិបត្តិការទាំងនេះដាច់ពីប្រតិបត្តិការផ្សេងទៀត។"
+
+msgctxt "help:aeat.347.report.property,complement:"
+msgid "Complement (urbanization, industrial park...)"
+msgstr "ព័ត៌មានអាសយដ្ឋានបន្ថែម (តំបន់លំនៅឋាន សួនឧស្សាហកម្ម...)"
+
+msgctxt "help:aeat.347.report.property,representative_vat:"
+msgid "Legal Representative VAT number"
+msgstr "លេខអាករលើតម្លៃបន្ថែមរបស់តំណាងស្របច្បាប់"
+
+msgctxt "help:asset,complement:"
+msgid "Complement (urbanization, industrial park...)"
+msgstr "ព័ត៌មានអាសយដ្ឋានបន្ថែម (តំបន់លំនៅឋាន សួនឧស្សាហកម្ម...)"
+
+msgctxt "help:asset,municipality_code:"
+msgid "Get code from INE"
+msgstr "យកកូដពី INE"
+
+msgctxt "model:aeat.347.reasign.end,name:"
+msgid "Reasign AEAT 347 End"
+msgstr "បញ្ចប់ការកំណត់ AEAT 347 ឡើងវិញ"
+
+msgctxt "model:aeat.347.reasign.start,name:"
+msgid "Reasign AEAT 347 Start"
+msgstr "ចាប់ផ្ដើមកំណត់ AEAT 347 ឡើងវិញ"
+
+msgctxt "model:aeat.347.report,name:"
+msgid "AEAT 347 Report"
+msgstr "របាយការណ៍ AEAT 347"
+
+msgctxt "model:aeat.347.report.party,name:"
+msgid "AEAT 347 Party Record"
+msgstr "កំណត់ត្រាភាគីក្នុង AEAT 347"
+
+msgctxt "model:aeat.347.report.party-account.invoice,name:"
+msgid "AEAT 347 Party Record - Invoice"
+msgstr "កំណត់ត្រាភាគី AEAT 347 - វិក្កយបត្រ"
+
+msgctxt "model:aeat.347.report.property,name:"
+msgid "AEAT 347 Property Record"
+msgstr "កំណត់ត្រាអចលនទ្រព្យក្នុង AEAT 347"
+
+msgctxt "model:aeat.347.report.property-account.invoice.line,name:"
+msgid "AEAT 347 Property Record - Invoice Line"
+msgstr "កំណត់ត្រាអចលនទ្រព្យ AEAT 347 - បន្ទាត់វិក្កយបត្រ"
+
+msgctxt "model:asset.party.party,name:"
+msgid "Asset Party"
+msgstr "ភាគីពាក់ព័ន្ធនឹងទ្រព្យសកម្ម"
+
+msgctxt "model:ir.action,name:"
+msgid "AEAT 347 Record"
+msgstr "កំណត់ត្រា AEAT 347"
+
+msgctxt "model:ir.action,name:act_aeat_347_party_record"
+msgid "AEAT 347 Party Record"
+msgstr "កំណត់ត្រាភាគីក្នុង AEAT 347"
+
+msgctxt "model:ir.action,name:act_aeat_347_property_record"
+msgid "AEAT 347 Property Record"
+msgstr "កំណត់ត្រាអចលនទ្រព្យក្នុង AEAT 347"
+
+msgctxt "model:ir.action,name:act_aeat_347_reasign"
+msgid "Reasign AEAT 347"
+msgstr "កំណត់ AEAT 347 ឡើងវិញ"
+
+msgctxt "model:ir.action,name:act_aeat_347_report"
+msgid "AEAT 347 Report"
+msgstr "របាយការណ៍ AEAT 347"
+
+msgctxt "model:ir.action,name:act_asset_party_party"
+msgid "Asset Party Party"
+msgstr "ភាគីពាក់ព័ន្ធនឹងទ្រព្យសកម្ម"
+
+msgctxt "model:ir.action.act_window,name:"
+msgid "AEAT 347 Record "
+msgstr "កំណត់ត្រា AEAT 347"
+
+msgctxt "model:ir.action.act_window,name:act_aeat_347_party_record"
+msgid "AEAT 347 Party Record"
+msgstr "កំណត់ត្រាភាគីក្នុង AEAT 347"
+
+msgctxt "model:ir.action.act_window,name:act_aeat_347_property_record"
+msgid "AEAT 347 Property Record"
+msgstr "កំណត់ត្រាអចលនទ្រព្យក្នុង AEAT 347"
+
+msgctxt "model:ir.action.act_window,name:act_aeat_347_report"
+msgid "AEAT 347 Report"
+msgstr "របាយការណ៍ AEAT 347"
+
+msgctxt "model:ir.action.wizard,name:act_aeat_347_reasign"
+msgid "Reasign AEAT 347 Records"
+msgstr "កំណត់កំណត់ត្រា AEAT 347 ឡើងវិញ"
+
+#, python-format
+msgctxt "model:ir.message,text:invalid_currency"
+msgid "Currency in AEAT 347 report \"%(report)s\" must be Euro."
+msgstr "រូបិយប័ណ្ណនៃរបាយការណ៍ AEAT 347 «%(report)s» ត្រូវតែជាអឺរ៉ូ។"
+
+#, python-format
+msgctxt "model:ir.message,text:msg_asset_not_found"
+msgid "Asset not found (id: %(asset_id)s, code: %(asset_code)s)."
+msgstr "រកមិនឃើញទ្រព្យសកម្ម (លេខសម្គាល់៖ %(asset_id)s, កូដ៖ %(asset_code)s)។"
+
+#, python-format
+msgctxt "model:ir.message,text:msg_invalid_province_code"
+msgid "The party \"%(party_name)s\" has an invalid zip."
+msgstr "លេខកូដប្រៃសណីយ៍របស់ភាគី «%(party_name)s» មិនត្រឹមត្រូវ។"
+
+#, python-format
+msgctxt "model:ir.message,text:msg_invalid_year"
+msgid "The year \"%(year)s\" is not valid."
+msgstr "ឆ្នាំ «%(year)s» មិនត្រឹមត្រូវ។"
+
+msgctxt "model:ir.message,text:msg_wrong_asset"
+msgid "The invoice asset is different from the contract asset."
+msgstr "ទ្រព្យសកម្មលើវិក្កយបត្រខុសពីទ្រព្យសកម្មក្នុងកិច្ចសន្យា។"
+
+msgctxt "model:ir.model.button,string:aeat_347_report_calculate_button"
+msgid "Calculate"
+msgstr "គណនា"
+
+msgctxt "model:ir.model.button,string:aeat_347_report_cancel_button"
+msgid "Cancel"
+msgstr "បោះបង់"
+
+msgctxt "model:ir.model.button,string:aeat_347_report_draft_button"
+msgid "Draft"
+msgstr "សេចក្តីព្រាង"
+
+msgctxt "model:ir.model.button,string:aeat_347_report_process_button"
+msgid "Process"
+msgstr "ដំណើរការ"
+
+msgctxt "model:ir.rule.group,name:"
+msgid "Aeat 347 Record"
+msgstr "កំណត់ត្រា AEAT 347"
+
+msgctxt "model:ir.rule.group,name:rule_group_aeat347"
+msgid "Aeat 347"
+msgstr "AEAT 347"
+
+msgctxt "model:ir.rule.group,name:rule_group_aeat347_party"
+msgid "Aeat 347 Party"
+msgstr "ភាគី AEAT 347"
+
+msgctxt "model:ir.rule.group,name:rule_group_aeat347_property"
+msgid "Aeat 347 Property"
+msgstr "អចលនទ្រព្យ AEAT 347"
+
+msgctxt "model:ir.ui.menu,name:"
+msgid "AEAT 347 Record"
+msgstr "កំណត់ត្រា AEAT 347"
+
+msgctxt "model:ir.ui.menu,name:menu_aeat_347_report"
+msgid "AEAT 347 Report"
+msgstr "របាយការណ៍ AEAT 347"
+
+msgctxt "model:ir.ui.menu,name:menu_aeat_347_report_party"
+msgid "AEAT 347 Party Records"
+msgstr "កំណត់ត្រាភាគី AEAT 347"
+
+msgctxt "model:ir.ui.menu,name:menu_aeat_347_report_property"
+msgid "AEAT 347 Property Records"
+msgstr "កំណត់ត្រាអចលនទ្រព្យ AEAT 347"
+
+msgctxt "selection:account.invoice,aeat347_operation_key:"
+msgid "A - Good and service adquisitions above limit (1)"
+msgstr "A - ការទិញទំនិញ និងសេវាលើសកម្រិត (1)"
+
+msgctxt "selection:account.invoice,aeat347_operation_key:"
+msgid "B - Good and service deliveries above limit (1)"
+msgstr "B - ការប្រគល់ទំនិញ និងសេវាលើសកម្រិត (1)"
+
+msgctxt "selection:account.invoice,aeat347_operation_key:"
+msgid "C - Money collection on behavlf of third parties above limit (3)"
+msgstr "C - ការប្រមូលប្រាក់ជំនួសតតិយជនលើសកម្រិត (3)"
+
+msgctxt "selection:account.invoice,aeat347_operation_key:"
+msgid "D - Adquisitions by Public Institutions (...) above limit (1)"
+msgstr "D - ការទិញដោយស្ថាប័នសាធារណៈ (...) លើសកម្រិត (1)"
+
+msgctxt "selection:account.invoice,aeat347_operation_key:"
+msgid "E - Grants and help made by public institutions above limit (1)"
+msgstr "E - ជំនួយឧបត្ថម្ភដោយស្ថាប័នសាធារណៈលើសកម្រិត (1)"
+
+msgctxt "selection:account.invoice,aeat347_operation_key:"
+msgid "F - Travel Agency Sales"
+msgstr "F - ការលក់របស់ភ្នាក់ងារទេសចរណ៍"
+
+msgctxt "selection:account.invoice,aeat347_operation_key:"
+msgid "G - Travel Agency Purchases"
+msgstr "G - ការទិញរបស់ភ្នាក់ងារទេសចរណ៍"
+
+msgctxt "selection:account.invoice,aeat347_operation_key:"
+msgid "Leave Empty"
+msgstr "ទុកឱ្យទទេ"
+
+msgctxt "selection:account.tax,operation_347:"
+msgid "Amount Only"
+msgstr "តែចំនួនទឹកប្រាក់"
+
+msgctxt "selection:account.tax,operation_347:"
+msgid "Exclude Invoice"
+msgstr "មិនរួមបញ្ចូលវិក្កយបត្រ"
+
+msgctxt "selection:account.tax,operation_347:"
+msgid "Ignore"
+msgstr "មិនអើពើ"
+
+msgctxt "selection:account.tax,operation_347:"
+msgid "Include Base Amount"
+msgstr "រួមបញ្ចូលចំនួនទឹកប្រាក់មូលដ្ឋាន"
+
+msgctxt "selection:account.tax.template,operation_347:"
+msgid "Amount Only"
+msgstr "តែចំនួនទឹកប្រាក់"
+
+msgctxt "selection:account.tax.template,operation_347:"
+msgid "Exclude Invoice"
+msgstr "មិនរួមបញ្ចូលវិក្កយបត្រ"
+
+msgctxt "selection:account.tax.template,operation_347:"
+msgid "Ignore"
+msgstr "មិនអើពើ"
+
+msgctxt "selection:account.tax.template,operation_347:"
+msgid "Include Base Amount"
+msgstr "រួមបញ្ចូលចំនួនទឹកប្រាក់មូលដ្ឋាន"
+
+msgctxt "selection:aeat.347.reasign.start,aeat347_operation_key:"
+msgid "A - Good and service adquisitions above limit (1)"
+msgstr "A - ការទិញទំនិញ និងសេវាលើសកម្រិត (1)"
+
+msgctxt "selection:aeat.347.reasign.start,aeat347_operation_key:"
+msgid "B - Good and service deliveries above limit (1)"
+msgstr "B - ការប្រគល់ទំនិញ និងសេវាលើសកម្រិត (1)"
+
+msgctxt "selection:aeat.347.reasign.start,aeat347_operation_key:"
+msgid "C - Money collection on behavlf of third parties above limit (3)"
+msgstr "C - ការប្រមូលប្រាក់ជំនួសតតិយជនលើសកម្រិត (3)"
+
+msgctxt "selection:aeat.347.reasign.start,aeat347_operation_key:"
+msgid "D - Adquisitions by Public Institutions (...) above limit (1)"
+msgstr "D - ការទិញដោយស្ថាប័នសាធារណៈ (...) លើសកម្រិត (1)"
+
+msgctxt "selection:aeat.347.reasign.start,aeat347_operation_key:"
+msgid "E - Grants and help made by public institutions above limit (1)"
+msgstr "E - ជំនួយឧបត្ថម្ភដោយស្ថាប័នសាធារណៈលើសកម្រិត (1)"
+
+msgctxt "selection:aeat.347.reasign.start,aeat347_operation_key:"
+msgid "F - Travel Agency Sales"
+msgstr "F - ការលក់របស់ភ្នាក់ងារទេសចរណ៍"
+
+msgctxt "selection:aeat.347.reasign.start,aeat347_operation_key:"
+msgid "G - Travel Agency Purchases"
+msgstr "G - ការទិញរបស់ភ្នាក់ងារទេសចរណ៍"
+
+msgctxt "selection:aeat.347.reasign.start,aeat347_operation_key:"
+msgid "Leave Empty"
+msgstr "ទុកឱ្យទទេ"
+
+msgctxt "selection:aeat.347.report,state:"
+msgid "Calculated"
+msgstr "បានគណនា"
+
+msgctxt "selection:aeat.347.report,state:"
+msgid "Cancelled"
+msgstr "បានបោះបង់"
+
+msgctxt "selection:aeat.347.report,state:"
+msgid "Done"
+msgstr "បានបញ្ចប់"
+
+msgctxt "selection:aeat.347.report,state:"
+msgid "Draft"
+msgstr "សេចក្តីព្រាង"
+
+msgctxt "selection:aeat.347.report,support_type:"
+msgid "DVD"
+msgstr "DVD"
+
+msgctxt "selection:aeat.347.report,support_type:"
+msgid "Telematics"
+msgstr "តាមអេឡិចត្រូនិក"
+
+msgctxt "selection:aeat.347.report,type:"
+msgid "Complementary"
+msgstr "បន្ថែម"
+
+msgctxt "selection:aeat.347.report,type:"
+msgid "Normal"
+msgstr "ធម្មតា"
+
+msgctxt "selection:aeat.347.report,type:"
+msgid "Substitutive"
+msgstr "ជំនួស"
+
+msgctxt "selection:aeat.347.report.party,operation_key:"
+msgid "A - Good and service adquisitions above limit (1)"
+msgstr "A - ការទិញទំនិញ និងសេវាលើសកម្រិត (1)"
+
+msgctxt "selection:aeat.347.report.party,operation_key:"
+msgid "B - Good and service deliveries above limit (1)"
+msgstr "B - ការប្រគល់ទំនិញ និងសេវាលើសកម្រិត (1)"
+
+msgctxt "selection:aeat.347.report.party,operation_key:"
+msgid "C - Money collection on behavlf of third parties above limit (3)"
+msgstr "C - ការប្រមូលប្រាក់ជំនួសតតិយជនលើសកម្រិត (3)"
+
+msgctxt "selection:aeat.347.report.party,operation_key:"
+msgid "D - Adquisitions by Public Institutions (...) above limit (1)"
+msgstr "D - ការទិញដោយស្ថាប័នសាធារណៈ (...) លើសកម្រិត (1)"
+
+msgctxt "selection:aeat.347.report.party,operation_key:"
+msgid "E - Grants and help made by public institutions above limit (1)"
+msgstr "E - ជំនួយឧបត្ថម្ភដោយស្ថាប័នសាធារណៈលើសកម្រិត (1)"
+
+msgctxt "selection:aeat.347.report.party,operation_key:"
+msgid "F - Travel Agency Sales"
+msgstr "F - ការលក់របស់ភ្នាក់ងារទេសចរណ៍"
+
+msgctxt "selection:aeat.347.report.party,operation_key:"
+msgid "G - Travel Agency Purchases"
+msgstr "G - ការទិញរបស់ភ្នាក់ងារទេសចរណ៍"
+
+msgctxt "selection:aeat.347.report.party,operation_key:"
+msgid "Leave Empty"
+msgstr "ទុកឱ្យទទេ"
+
+msgctxt "selection:aeat.347.report.property,number_qualifier:"
+msgid "Ant"
+msgstr "លេខពីមុន (Ant)"
+
+msgctxt "selection:aeat.347.report.property,number_qualifier:"
+msgid "Bis"
+msgstr "លេខបន្ថែម (Bis)"
+
+msgctxt "selection:aeat.347.report.property,number_qualifier:"
+msgid "Dup"
+msgstr "លេខស្ទួន (Dup)"
+
+msgctxt "selection:aeat.347.report.property,number_qualifier:"
+msgid "Mod"
+msgstr "លេខដែលបានកែប្រែ (Mod)"
+
+msgctxt "selection:aeat.347.report.property,number_type:"
+msgid "Kilometer"
+msgstr "គីឡូម៉ែត្រ"
+
+msgctxt "selection:aeat.347.report.property,number_type:"
+msgid "Number"
+msgstr "លេខ"
+
+msgctxt "selection:aeat.347.report.property,number_type:"
+msgid "Without number"
+msgstr "គ្មានលេខ"
+
+msgctxt "selection:aeat.347.report.property,road_type:"
+msgid "Avenue"
+msgstr "មហាវិថី"
+
+msgctxt "selection:aeat.347.report.property,road_type:"
+msgid "Cross Street"
+msgstr "ផ្លូវប្រសព្វ"
+
+msgctxt "selection:aeat.347.report.property,road_type:"
+msgid "Grand Avenue"
+msgstr "មហាវិថីធំ"
+
+msgctxt "selection:aeat.347.report.property,road_type:"
+msgid "Industrial Park"
+msgstr "សួនឧស្សាហកម្ម"
+
+msgctxt "selection:aeat.347.report.property,road_type:"
+msgid "Path"
+msgstr "ផ្លូវ"
+
+msgctxt "selection:aeat.347.report.property,road_type:"
+msgid "Place"
+msgstr "ទីកន្លែង"
+
+msgctxt "selection:aeat.347.report.property,road_type:"
+msgid "Plot"
+msgstr "ដីឡូត៍"
+
+msgctxt "selection:aeat.347.report.property,road_type:"
+msgid "Promenade"
+msgstr "ផ្លូវដើរកម្សាន្ត"
+
+msgctxt "selection:aeat.347.report.property,road_type:"
+msgid "Rambla"
+msgstr "វិថីដើរកម្សាន្ត (Rambla)"
+
+msgctxt "selection:aeat.347.report.property,road_type:"
+msgid "Ring Road"
+msgstr "ផ្លូវក្រវាត់"
+
+msgctxt "selection:aeat.347.report.property,road_type:"
+msgid "Road"
+msgstr "ផ្លូវថ្នល់"
+
+msgctxt "selection:aeat.347.report.property,road_type:"
+msgid "Square"
+msgstr "ការ៉េ"
+
+msgctxt "selection:aeat.347.report.property,road_type:"
+msgid "Street"
+msgstr "ផ្លូវ"
+
+msgctxt "selection:aeat.347.report.property,situation:"
+msgid "1 - Spain but Basque Country and Navarra"
+msgstr "1 - អេស្ប៉ាញ លើកលែងតំបន់បាស្ក និងណាវ៉ារ៉ា"
+
+msgctxt "selection:aeat.347.report.property,situation:"
+msgid "2 - Basque Country and Navarra"
+msgstr "2 - តំបន់បាស្ក និងណាវ៉ារ៉ា"
+
+msgctxt "selection:aeat.347.report.property,situation:"
+msgid "3 - Spain, without catastral reference"
+msgstr "3 - អេស្ប៉ាញ ដោយគ្មានឯកសារយោងសុរិយោដី"
+
+msgctxt "selection:aeat.347.report.property,situation:"
+msgid "4 - Foreign"
+msgstr "4 - បរទេស"
+
+msgctxt "selection:asset,number_qualifier:"
+msgid "Ant"
+msgstr "លេខពីមុន (Ant)"
+
+msgctxt "selection:asset,number_qualifier:"
+msgid "Bis"
+msgstr "លេខបន្ថែម (Bis)"
+
+msgctxt "selection:asset,number_qualifier:"
+msgid "Dup"
+msgstr "លេខស្ទួន (Dup)"
+
+msgctxt "selection:asset,number_qualifier:"
+msgid "Mod"
+msgstr "លេខដែលបានកែប្រែ (Mod)"
+
+msgctxt "selection:asset,number_type:"
+msgid "Kilometer"
+msgstr "គីឡូម៉ែត្រ"
+
+msgctxt "selection:asset,number_type:"
+msgid "Number"
+msgstr "លេខ"
+
+msgctxt "selection:asset,number_type:"
+msgid "Without number"
+msgstr "គ្មានលេខ"
+
+msgctxt "selection:asset,road_type:"
+msgid "Avenue"
+msgstr "មហាវិថី"
+
+msgctxt "selection:asset,road_type:"
+msgid "Cross Street"
+msgstr "ផ្លូវប្រសព្វ"
+
+msgctxt "selection:asset,road_type:"
+msgid "Grand Avenue"
+msgstr "មហាវិថីធំ"
+
+msgctxt "selection:asset,road_type:"
+msgid "Industrial Park"
+msgstr "សួនឧស្សាហកម្ម"
+
+msgctxt "selection:asset,road_type:"
+msgid "Path"
+msgstr "ផ្លូវ"
+
+msgctxt "selection:asset,road_type:"
+msgid "Place"
+msgstr "ទីកន្លែង"
+
+msgctxt "selection:asset,road_type:"
+msgid "Plot"
+msgstr "ដីឡូត៍"
+
+msgctxt "selection:asset,road_type:"
+msgid "Promenade"
+msgstr "ផ្លូវដើរកម្សាន្ត"
+
+msgctxt "selection:asset,road_type:"
+msgid "Rambla"
+msgstr "វិថីដើរកម្សាន្ត (Rambla)"
+
+msgctxt "selection:asset,road_type:"
+msgid "Ring Road"
+msgstr "ផ្លូវក្រវាត់"
+
+msgctxt "selection:asset,road_type:"
+msgid "Road"
+msgstr "ផ្លូវថ្នល់"
+
+msgctxt "selection:asset,road_type:"
+msgid "Square"
+msgstr "ការ៉េ"
+
+msgctxt "selection:asset,road_type:"
+msgid "Street"
+msgstr "ផ្លូវ"
+
+msgctxt "selection:asset,situation:"
+msgid "1 - Spain but Basque Country and Navarra"
+msgstr "1 - អេស្ប៉ាញ លើកលែងតំបន់បាស្ក និងណាវ៉ារ៉ា"
+
+msgctxt "selection:asset,situation:"
+msgid "2 - Basque Country and Navarra"
+msgstr "2 - តំបន់បាស្ក និងណាវ៉ារ៉ា"
+
+msgctxt "selection:asset,situation:"
+msgid "3 - Spain, without catastral reference"
+msgstr "3 - អេស្ប៉ាញ ដោយគ្មានឯកសារយោងសុរិយោដី"
+
+msgctxt "selection:asset,situation:"
+msgid "4 - Foreign"
+msgstr "4 - បរទេស"
+
+msgctxt "view:aeat.347.reasign.end:"
+msgid "The AEAT 347 records have been reasigned."
+msgstr "កំណត់ត្រា AEAT 347 ត្រូវបានកំណត់ឡើងវិញ។"
+
+msgctxt "view:aeat.347.reasign.start:"
+msgid "Select Operation Key to reasign invoices:"
+msgstr "ជ្រើសរើសកូដប្រតិបត្តិការដើម្បីកំណត់វិក្កយបត្រឡើងវិញ៖"
+
+msgctxt "view:aeat.347.report.party:"
+msgid "Invoices"
+msgstr "វិក្កយបត្រ"
+
+msgctxt "view:aeat.347.report.property:"
+msgid "Address"
+msgstr "អាសយដ្ឋាន"
+
+msgctxt "view:aeat.347.report.property:"
+msgid "Invoice Lines"
+msgstr "បន្ទាត់វិក្កយបត្រ"
+
+msgctxt "view:aeat.347.report:"
+msgid "Declaration Number"
+msgstr "លេខសេចក្តីប្រកាស"
+
+msgctxt "view:aeat.347.report:"
+msgid "General"
+msgstr "ទូទៅ"
+
+msgctxt "view:aeat.347.report:"
+msgid "Limits"
+msgstr "កម្រិត"
+
+msgctxt "view:aeat.347.report:"
+msgid "Party Records"
+msgstr "កំណត់ត្រាភាគី"
+
+msgctxt "view:aeat.347.report:"
+msgid "Property Records"
+msgstr "កំណត់ត្រាអចលនទ្រព្យ"
+
+msgctxt "view:aeat.347.report:"
+msgid "Totals"
+msgstr "ចំនួនសរុប"
+
+msgctxt "view:asset:"
+msgid "AEAT 347"
+msgstr "AEAT 347"
+
+msgctxt "view:party.party:"
+msgid "Assets"
+msgstr "ទ្រព្យសកម្ម"
+
+msgctxt "view:product.product:"
+msgid "AEAT 347"
+msgstr "AEAT 347"
+
+msgctxt "wizard_button:aeat.347.reasign,done,end:"
+msgid "Ok"
+msgstr "យល់ព្រម"
+
+msgctxt "wizard_button:aeat.347.reasign,start,end:"
+msgid "Cancel"
+msgstr "បោះបង់"
+
+msgctxt "wizard_button:aeat.347.reasign,start,reasign:"
+msgid "Reasign"
+msgstr "កំណត់ឡើងវិញ"
+
+msgctxt "field:account.invoice.line,invoice_date:"
+msgid "Invoice Date"
+msgstr "កាលបរិច្ឆេទវិក្កយបត្រ"
+
+msgctxt "field:aeat.347.reasign.records.start,aeat347_operation_key:"
+msgid "Operation Key"
+msgstr "កូដប្រតិបត្តិការ"
+
+msgctxt "field:aeat.347.record,company:"
+msgid "Company"
+msgstr "ក្រុមហ៊ុន"
+
+msgctxt "field:aeat.347.record,fiscalyear:"
+msgid "Fiscal Year"
+msgstr "ឆ្នាំសារពើពន្ធ"
+
+msgctxt "field:aeat.347.record,invoice:"
+msgid "Invoice"
+msgstr "វិក្កយបត្រ"
+
+msgctxt "field:aeat.347.record,party_record:"
+msgid "Party Record"
+msgstr "កំណត់ត្រាភាគី"
+
+msgctxt "field:aeat.347.record,party_tax_identifier:"
+msgid "Party Tax Identifier"
+msgstr "លេខអត្តសញ្ញាណសារពើពន្ធរបស់ភាគី"
+
+msgctxt "field:aeat.347.record,year:"
+msgid "Year"
+msgstr "ឆ្នាំ"
+
+msgctxt "field:aeat.347.report,fiscalyear:"
+msgid "Fiscal Year"
+msgstr "ឆ្នាំសារពើពន្ធ"
+
+msgctxt "field:product.product,aeat347_party:"
+msgid "347 Party"
+msgstr "ភាគី 347"
+
+msgctxt "field:product.product,aeat347_property:"
+msgid "347 Property"
+msgstr "អចលនទ្រព្យ 347"
+
+msgctxt "selection:aeat.347.reasign.records.start,aeat347_operation_key:"
+msgid "E - Grants and help made by public institutions above limit (1)"
+msgstr "E - ជំនួយឧបត្ថម្ភដោយស្ថាប័នសាធារណៈលើសកម្រិត (1)"
+
+msgctxt "selection:aeat.347.reasign.records.start,aeat347_operation_key:"
+msgid "Leave Empty"
+msgstr "ទុកឱ្យទទេ"
+
+msgctxt "selection:aeat.347.reasign.records.start,aeat347_operation_key:"
+msgid "A - Good and service adquisitions above limit (1)"
+msgstr "A - ការទិញទំនិញ និងសេវាលើសកម្រិត (1)"
+
+msgctxt "selection:aeat.347.reasign.records.start,aeat347_operation_key:"
+msgid "B - Good and service deliveries above limit (1)"
+msgstr "B - ការប្រគល់ទំនិញ និងសេវាលើសកម្រិត (1)"
+
+msgctxt "selection:aeat.347.reasign.records.start,aeat347_operation_key:"
+msgid "C - Money collection on behavlf of third parties above limit (3)"
+msgstr "C - ការប្រមូលប្រាក់ជំនួសតតិយជនលើសកម្រិត (3)"
+
+msgctxt "selection:aeat.347.reasign.records.start,aeat347_operation_key:"
+msgid "D - Adquisitions by Public Institutions (...) above limit (1)"
+msgstr "D - ការទិញដោយស្ថាប័នសាធារណៈ (...) លើសកម្រិត (1)"
+
+msgctxt "selection:aeat.347.reasign.records.start,aeat347_operation_key:"
+msgid "F - Travel Agency Sales"
+msgstr "F - ការលក់របស់ភ្នាក់ងារទេសចរណ៍"
+
+msgctxt "selection:aeat.347.reasign.records.start,aeat347_operation_key:"
+msgid "G - Travel Agency Purchases"
+msgstr "G - ការទិញរបស់ភ្នាក់ងារទេសចរណ៍"
+
+msgctxt "selection:aeat.347.record,operation_key:"
+msgid "D - Adquisitions by Public Institutions (...) above limit (1)"
+msgstr "D - ការទិញដោយស្ថាប័នសាធារណៈ (...) លើសកម្រិត (1)"
+
+msgctxt "selection:aeat.347.record,operation_key:"
+msgid "C - Money collection on behavlf of third parties above limit (3)"
+msgstr "C - ការប្រមូលប្រាក់ជំនួសតតិយជនលើសកម្រិត (3)"
+
+msgctxt "selection:aeat.347.record,operation_key:"
+msgid "Leave Empty"
+msgstr "ទុកឱ្យទទេ"
+
+msgctxt "selection:aeat.347.record,operation_key:"
+msgid "A - Good and service adquisitions above limit (1)"
+msgstr "A - ការទិញទំនិញ និងសេវាលើសកម្រិត (1)"
+
+msgctxt "selection:aeat.347.record,operation_key:"
+msgid "B - Good and service deliveries above limit (1)"
+msgstr "B - ការប្រគល់ទំនិញ និងសេវាលើសកម្រិត (1)"
+
+msgctxt "selection:aeat.347.record,operation_key:"
+msgid "G - Travel Agency Purchases"
+msgstr "G - ការទិញរបស់ភ្នាក់ងារទេសចរណ៍"
+
+msgctxt "selection:aeat.347.record,operation_key:"
+msgid "F - Travel Agency Sales"
+msgstr "F - ការលក់របស់ភ្នាក់ងារទេសចរណ៍"
+
+msgctxt "selection:aeat.347.record,operation_key:"
+msgid "E - Grants and help made by public institutions above limit (1)"
+msgstr "E - ជំនួយឧបត្ថម្ភដោយស្ថាប័នសាធារណៈលើសកម្រិត (1)"
+
+msgctxt "wizard_button:aeat.347.reasign.records,done,end:"
+msgid "Ok"
+msgstr "យល់ព្រម"
+
+msgctxt "wizard_button:aeat.347.reasign.records,start,end:"
+msgid "Cancel"
+msgstr "បោះបង់"
+
+msgctxt "wizard_button:aeat.347.reasign.records,start,reasign:"
+msgid "Reasign"
+msgstr "កំណត់ឡើងវិញ"
+
+msgctxt "wizard_button:aeat.347.recalculate.records,done,end:"
+msgid "Ok"
+msgstr "យល់ព្រម"
+
+msgctxt "wizard_button:aeat.347.recalculate.records,start,calculate:"
+msgid "Calculate"
+msgstr "គណនា"
+
+msgctxt "wizard_button:aeat.347.recalculate.records,start,end:"
+msgid "Cancel"
+msgstr "បោះបង់"
